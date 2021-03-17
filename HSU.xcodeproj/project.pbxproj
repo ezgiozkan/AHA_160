@@ -7,25 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B60185E25FE9F1B00F2FFD6 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60185C25FE9F1A00F2FFD6 /* ForgotPasswordViewController.swift */; };
+		3B60185F25FE9F1B00F2FFD6 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B60185D25FE9F1A00F2FFD6 /* ForgotPasswordViewController.xib */; };
+		3B6C603F25FDFC7700839DA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C603D25FDFC7700839DA8 /* LoginViewController.swift */; };
+		3B6C604025FDFC7700839DA8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6C603E25FDFC7700839DA8 /* LoginViewController.xib */; };
+		3B6C604725FE388100839DA8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C604525FE388100839DA8 /* SignUpViewController.swift */; };
+		3B6C604825FE388100839DA8 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6C604625FE388100839DA8 /* SignUpViewController.xib */; };
 		3B7466C225FCC32E0000FB00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7466C125FCC32E0000FB00 /* AppDelegate.swift */; };
-		3B7466C425FCC32E0000FB00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7466C325FCC32E0000FB00 /* SceneDelegate.swift */; };
 		3B7466C625FCC32E0000FB00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7466C525FCC32E0000FB00 /* ViewController.swift */; };
-		3B7466C925FCC32E0000FB00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7466C725FCC32E0000FB00 /* Main.storyboard */; };
 		3B7466CC25FCC32F0000FB00 /* HSU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B7466CA25FCC32F0000FB00 /* HSU.xcdatamodeld */; };
 		3B7466CE25FCC3320000FB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B7466CD25FCC3320000FB00 /* Assets.xcassets */; };
 		3B7466D125FCC3320000FB00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7466CF25FCC3320000FB00 /* LaunchScreen.storyboard */; };
+		3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7466DD25FCC4DA0000FB00 /* RootViewController.swift */; };
+		3B7466E025FCC4DA0000FB00 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B60185C25FE9F1A00F2FFD6 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		3B60185D25FE9F1A00F2FFD6 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		3B6C603D25FDFC7700839DA8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3B6C603E25FDFC7700839DA8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		3B6C604525FE388100839DA8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3B6C604625FE388100839DA8 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		3B7466BE25FCC32E0000FB00 /* HSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7466C125FCC32E0000FB00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3B7466C325FCC32E0000FB00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3B7466C525FCC32E0000FB00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3B7466C825FCC32E0000FB00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B7466CB25FCC32F0000FB00 /* HSU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HSU.xcdatamodel; sourceTree = "<group>"; };
 		3B7466CD25FCC3320000FB00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B7466D025FCC3320000FB00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B7466D225FCC3320000FB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B7466DD25FCC4DA0000FB00 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +51,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B6C603825FDF82E00839DA8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B7466DD25FCC4DA0000FB00 /* RootViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3B6C603A25FDFC3F00839DA8 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				3B6C603B25FDFC4800839DA8 /* Controllers */,
+				3B6C603C25FDFC5C00839DA8 /* Xib */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		3B6C603B25FDFC4800839DA8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B6C603D25FDFC7700839DA8 /* LoginViewController.swift */,
+				3B6C604525FE388100839DA8 /* SignUpViewController.swift */,
+				3B60185C25FE9F1A00F2FFD6 /* ForgotPasswordViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3B6C603C25FDFC5C00839DA8 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				3B6C603E25FDFC7700839DA8 /* LoginViewController.xib */,
+				3B6C604625FE388100839DA8 /* SignUpViewController.xib */,
+				3B60185D25FE9F1A00F2FFD6 /* ForgotPasswordViewController.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
 		3B7466B525FCC32E0000FB00 = {
 			isa = PBXGroup;
 			children = (
@@ -58,16 +107,33 @@
 		3B7466C025FCC32E0000FB00 /* HSU */ = {
 			isa = PBXGroup;
 			children = (
+				3B7466DA25FCC4A40000FB00 /* Root */,
+				3B6C603A25FDFC3F00839DA8 /* Authentication */,
 				3B7466C125FCC32E0000FB00 /* AppDelegate.swift */,
-				3B7466C325FCC32E0000FB00 /* SceneDelegate.swift */,
 				3B7466C525FCC32E0000FB00 /* ViewController.swift */,
-				3B7466C725FCC32E0000FB00 /* Main.storyboard */,
 				3B7466CD25FCC3320000FB00 /* Assets.xcassets */,
 				3B7466CF25FCC3320000FB00 /* LaunchScreen.storyboard */,
 				3B7466D225FCC3320000FB00 /* Info.plist */,
 				3B7466CA25FCC32F0000FB00 /* HSU.xcdatamodeld */,
 			);
 			path = HSU;
+			sourceTree = "<group>";
+		};
+		3B7466DA25FCC4A40000FB00 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				3B6C603825FDF82E00839DA8 /* Controllers */,
+				3B7466DB25FCC4B20000FB00 /* Xib */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		3B7466DB25FCC4B20000FB00 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,9 +193,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B60185F25FE9F1B00F2FFD6 /* ForgotPasswordViewController.xib in Resources */,
+				3B6C604825FE388100839DA8 /* SignUpViewController.xib in Resources */,
+				3B6C604025FDFC7700839DA8 /* LoginViewController.xib in Resources */,
 				3B7466D125FCC3320000FB00 /* LaunchScreen.storyboard in Resources */,
 				3B7466CE25FCC3320000FB00 /* Assets.xcassets in Resources */,
-				3B7466C925FCC32E0000FB00 /* Main.storyboard in Resources */,
+				3B7466E025FCC4DA0000FB00 /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,24 +209,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B6C604725FE388100839DA8 /* SignUpViewController.swift in Sources */,
+				3B60185E25FE9F1B00F2FFD6 /* ForgotPasswordViewController.swift in Sources */,
+				3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */,
 				3B7466CC25FCC32F0000FB00 /* HSU.xcdatamodeld in Sources */,
 				3B7466C625FCC32E0000FB00 /* ViewController.swift in Sources */,
+				3B6C603F25FDFC7700839DA8 /* LoginViewController.swift in Sources */,
 				3B7466C225FCC32E0000FB00 /* AppDelegate.swift in Sources */,
-				3B7466C425FCC32E0000FB00 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3B7466C725FCC32E0000FB00 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B7466C825FCC32E0000FB00 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3B7466CF25FCC3320000FB00 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,6 +357,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJ43G2NR3P;
 				INFOPLIST_FILE = HSU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJ43G2NR3P;
 				INFOPLIST_FILE = HSU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
