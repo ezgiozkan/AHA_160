@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let rootViewController = RootViewController(nibName: "RootViewController", bundle: .main)
+        let rootViewController = TabBarController(nibName: "TabBarController", bundle: nil) // RootViewController(nibName: "RootViewController", bundle: .main)
         let navigationController = UINavigationController(rootViewController: rootViewController)
         
        

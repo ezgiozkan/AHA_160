@@ -82,6 +82,11 @@ class LoginViewController: UIViewController {
     @objc func btnLogin(sender: UIButton){
         
         print("Ana Sayfa açılacak")
+        
+        // Temp Auth...
+    
+        self.navigationController?.present(TabBarController(nibName: "TabBarController", bundle: nil), animated: true, completion: nil)
+        
     }
     
     

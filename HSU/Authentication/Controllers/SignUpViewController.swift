@@ -107,6 +107,9 @@ class SignUpViewController: UIViewController {
     @objc func btnSignUp(sender: UIButton){
         
         print("Ana Sayfa açılacak")
+        
+        // Temp Auth...
+        
     }
     
     

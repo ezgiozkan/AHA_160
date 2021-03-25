@@ -14,12 +14,22 @@
 		3B6C604725FE388100839DA8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C604525FE388100839DA8 /* SignUpViewController.swift */; };
 		3B6C604825FE388100839DA8 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6C604625FE388100839DA8 /* SignUpViewController.xib */; };
 		3B7466C225FCC32E0000FB00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7466C125FCC32E0000FB00 /* AppDelegate.swift */; };
-		3B7466C625FCC32E0000FB00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7466C525FCC32E0000FB00 /* ViewController.swift */; };
 		3B7466CC25FCC32F0000FB00 /* HSU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B7466CA25FCC32F0000FB00 /* HSU.xcdatamodeld */; };
 		3B7466CE25FCC3320000FB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B7466CD25FCC3320000FB00 /* Assets.xcassets */; };
 		3B7466D125FCC3320000FB00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7466CF25FCC3320000FB00 /* LaunchScreen.storyboard */; };
 		3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7466DD25FCC4DA0000FB00 /* RootViewController.swift */; };
 		3B7466E025FCC4DA0000FB00 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */; };
+		D8051542260CF86200B54EF0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8051540260CF86200B54EF0 /* TabBarController.swift */; };
+		D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8051541260CF86200B54EF0 /* TabBarController.xib */; };
+		D805155A260CFE1200B54EF0 /* PetsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D805154F260CFE1200B54EF0 /* PetsCollectionViewCell.xib */; };
+		D805155B260CFE1200B54EF0 /* ServicesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8051550260CFE1200B54EF0 /* ServicesCollectionViewCell.xib */; };
+		D805155C260CFE1200B54EF0 /* PetsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8051551260CFE1200B54EF0 /* PetsCollectionViewCell.swift */; };
+		D805155D260CFE1200B54EF0 /* ServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8051552260CFE1200B54EF0 /* ServicesCollectionViewCell.swift */; };
+		D805155E260CFE1200B54EF0 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8051554260CFE1200B54EF0 /* HomeViewController.xib */; };
+		D805155F260CFE1200B54EF0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8051555260CFE1200B54EF0 /* HomeViewController.swift */; };
+		D8051560260CFE1200B54EF0 /* AddPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8051557260CFE1200B54EF0 /* AddPetViewController.swift */; };
+		D8051561260CFE1200B54EF0 /* AddPetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8051558260CFE1200B54EF0 /* AddPetViewController.xib */; };
+		D8E01B7B260D15AA0042C649 /* UIShadow+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E01B7A260D15AA0042C649 /* UIShadow+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,13 +41,23 @@
 		3B6C604625FE388100839DA8 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		3B7466BE25FCC32E0000FB00 /* HSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7466C125FCC32E0000FB00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3B7466C525FCC32E0000FB00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3B7466CB25FCC32F0000FB00 /* HSU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HSU.xcdatamodel; sourceTree = "<group>"; };
 		3B7466CD25FCC3320000FB00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B7466D025FCC3320000FB00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B7466D225FCC3320000FB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B7466DD25FCC4DA0000FB00 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		D8051540260CF86200B54EF0 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		D8051541260CF86200B54EF0 /* TabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
+		D805154F260CFE1200B54EF0 /* PetsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetsCollectionViewCell.xib; sourceTree = "<group>"; };
+		D8051550260CFE1200B54EF0 /* ServicesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicesCollectionViewCell.xib; sourceTree = "<group>"; };
+		D8051551260CFE1200B54EF0 /* PetsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetsCollectionViewCell.swift; sourceTree = "<group>"; };
+		D8051552260CFE1200B54EF0 /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
+		D8051554260CFE1200B54EF0 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		D8051555260CFE1200B54EF0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D8051557260CFE1200B54EF0 /* AddPetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPetViewController.swift; sourceTree = "<group>"; };
+		D8051558260CFE1200B54EF0 /* AddPetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPetViewController.xib; sourceTree = "<group>"; };
+		D8E01B7A260D15AA0042C649 /* UIShadow+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIShadow+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +127,12 @@
 		3B7466C025FCC32E0000FB00 /* HSU */ = {
 			isa = PBXGroup;
 			children = (
+				D8E01B78260D15360042C649 /* Helper */,
 				3B7466DA25FCC4A40000FB00 /* Root */,
+				D805153F260CF84800B54EF0 /* TabBarController */,
 				3B6C603A25FDFC3F00839DA8 /* Authentication */,
+				D805154D260CFE1200B54EF0 /* HomeView */,
 				3B7466C125FCC32E0000FB00 /* AppDelegate.swift */,
-				3B7466C525FCC32E0000FB00 /* ViewController.swift */,
 				3B7466CD25FCC3320000FB00 /* Assets.xcassets */,
 				3B7466CF25FCC3320000FB00 /* LaunchScreen.storyboard */,
 				3B7466D225FCC3320000FB00 /* Info.plist */,
@@ -134,6 +156,95 @@
 				3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */,
 			);
 			path = Xib;
+			sourceTree = "<group>";
+		};
+		D805153F260CF84800B54EF0 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				D8051540260CF86200B54EF0 /* TabBarController.swift */,
+				D8051541260CF86200B54EF0 /* TabBarController.xib */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		D805154D260CFE1200B54EF0 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				D805154E260CFE1200B54EF0 /* Cell */,
+				D8051553260CFE1200B54EF0 /* View */,
+				D8051559260CFE1200B54EF0 /* Sources */,
+			);
+			name = HomeView;
+			path = "../../adsız klasör/HSU/HSU/HSU/TabBarController/HomeView";
+			sourceTree = "<group>";
+		};
+		D805154E260CFE1200B54EF0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D8051565260CFF7E00B54EF0 /* Xib */,
+				D8051551260CFE1200B54EF0 /* PetsCollectionViewCell.swift */,
+				D8051552260CFE1200B54EF0 /* ServicesCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D8051553260CFE1200B54EF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8051566260CFF9000B54EF0 /* Xib */,
+				D8051555260CFE1200B54EF0 /* HomeViewController.swift */,
+				D8051556260CFE1200B54EF0 /* AddPetView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8051556260CFE1200B54EF0 /* AddPetView */ = {
+			isa = PBXGroup;
+			children = (
+				D8051557260CFE1200B54EF0 /* AddPetViewController.swift */,
+			);
+			path = AddPetView;
+			sourceTree = "<group>";
+		};
+		D8051559260CFE1200B54EF0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D8051565260CFF7E00B54EF0 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				D805154F260CFE1200B54EF0 /* PetsCollectionViewCell.xib */,
+				D8051550260CFE1200B54EF0 /* ServicesCollectionViewCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		D8051566260CFF9000B54EF0 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				D8051554260CFE1200B54EF0 /* HomeViewController.xib */,
+				D8051558260CFE1200B54EF0 /* AddPetViewController.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		D8E01B78260D15360042C649 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D8E01B79260D153C0042C649 /* UIAdditions */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D8E01B79260D153C0042C649 /* UIAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				D8E01B7A260D15AA0042C649 /* UIShadow+Additions.swift */,
+			);
+			path = UIAdditions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,10 +306,15 @@
 			files = (
 				3B60185F25FE9F1B00F2FFD6 /* ForgotPasswordViewController.xib in Resources */,
 				3B6C604825FE388100839DA8 /* SignUpViewController.xib in Resources */,
+				D805155B260CFE1200B54EF0 /* ServicesCollectionViewCell.xib in Resources */,
 				3B6C604025FDFC7700839DA8 /* LoginViewController.xib in Resources */,
+				D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */,
 				3B7466D125FCC3320000FB00 /* LaunchScreen.storyboard in Resources */,
 				3B7466CE25FCC3320000FB00 /* Assets.xcassets in Resources */,
 				3B7466E025FCC4DA0000FB00 /* RootViewController.xib in Resources */,
+				D805155A260CFE1200B54EF0 /* PetsCollectionViewCell.xib in Resources */,
+				D8051561260CFE1200B54EF0 /* AddPetViewController.xib in Resources */,
+				D805155E260CFE1200B54EF0 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,11 +326,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B6C604725FE388100839DA8 /* SignUpViewController.swift in Sources */,
+				D8E01B7B260D15AA0042C649 /* UIShadow+Additions.swift in Sources */,
+				D8051542260CF86200B54EF0 /* TabBarController.swift in Sources */,
 				3B60185E25FE9F1B00F2FFD6 /* ForgotPasswordViewController.swift in Sources */,
 				3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */,
 				3B7466CC25FCC32F0000FB00 /* HSU.xcdatamodeld in Sources */,
-				3B7466C625FCC32E0000FB00 /* ViewController.swift in Sources */,
+				D8051560260CFE1200B54EF0 /* AddPetViewController.swift in Sources */,
 				3B6C603F25FDFC7700839DA8 /* LoginViewController.swift in Sources */,
+				D805155F260CFE1200B54EF0 /* HomeViewController.swift in Sources */,
+				D805155C260CFE1200B54EF0 /* PetsCollectionViewCell.swift in Sources */,
+				D805155D260CFE1200B54EF0 /* ServicesCollectionViewCell.swift in Sources */,
 				3B7466C225FCC32E0000FB00 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
