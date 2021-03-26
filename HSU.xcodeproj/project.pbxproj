@@ -21,6 +21,18 @@
 		3B7466E025FCC4DA0000FB00 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */; };
 		D8051542260CF86200B54EF0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8051540260CF86200B54EF0 /* TabBarController.swift */; };
 		D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8051541260CF86200B54EF0 /* TabBarController.xib */; };
+		D8DFF1AE260E47E900777F4C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CEAF0B260E2F5A00A0D762 /* HomeViewController.swift */; };
+		D8DFF1B0260E47F500777F4C /* AddPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CEAF10260E2F5A00A0D762 /* AddPetViewController.swift */; };
+		D8DFF1B2260E480800777F4C /* ServicesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CEAF16260E2F7300A0D762 /* ServicesCollectionViewDataSource.swift */; };
+		D8DFF1B4260E480B00777F4C /* ServicesCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CEAF17260E2F7300A0D762 /* ServicesCollectionViewDelegate.swift */; };
+		D8DFF1B6260E480F00777F4C /* PetsCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CEAF1A260E2F7300A0D762 /* PetsCollectionViewDataSource.swift */; };
+		D8DFF1B8260E481100777F4C /* PetsCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CEAF19260E2F7300A0D762 /* PetsCollectionViewDelegate.swift */; };
+		D8DFF1BA260E481900777F4C /* PetsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CEAF0E260E2F5A00A0D762 /* PetsCollectionViewCell.xib */; };
+		D8DFF1BC260E481B00777F4C /* ServicesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CEAF0D260E2F5A00A0D762 /* ServicesCollectionViewCell.xib */; };
+		D8DFF1BE260E481F00777F4C /* PetsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CEAF09260E2F5A00A0D762 /* PetsCollectionViewCell.swift */; };
+		D8DFF1C0260E482100777F4C /* ServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CEAF08260E2F5A00A0D762 /* ServicesCollectionViewCell.swift */; };
+		D8DFF1C2260E482700777F4C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CEAF13260E2F5A00A0D762 /* HomeViewController.xib */; };
+		D8DFF1C4260E482900777F4C /* AddPetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CEAF12260E2F5A00A0D762 /* AddPetViewController.xib */; };
 		D8E01B7B260D15AA0042C649 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E01B7A260D15AA0042C649 /* UIView+Additions.swift */; };
 /* End PBXBuildFile section */
 
@@ -324,8 +336,12 @@
 				3B6C604025FDFC7700839DA8 /* LoginViewController.xib in Resources */,
 				D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */,
 				3B7466D125FCC3320000FB00 /* LaunchScreen.storyboard in Resources */,
+				D8DFF1C4260E482900777F4C /* AddPetViewController.xib in Resources */,
 				3B7466CE25FCC3320000FB00 /* Assets.xcassets in Resources */,
+				D8DFF1BA260E481900777F4C /* PetsCollectionViewCell.xib in Resources */,
+				D8DFF1C2260E482700777F4C /* HomeViewController.xib in Resources */,
 				3B7466E025FCC4DA0000FB00 /* RootViewController.xib in Resources */,
+				D8DFF1BC260E481B00777F4C /* ServicesCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,11 +354,19 @@
 			files = (
 				3B6C604725FE388100839DA8 /* SignUpViewController.swift in Sources */,
 				D8E01B7B260D15AA0042C649 /* UIView+Additions.swift in Sources */,
+				D8DFF1B8260E481100777F4C /* PetsCollectionViewDelegate.swift in Sources */,
+				D8DFF1B0260E47F500777F4C /* AddPetViewController.swift in Sources */,
 				D8051542260CF86200B54EF0 /* TabBarController.swift in Sources */,
 				3B60185E25FE9F1B00F2FFD6 /* ForgotPasswordViewController.swift in Sources */,
+				D8DFF1B6260E480F00777F4C /* PetsCollectionViewDataSource.swift in Sources */,
+				D8DFF1BE260E481F00777F4C /* PetsCollectionViewCell.swift in Sources */,
 				3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */,
+				D8DFF1AE260E47E900777F4C /* HomeViewController.swift in Sources */,
 				3B7466CC25FCC32F0000FB00 /* HSU.xcdatamodeld in Sources */,
 				3B6C603F25FDFC7700839DA8 /* LoginViewController.swift in Sources */,
+				D8DFF1C0260E482100777F4C /* ServicesCollectionViewCell.swift in Sources */,
+				D8DFF1B4260E480B00777F4C /* ServicesCollectionViewDelegate.swift in Sources */,
+				D8DFF1B2260E480800777F4C /* ServicesCollectionViewDataSource.swift in Sources */,
 				3B7466C225FCC32E0000FB00 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
