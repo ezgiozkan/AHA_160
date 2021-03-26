@@ -37,6 +37,19 @@ class HomeViewController: UIViewController {
         case forServices
     }
     
+    var windowWidth: CGFloat?{
+        
+        if let windowWidth = AppDelegate.window?.frame.width {
+            
+            return windowWidth - 25
+        
+        }else{
+            
+            return 0.0
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -68,7 +81,7 @@ class HomeViewController: UIViewController {
         
        
         self.servicesCollectionViewDataSource = ServicesCollectionViewDataSource()
-        self.servicesCollectionViewDelegate = ServicesCollectionViewDelegate(width: self.view.frame.width - 25)
+        self.servicesCollectionViewDelegate = ServicesCollectionViewDelegate(width: self.windowWidth ?? 0.0)
         
         self.servicesCollectionView.dataSource = self.servicesCollectionViewDataSource
         self.servicesCollectionView.delegate = self.servicesCollectionViewDelegate
