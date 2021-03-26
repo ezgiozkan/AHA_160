@@ -29,7 +29,11 @@
 		D805155F260CFE1200B54EF0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8051555260CFE1200B54EF0 /* HomeViewController.swift */; };
 		D8051560260CFE1200B54EF0 /* AddPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8051557260CFE1200B54EF0 /* AddPetViewController.swift */; };
 		D8051561260CFE1200B54EF0 /* AddPetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8051558260CFE1200B54EF0 /* AddPetViewController.xib */; };
-		D8E01B7B260D15AA0042C649 /* UIShadow+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E01B7A260D15AA0042C649 /* UIShadow+Additions.swift */; };
+		D8ADB995260E1EFA00CD8CCA /* ServicesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADB994260E1EFA00CD8CCA /* ServicesCollectionViewDataSource.swift */; };
+		D8ADB999260E1F0500CD8CCA /* ServicesCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADB998260E1F0500CD8CCA /* ServicesCollectionViewDelegate.swift */; };
+		D8ADB99C260E1F1800CD8CCA /* PetsCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADB99B260E1F1800CD8CCA /* PetsCollectionViewDataSource.swift */; };
+		D8ADB99F260E1F2600CD8CCA /* PetsCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADB99E260E1F2600CD8CCA /* PetsCollectionViewDelegate.swift */; };
+		D8E01B7B260D15AA0042C649 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E01B7A260D15AA0042C649 /* UIView+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +61,11 @@
 		D8051555260CFE1200B54EF0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D8051557260CFE1200B54EF0 /* AddPetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPetViewController.swift; sourceTree = "<group>"; };
 		D8051558260CFE1200B54EF0 /* AddPetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPetViewController.xib; sourceTree = "<group>"; };
-		D8E01B7A260D15AA0042C649 /* UIShadow+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIShadow+Additions.swift"; sourceTree = "<group>"; };
+		D8ADB994260E1EFA00CD8CCA /* ServicesCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		D8ADB998260E1F0500CD8CCA /* ServicesCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		D8ADB99B260E1F1800CD8CCA /* PetsCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		D8ADB99E260E1F2600CD8CCA /* PetsCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		D8E01B7A260D15AA0042C649 /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +217,8 @@
 		D8051559260CFE1200B54EF0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D8ADB993260E1EDC00CD8CCA /* ServicesCollectionViewSources */,
+				D8ADB992260E1ECD00CD8CCA /* PetsCollectionViewSources */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -231,6 +241,24 @@
 			path = Xib;
 			sourceTree = "<group>";
 		};
+		D8ADB992260E1ECD00CD8CCA /* PetsCollectionViewSources */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADB99B260E1F1800CD8CCA /* PetsCollectionViewDataSource.swift */,
+				D8ADB99E260E1F2600CD8CCA /* PetsCollectionViewDelegate.swift */,
+			);
+			path = PetsCollectionViewSources;
+			sourceTree = "<group>";
+		};
+		D8ADB993260E1EDC00CD8CCA /* ServicesCollectionViewSources */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADB994260E1EFA00CD8CCA /* ServicesCollectionViewDataSource.swift */,
+				D8ADB998260E1F0500CD8CCA /* ServicesCollectionViewDelegate.swift */,
+			);
+			path = ServicesCollectionViewSources;
+			sourceTree = "<group>";
+		};
 		D8E01B78260D15360042C649 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,7 +270,7 @@
 		D8E01B79260D153C0042C649 /* UIAdditions */ = {
 			isa = PBXGroup;
 			children = (
-				D8E01B7A260D15AA0042C649 /* UIShadow+Additions.swift */,
+				D8E01B7A260D15AA0042C649 /* UIView+Additions.swift */,
 			);
 			path = UIAdditions;
 			sourceTree = "<group>";
@@ -326,17 +354,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B6C604725FE388100839DA8 /* SignUpViewController.swift in Sources */,
-				D8E01B7B260D15AA0042C649 /* UIShadow+Additions.swift in Sources */,
+				D8E01B7B260D15AA0042C649 /* UIView+Additions.swift in Sources */,
+				D8ADB99F260E1F2600CD8CCA /* PetsCollectionViewDelegate.swift in Sources */,
 				D8051542260CF86200B54EF0 /* TabBarController.swift in Sources */,
 				3B60185E25FE9F1B00F2FFD6 /* ForgotPasswordViewController.swift in Sources */,
+				D8ADB999260E1F0500CD8CCA /* ServicesCollectionViewDelegate.swift in Sources */,
 				3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */,
 				3B7466CC25FCC32F0000FB00 /* HSU.xcdatamodeld in Sources */,
 				D8051560260CFE1200B54EF0 /* AddPetViewController.swift in Sources */,
 				3B6C603F25FDFC7700839DA8 /* LoginViewController.swift in Sources */,
 				D805155F260CFE1200B54EF0 /* HomeViewController.swift in Sources */,
 				D805155C260CFE1200B54EF0 /* PetsCollectionViewCell.swift in Sources */,
+				D8ADB995260E1EFA00CD8CCA /* ServicesCollectionViewDataSource.swift in Sources */,
 				D805155D260CFE1200B54EF0 /* ServicesCollectionViewCell.swift in Sources */,
 				3B7466C225FCC32E0000FB00 /* AppDelegate.swift in Sources */,
+				D8ADB99C260E1F1800CD8CCA /* PetsCollectionViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

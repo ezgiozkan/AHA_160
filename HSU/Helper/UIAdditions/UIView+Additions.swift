@@ -34,8 +34,6 @@ extension UIView {
     func backViewShadow() {
         
         self.layer.cornerRadius = 24
-        self.layer.masksToBounds = true
-        self.layer.cornerRadius = 24
         self.layer.masksToBounds = false
         self.layer.shadowRadius = 8.0
         self.layer.shadowOpacity = 0.20
