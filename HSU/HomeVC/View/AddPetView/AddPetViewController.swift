@@ -10,7 +10,6 @@ import UIKit
 class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     
     // MARK: - IBOutlets
-
     @IBOutlet weak var addView: UIView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
@@ -31,6 +30,7 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
             
             static let shadowColor = UIColor(red: 0 / 255, green: 0 / 255, blue: 0 / 255, alpha: 0.8)
             static let switchColor = UIColor(red: 157 / 255, green: 155 / 255, blue: 240 / 255, alpha: 1)
+            static let bottomBorderColor = UIColor(red: 60 / 255, green: 60 / 255, blue: 67 / 255, alpha: 0.29)
         }
     }
     
@@ -84,11 +84,10 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
 
         self.backView.backViewShadow()
         
-        self.nameTextField.addBottomBorder(height: 0.6, color: UIColor(red: 60 / 255, green: 60 / 255, blue: 67 / 255, alpha: 0.29))
-        self.breedTextField.addBottomBorder(height: 0.6, color: UIColor(red: 60 / 255, green: 60 / 255, blue: 67 / 255, alpha: 0.29))
-        self.thirdBackView.addBottomBorder(height: 0.6, color: UIColor(red: 60 / 255, green: 60 / 255, blue: 67 / 255, alpha: 0.29))
-        self.fourthBackView.addBottomBorder(height: 0.6, color: UIColor(red: 60 / 255, green: 60 / 255, blue: 67 / 255, alpha: 0.29))
-        
+        self.nameTextField.addBottomBorder(height: 0.6, color: Constants.Color.shadowColor)
+        self.breedTextField.addBottomBorder(height: 0.6, color: Constants.Color.shadowColor)
+        self.thirdBackView.addBottomBorder(height: 0.6, color: Constants.Color.shadowColor)
+        self.fourthBackView.addBottomBorder(height: 0.6, color: Constants.Color.shadowColor)
         
         // Gender buttons
         self.femaleButton.backgroundColor = UIColor(red: 255 / 255, green: 255 / 255, blue: 255 / 255, alpha: 1)
@@ -108,6 +107,7 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBAction func addButton(_ sender: Any) {
         
+        print("Add pet")
     }
     
 
@@ -115,10 +115,6 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
         print("Open gallery...")
     }
     
-    @objc func back() {
-        
-        self.navigationController?.popViewController(animated: true)
-    }
     
     @IBAction func femaleButton(_ sender: Any) {
         
@@ -127,6 +123,11 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func maleButton(_ sender: Any) {
         
         print("Male")
+    }
+    
+    @objc func back() {
+        
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

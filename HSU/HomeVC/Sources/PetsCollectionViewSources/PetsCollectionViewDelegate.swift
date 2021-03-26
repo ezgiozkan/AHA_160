@@ -10,6 +10,12 @@ import UIKit
 
 class PetsCollectionViewDelegate: NSObject {
     
+    var view = UIViewController()
+    
+    init(view: UIViewController) {
+        
+        self.view = view
+    }
 }
 
 extension PetsCollectionViewDelegate: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
@@ -22,7 +28,10 @@ extension PetsCollectionViewDelegate: UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        
+        if indexPath.row == 0 {
+            
+            self.view.navigationController?.pushViewController(AddPetViewController(nibName: "AddPetViewController", bundle: nil), animated: true)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

@@ -71,7 +71,7 @@ class HomeViewController: UIViewController {
     
     func configureCollectionViews() {
         
-        self.petsCollectionViewDelegate = PetsCollectionViewDelegate()
+        self.petsCollectionViewDelegate = PetsCollectionViewDelegate(view: self)
         self.petsCollectionViewDataSource = PetsCollectionViewDataSource()
         
         self.petsCollectionView.dataSource = self.petsCollectionViewDataSource
@@ -89,11 +89,7 @@ class HomeViewController: UIViewController {
         self.servicesCollectionView.register(UINib(nibName: "ServicesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ServicesCollectionViewCell.cellIdentifier)
         
     }
-    @IBAction func addPet(_ sender: Any) {
-        
-        self.tabBarController?.navigationController?.pushViewController(AddPetViewController(nibName: "AddPetViewController", bundle: nil), animated: true)
-    }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
