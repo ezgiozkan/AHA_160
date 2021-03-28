@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B60185E25FE9F1B00F2FFD6 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B60185C25FE9F1A00F2FFD6 /* ForgotPasswordViewController.swift */; };
-		3B60185F25FE9F1B00F2FFD6 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B60185D25FE9F1A00F2FFD6 /* ForgotPasswordViewController.xib */; };
+		3B53A584260FC90700FD4F5D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53A582260FC90700FD4F5D /* SignUpViewController.swift */; };
+		3B53A585260FC90700FD4F5D /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B53A583260FC90700FD4F5D /* SignUpViewController.xib */; };
 		3B6C603F25FDFC7700839DA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C603D25FDFC7700839DA8 /* LoginViewController.swift */; };
 		3B6C604025FDFC7700839DA8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6C603E25FDFC7700839DA8 /* LoginViewController.xib */; };
-		3B6C604725FE388100839DA8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C604525FE388100839DA8 /* SignUpViewController.swift */; };
-		3B6C604825FE388100839DA8 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6C604625FE388100839DA8 /* SignUpViewController.xib */; };
 		3B7466C225FCC32E0000FB00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7466C125FCC32E0000FB00 /* AppDelegate.swift */; };
 		3B7466CC25FCC32F0000FB00 /* HSU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B7466CA25FCC32F0000FB00 /* HSU.xcdatamodeld */; };
 		3B7466CE25FCC3320000FB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B7466CD25FCC3320000FB00 /* Assets.xcassets */; };
@@ -37,12 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B60185C25FE9F1A00F2FFD6 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
-		3B60185D25FE9F1A00F2FFD6 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		3B53A582260FC90700FD4F5D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3B53A583260FC90700FD4F5D /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		3B6C603D25FDFC7700839DA8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3B6C603E25FDFC7700839DA8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		3B6C604525FE388100839DA8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		3B6C604625FE388100839DA8 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		3B7466BE25FCC32E0000FB00 /* HSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7466C125FCC32E0000FB00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B7466CB25FCC32F0000FB00 /* HSU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HSU.xcdatamodel; sourceTree = "<group>"; };
@@ -100,8 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				3B6C603D25FDFC7700839DA8 /* LoginViewController.swift */,
-				3B6C604525FE388100839DA8 /* SignUpViewController.swift */,
-				3B60185C25FE9F1A00F2FFD6 /* ForgotPasswordViewController.swift */,
+				3B53A582260FC90700FD4F5D /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -110,8 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				3B6C603E25FDFC7700839DA8 /* LoginViewController.xib */,
-				3B6C604625FE388100839DA8 /* SignUpViewController.xib */,
-				3B60185D25FE9F1A00F2FFD6 /* ForgotPasswordViewController.xib */,
+				3B53A583260FC90700FD4F5D /* SignUpViewController.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -331,8 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B60185F25FE9F1B00F2FFD6 /* ForgotPasswordViewController.xib in Resources */,
-				3B6C604825FE388100839DA8 /* SignUpViewController.xib in Resources */,
+				3B53A585260FC90700FD4F5D /* SignUpViewController.xib in Resources */,
 				3B6C604025FDFC7700839DA8 /* LoginViewController.xib in Resources */,
 				D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */,
 				3B7466D125FCC3320000FB00 /* LaunchScreen.storyboard in Resources */,
@@ -352,17 +345,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B6C604725FE388100839DA8 /* SignUpViewController.swift in Sources */,
 				D8E01B7B260D15AA0042C649 /* UIView+Additions.swift in Sources */,
 				D8DFF1B8260E481100777F4C /* PetsCollectionViewDelegate.swift in Sources */,
 				D8DFF1B0260E47F500777F4C /* AddPetViewController.swift in Sources */,
 				D8051542260CF86200B54EF0 /* TabBarController.swift in Sources */,
-				3B60185E25FE9F1B00F2FFD6 /* ForgotPasswordViewController.swift in Sources */,
 				D8DFF1B6260E480F00777F4C /* PetsCollectionViewDataSource.swift in Sources */,
 				D8DFF1BE260E481F00777F4C /* PetsCollectionViewCell.swift in Sources */,
 				3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */,
 				D8DFF1AE260E47E900777F4C /* HomeViewController.swift in Sources */,
 				3B7466CC25FCC32F0000FB00 /* HSU.xcdatamodeld in Sources */,
+				3B53A584260FC90700FD4F5D /* SignUpViewController.swift in Sources */,
 				3B6C603F25FDFC7700839DA8 /* LoginViewController.swift in Sources */,
 				D8DFF1C0260E482100777F4C /* ServicesCollectionViewCell.swift in Sources */,
 				D8DFF1B4260E480B00777F4C /* ServicesCollectionViewDelegate.swift in Sources */,

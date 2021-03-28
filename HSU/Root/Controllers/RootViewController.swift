@@ -10,8 +10,7 @@ import UIKit
 @available(iOS 13.0, *)
 class RootViewController: UIViewController {
 
-    @IBOutlet weak var loginButton: UIButton!
-    
+    @IBOutlet weak var loginButton: UIButton!  
     @IBOutlet weak var signupButton: UIButton!
     
     let rootImageView: UIImageView = {
@@ -122,33 +121,7 @@ class RootViewController: UIViewController {
             pageControlsStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 80),
             pageControlsStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -80),
         
-        
-        
         ])
-        
-
-        /*let bottomControlsStackView = UIStackView(arrangedSubviews: [loginButton,imageView2,createAccountButton])
-        bottomControlsStackView.translatesAutoresizingMaskIntoConstraints = false
-        bottomControlsStackView.distribution = .fillEqually
-        view.addSubview(bottomControlsStackView)
-        NSLayoutConstraint.activate([
-            bottomControlsStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40),
-            bottomControlsStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 40),
-            bottomControlsStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -40),
-            bottomControlsStackView.heightAnchor.constraint(equalToConstant: 50)
-            
-           
-            ])*/
-        
- 
-   
-        
-        
-    }
-
-   
-
     
-   
-
+    }
 }

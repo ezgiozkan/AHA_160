@@ -42,6 +42,16 @@ extension UIView {
         
     }
     
+    func buttonShadow() {
+        
+    
+        self.layer.masksToBounds = false
+        self.layer.shadowRadius = 3.0
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 5)
+        
+      }
     
     //Border
     
