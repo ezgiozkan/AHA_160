@@ -84,10 +84,10 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
 
         self.backView.backViewShadow()
         
-        self.nameTextField.addBottomBorder(height: 0.6, color: Constants.Color.shadowColor)
-        self.breedTextField.addBottomBorder(height: 0.6, color: Constants.Color.shadowColor)
-        self.thirdBackView.addBottomBorder(height: 0.6, color: Constants.Color.shadowColor)
-        self.fourthBackView.addBottomBorder(height: 0.6, color: Constants.Color.shadowColor)
+        self.nameTextField.addBottomBorder(height: 0.6, color: Constants.Color.bottomBorderColor)
+        self.breedTextField.addBottomBorder(height: 0.6, color: Constants.Color.bottomBorderColor)
+        self.thirdBackView.addBottomBorder(height: 0.6, color: Constants.Color.bottomBorderColor)
+        self.fourthBackView.addBottomBorder(height: 0.6, color: Constants.Color.bottomBorderColor)
         
         // Gender buttons
         self.femaleButton.backgroundColor = UIColor(red: 255 / 255, green: 255 / 255, blue: 255 / 255, alpha: 1)

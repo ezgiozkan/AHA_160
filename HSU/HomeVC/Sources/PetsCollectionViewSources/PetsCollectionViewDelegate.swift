@@ -31,6 +31,9 @@ extension PetsCollectionViewDelegate: UICollectionViewDelegate, UICollectionView
         if indexPath.row == 0 {
             
             self.view.navigationController?.pushViewController(AddPetViewController(nibName: "AddPetViewController", bundle: nil), animated: true)
+        }else{
+            
+            self.view.navigationController?.pushViewController(PetDetailViewController(nibName: "PetDetailViewController", bundle: nil), animated: true)
         }
     }
     
