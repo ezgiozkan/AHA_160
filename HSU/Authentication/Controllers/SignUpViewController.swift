@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController,UITextFieldDelegate{
 
     // MARK: - IBOutlets
     
@@ -44,28 +44,39 @@ class SignUpViewController: UIViewController {
     }
     
     
-    
     func configureTextFields(){
-        
-        
-       
         
         self.emailTxtField.layer.cornerRadius = 5
         self.emailTxtField.backgroundColor = Constants.Color.txtBackgroundColor
         self.emailTxtField.buttonShadow()
         self.emailTxtField.keyboardType = .emailAddress
-        
+        self.emailTxtField.delegate = self
+        emailTxtField.tag = 1
        
         self.passwordTxtField.layer.cornerRadius = 5
         self.passwordTxtField.backgroundColor = Constants.Color.txtBackgroundColor
         self.passwordTxtField.buttonShadow()
+        self.passwordTxtField.delegate = self
+        passwordTxtField.tag = 2
       
         
         self.confirmTxtField.layer.cornerRadius = 5
         self.confirmTxtField.backgroundColor = Constants.Color.txtBackgroundColor
         self.confirmTxtField.buttonShadow()
+        self.confirmTxtField.delegate = self
+        confirmTxtField.tag = 3
     }
     
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
+                   nextField.becomeFirstResponder()
+               } else {
+                   textField.resignFirstResponder()
+               }
+               return false
+       
+    }
     
     @IBAction func btnCreateAccount(_ sender: Any) {
         
@@ -73,6 +84,6 @@ class SignUpViewController: UIViewController {
         
     }
     
-
+  
    
 }

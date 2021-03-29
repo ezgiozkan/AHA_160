@@ -9,13 +9,14 @@ import UIKit
 
 
 @available(iOS 13.0, *)
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,UITextFieldDelegate {
 
     //MARK:IBOutlets
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
     @IBOutlet weak var forgotPasswordBtn: UIButton!
     @IBOutlet weak var loginBtn: UIButton!
+   
     
     //MARK:CONSTANTS
     private enum Constants{
@@ -34,6 +35,7 @@ class LoginViewController: UIViewController {
         configureLoginButton()
         configureTextFields()
        
+        
      
     }
     
@@ -49,13 +51,28 @@ class LoginViewController: UIViewController {
         self.emailTxtField.backgroundColor = Constants.Color.txtBackgroundColor
         self.emailTxtField.buttonShadow()
         self.emailTxtField.keyboardType = .emailAddress
+        self.emailTxtField.delegate = self
+        emailTxtField.tag = 1
         
        
         self.passwordTxtField.layer.cornerRadius = 5
         self.passwordTxtField.backgroundColor = Constants.Color.txtBackgroundColor
         self.passwordTxtField.buttonShadow()
+        self.passwordTxtField.delegate = self
+        passwordTxtField.tag = 2
     }
     
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
+                   nextField.becomeFirstResponder()
+               } else {
+                   textField.resignFirstResponder()
+               }
+               return false
+       
+    }
+   
     
     @IBAction func forgotPasswordBtn(_ sender: Any) {
         print("forgot password")
