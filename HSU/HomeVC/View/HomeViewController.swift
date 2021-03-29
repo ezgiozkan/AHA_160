@@ -39,15 +39,7 @@ class HomeViewController: UIViewController {
     
     var windowWidth: CGFloat?{
         
-        if let windowWidth = AppDelegate.window?.frame.width {
-            
-            return windowWidth - 25
-        
-        }else{
-            
-            return 0.0
-        }
-        
+        return UIScreen.main.bounds.width - 25
     }
     
     override func viewDidLoad() {
@@ -71,7 +63,7 @@ class HomeViewController: UIViewController {
     
     func configureCollectionViews() {
         
-        self.petsCollectionViewDelegate = PetsCollectionViewDelegate(view: self)
+        self.petsCollectionViewDelegate = PetsCollectionViewDelegate(outputDelegate: self)
         self.petsCollectionViewDataSource = PetsCollectionViewDataSource()
         
         self.petsCollectionView.dataSource = self.petsCollectionViewDataSource
@@ -107,4 +99,17 @@ class HomeViewController: UIViewController {
 
 }
 
- 
+
+extension HomeViewController: PetsCollectionViewDelegateOutput {
+    func didSelect(indexPath: IndexPath) {
+        
+        if indexPath.row == 0 {
+            
+            self.navigationController?.pushViewController(AddPetViewController(nibName: "AddPetViewController", bundle: nil), animated: true)
+        }else{
+            
+            self.navigationController?.pushViewController(PetDetailViewController(nibName: "PetDetailViewController", bundle: nil), animated: true)
+        }
+    }
+}
+

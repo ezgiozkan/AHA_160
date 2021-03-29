@@ -8,13 +8,16 @@
 import Foundation
 import UIKit
 
+protocol PetsCollectionViewDelegateOutput: class {
+    func didSelect(indexPath: IndexPath)
+}
+
 class PetsCollectionViewDelegate: NSObject {
     
-    var view = UIViewController()
+    var outputDelegate: PetsCollectionViewDelegateOutput?
     
-    init(view: UIViewController) {
-        
-        self.view = view
+    init(outputDelegate: PetsCollectionViewDelegateOutput) {
+        self.outputDelegate = outputDelegate
     }
 }
 
@@ -28,13 +31,8 @@ extension PetsCollectionViewDelegate: UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if indexPath.row == 0 {
-            
-            self.view.navigationController?.pushViewController(AddPetViewController(nibName: "AddPetViewController", bundle: nil), animated: true)
-        }else{
-            
-            self.view.navigationController?.pushViewController(PetDetailViewController(nibName: "PetDetailViewController", bundle: nil), animated: true)
-        }
+        self.outputDelegate?.didSelect(indexPath: indexPath)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
