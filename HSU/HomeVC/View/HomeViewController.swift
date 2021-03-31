@@ -86,6 +86,7 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
 
         // Hide the navigation bar on the this view controller
+        
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
@@ -93,6 +94,7 @@ class HomeViewController: UIViewController {
         super.viewWillDisappear(animated)
 
         // Show the navigation bar on other view controllers
+        
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
@@ -106,6 +108,7 @@ extension HomeViewController: PetsCollectionViewDelegateOutput {
         if indexPath.row == 0 {
             
             self.navigationController?.pushViewController(AddPetViewController(nibName: "AddPetViewController", bundle: nil), animated: true)
+            
         }else{
             
             self.navigationController?.pushViewController(PetDetailViewController(nibName: "PetDetailViewController", bundle: nil), animated: true)

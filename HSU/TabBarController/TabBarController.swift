@@ -24,10 +24,13 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+
         
         let item1 = UIViewController()
         let item2 = UIViewController()
-        let item3 = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        
+        let item3 = UINavigationController(rootViewController: HomeViewController(nibName: "HomeViewController", bundle: .main))
+        
         let item4 = UIViewController()
         let item5 = UIViewController()
         
@@ -45,7 +48,6 @@ class TabBarController: UITabBarController {
         indicatorImage = UIImageView(image: createSelectionIndicator(color: #colorLiteral(red: 0.9803921569, green: 0.7803921569, blue: 0.3529411765, alpha: 1), size: tabBarItemSize, lineHeight: 4))
         indicatorImage?.center.x =  tabBar.frame.width/5/2
         tabBar.addSubview(indicatorImage!)
-        
         
         
     }
