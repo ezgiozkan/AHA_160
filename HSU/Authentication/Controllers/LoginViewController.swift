@@ -81,7 +81,9 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func loginBtn(_ sender: Any) {
         
-        self.navigationController?.pushViewController(HomeViewController(nibName: "HomeViewController", bundle: nil), animated: true)
+        let tabVC = TabBarController(nibName: "TabBarController", bundle: nil)
+        tabVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.present(tabVC, animated: true, completion: nil)
         
     }
     

@@ -80,10 +80,10 @@ class SignUpViewController: UIViewController,UITextFieldDelegate{
     
     @IBAction func btnCreateAccount(_ sender: Any) {
         
-        print("Create Account")
+        let tabVC = TabBarController(nibName: "TabBarController", bundle: nil)
+        tabVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.present(tabVC, animated: true, completion: nil)
         
     }
     
-  
-   
 }

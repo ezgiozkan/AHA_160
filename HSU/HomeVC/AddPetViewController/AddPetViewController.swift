@@ -37,7 +37,7 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        
         configureFirstStackView()
         configureNavBar()
         configureBackViews()
@@ -128,6 +128,20 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     @objc func back() {
         
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        
+        self.tabBarController?.tabBar.isHidden = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        
+        self.tabBarController?.tabBar.isHidden = false
     }
 }
 
