@@ -21,6 +21,12 @@
 		D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8051541260CF86200B54EF0 /* TabBarController.xib */; };
 		D88967102610EA130092B228 /* PetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D889670E2610EA130092B228 /* PetDetailViewController.swift */; };
 		D88967112610EA130092B228 /* PetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D889670F2610EA130092B228 /* PetDetailViewController.xib */; };
+		D8DC74602618D96F005EC30A /* PetDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DC745E2618D96F005EC30A /* PetDetailCollectionViewCell.swift */; };
+		D8DC74612618D96F005EC30A /* PetDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8DC745F2618D96F005EC30A /* PetDetailCollectionViewCell.xib */; };
+		D8DC74652618DEBC005EC30A /* PetDetailCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DC74642618DEBC005EC30A /* PetDetailCollectionViewDelegate.swift */; };
+		D8DC74682618DED1005EC30A /* PetDetailCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DC74672618DED1005EC30A /* PetDetailCollectionViewDataSource.swift */; };
+		D8DC746C2618F318005EC30A /* PetDetailReusableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DC746A2618F318005EC30A /* PetDetailReusableViewCell.swift */; };
+		D8DC746D2618F318005EC30A /* PetDetailReusableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8DC746B2618F318005EC30A /* PetDetailReusableViewCell.xib */; };
 		D8DFF1AE260E47E900777F4C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CEAF0B260E2F5A00A0D762 /* HomeViewController.swift */; };
 		D8DFF1B0260E47F500777F4C /* AddPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CEAF10260E2F5A00A0D762 /* AddPetViewController.swift */; };
 		D8DFF1B2260E480800777F4C /* ServicesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CEAF16260E2F7300A0D762 /* ServicesCollectionViewDataSource.swift */; };
@@ -65,6 +71,12 @@
 		D8CEAF17260E2F7300A0D762 /* ServicesCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		D8CEAF19260E2F7300A0D762 /* PetsCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		D8CEAF1A260E2F7300A0D762 /* PetsCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		D8DC745E2618D96F005EC30A /* PetDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		D8DC745F2618D96F005EC30A /* PetDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		D8DC74642618DEBC005EC30A /* PetDetailCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		D8DC74672618DED1005EC30A /* PetDetailCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		D8DC746A2618F318005EC30A /* PetDetailReusableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailReusableViewCell.swift; sourceTree = "<group>"; };
+		D8DC746B2618F318005EC30A /* PetDetailReusableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetDetailReusableViewCell.xib; sourceTree = "<group>"; };
 		D8E01B7A260D15AA0042C649 /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +188,8 @@
 		D889670D2610E9DC0092B228 /* PetDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D8DC74632618DE7B005EC30A /* Sources */,
+				D8DC745D2618D944005EC30A /* Cell */,
 				D889670F2610EA130092B228 /* PetDetailViewController.xib */,
 				D889670E2610EA130092B228 /* PetDetailViewController.swift */,
 			);
@@ -185,7 +199,6 @@
 		D8CEAF06260E2F4800A0D762 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
-				D8CEAF14260E2F6200A0D762 /* Sources */,
 				D8CEAF07260E2F5A00A0D762 /* Cell */,
 				D889670D2610E9DC0092B228 /* PetDetailViewController */,
 				D8CEAF0F260E2F5A00A0D762 /* AddPetViewController */,
@@ -197,6 +210,7 @@
 		D8CEAF07260E2F5A00A0D762 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D8CEAF14260E2F6200A0D762 /* Sources */,
 				D8CEAF0C260E2F5A00A0D762 /* Xib */,
 				D8CEAF09260E2F5A00A0D762 /* PetsCollectionViewCell.swift */,
 				D8CEAF08260E2F5A00A0D762 /* ServicesCollectionViewCell.swift */,
@@ -256,6 +270,26 @@
 				D8CEAF19260E2F7300A0D762 /* PetsCollectionViewDelegate.swift */,
 			);
 			path = PetsCollectionViewSources;
+			sourceTree = "<group>";
+		};
+		D8DC745D2618D944005EC30A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D8DC745E2618D96F005EC30A /* PetDetailCollectionViewCell.swift */,
+				D8DC745F2618D96F005EC30A /* PetDetailCollectionViewCell.xib */,
+				D8DC746A2618F318005EC30A /* PetDetailReusableViewCell.swift */,
+				D8DC746B2618F318005EC30A /* PetDetailReusableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D8DC74632618DE7B005EC30A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D8DC74642618DEBC005EC30A /* PetDetailCollectionViewDelegate.swift */,
+				D8DC74672618DED1005EC30A /* PetDetailCollectionViewDataSource.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		D8E01B78260D15360042C649 /* Helper */ = {
@@ -334,6 +368,7 @@
 				3B53A585260FC90700FD4F5D /* SignUpViewController.xib in Resources */,
 				3B6C604025FDFC7700839DA8 /* LoginViewController.xib in Resources */,
 				D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */,
+				D8DC746D2618F318005EC30A /* PetDetailReusableViewCell.xib in Resources */,
 				3B7466D125FCC3320000FB00 /* LaunchScreen.storyboard in Resources */,
 				D8DFF1C4260E482900777F4C /* AddPetViewController.xib in Resources */,
 				3B7466CE25FCC3320000FB00 /* Assets.xcassets in Resources */,
@@ -342,6 +377,7 @@
 				3B7466E025FCC4DA0000FB00 /* RootViewController.xib in Resources */,
 				D88967112610EA130092B228 /* PetDetailViewController.xib in Resources */,
 				D8DFF1BC260E481B00777F4C /* ServicesCollectionViewCell.xib in Resources */,
+				D8DC74612618D96F005EC30A /* PetDetailCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,11 +388,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8DC74652618DEBC005EC30A /* PetDetailCollectionViewDelegate.swift in Sources */,
 				D8E01B7B260D15AA0042C649 /* UIView+Additions.swift in Sources */,
 				D8DFF1B8260E481100777F4C /* PetsCollectionViewDelegate.swift in Sources */,
 				D8DFF1B0260E47F500777F4C /* AddPetViewController.swift in Sources */,
+				D8DC746C2618F318005EC30A /* PetDetailReusableViewCell.swift in Sources */,
 				D88967102610EA130092B228 /* PetDetailViewController.swift in Sources */,
 				D8051542260CF86200B54EF0 /* TabBarController.swift in Sources */,
+				D8DC74602618D96F005EC30A /* PetDetailCollectionViewCell.swift in Sources */,
 				D8DFF1B6260E480F00777F4C /* PetsCollectionViewDataSource.swift in Sources */,
 				D8DFF1BE260E481F00777F4C /* PetsCollectionViewCell.swift in Sources */,
 				3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */,
@@ -368,6 +407,7 @@
 				D8DFF1B4260E480B00777F4C /* ServicesCollectionViewDelegate.swift in Sources */,
 				D8DFF1B2260E480800777F4C /* ServicesCollectionViewDataSource.swift in Sources */,
 				3B7466C225FCC32E0000FB00 /* AppDelegate.swift in Sources */,
+				D8DC74682618DED1005EC30A /* PetDetailCollectionViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

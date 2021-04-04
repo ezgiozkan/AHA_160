@@ -30,13 +30,6 @@ class HomeViewController: UIViewController {
         }
     }
     
-    // MARK: - Collection View Type
-    enum CollectionViewType{
-
-        case forPets
-        case forServices
-    }
-    
     var windowWidth: CGFloat?{
         
         return UIScreen.main.bounds.width - 25
