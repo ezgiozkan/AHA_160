@@ -19,15 +19,15 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCZ-SP-pPW">
-                        <rect key="frame" x="20" y="0.0" width="280" height="80"/>
+                        <rect key="frame" x="12" y="0.0" width="288" height="80"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pablo is allergic to peanuts and diary products. He requires frequetvaccination and medicines " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNK-lc-ibm">
-                                <rect key="frame" x="10" y="16" width="262" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pablo is allergic to peanuts and diary products.He requires frequent vaccination and medicines " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNK-lc-ibm">
+                                <rect key="frame" x="8" y="7" width="272" height="47"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="262" id="3pq-hc-NiM"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="262" id="GJL-W2-5gX"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="iC6-jV-3ec"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="lXw-hY-vbx"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="1M2-aJ-mdO"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="Pur-Hf-Sik"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="264" id="YiR-4b-sFg"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="272" id="exm-q1-ONq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                 <color key="textColor" red="0.058823529411764705" green="0.058823529411764705" blue="0.058823529411764705" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,20 +36,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="tNK-lc-ibm" secondAttribute="bottom" constant="16" id="1On-bl-IYe"/>
-                            <constraint firstItem="tNK-lc-ibm" firstAttribute="top" secondItem="fCZ-SP-pPW" secondAttribute="top" constant="16" id="fq2-Hp-Kgm"/>
-                            <constraint firstItem="tNK-lc-ibm" firstAttribute="leading" secondItem="fCZ-SP-pPW" secondAttribute="leading" constant="10" id="h3W-U3-JA0"/>
-                            <constraint firstAttribute="trailing" secondItem="tNK-lc-ibm" secondAttribute="trailing" constant="8" id="lXk-zM-1No"/>
+                            <constraint firstItem="tNK-lc-ibm" firstAttribute="top" secondItem="fCZ-SP-pPW" secondAttribute="top" constant="7" id="BTD-SM-lZ8"/>
+                            <constraint firstAttribute="trailing" secondItem="tNK-lc-ibm" secondAttribute="trailing" constant="8" id="MeZ-ny-qhc"/>
+                            <constraint firstItem="tNK-lc-ibm" firstAttribute="leading" secondItem="fCZ-SP-pPW" secondAttribute="leading" constant="8" id="lqO-F1-mK3"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="fCZ-SP-pPW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="9Ha-ia-0O9"/>
                 <constraint firstItem="fCZ-SP-pPW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NSW-tQ-YYn"/>
+                <constraint firstItem="fCZ-SP-pPW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="edo-zk-eW4"/>
                 <constraint firstAttribute="bottom" secondItem="fCZ-SP-pPW" secondAttribute="bottom" id="els-d1-AzM"/>
-                <constraint firstAttribute="trailing" secondItem="fCZ-SP-pPW" secondAttribute="trailing" constant="20" id="vX5-hi-5tF"/>
             </constraints>
             <point key="canvasLocation" x="71.014492753623188" y="51.5625"/>
         </collectionViewCell>

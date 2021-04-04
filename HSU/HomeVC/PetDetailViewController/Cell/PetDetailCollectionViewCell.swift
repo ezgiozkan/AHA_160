@@ -24,7 +24,7 @@ class PetDetailCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
    
-        configureBackView()
+        //configureBackView()
         
     }
     
@@ -34,7 +34,7 @@ class PetDetailCollectionViewCell: UICollectionViewCell {
         layer.shadowOpacity = 1
         layer.shadowColor = Constants.Color.shadowColor.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 5)
-        contentView.layer.cornerRadius = 22
+        contentView.layer.cornerRadius = self.frame.height / 2.0
         contentView.layer.masksToBounds = true
 
     }

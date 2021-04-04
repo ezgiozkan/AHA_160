@@ -27,13 +27,7 @@ extension PetDetailCollectionViewDataSource: UICollectionViewDataSource {
 
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        let view = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: PetDetailReusableViewCell.footerReuseIdentifier, for: indexPath)
-        
-        return view
-    }
-    
+
+
     
 }

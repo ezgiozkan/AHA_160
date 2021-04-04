@@ -22,13 +22,13 @@ extension PetDetailCollectionViewDelegate: UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: self.cellWidth, height: 55)
+        return CGSize(width: self.cellWidth, height: 60)
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-        return UIEdgeInsets(top: 15, left: 0, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 5, left: 5, bottom: 35, right: 5)
         
     }
     

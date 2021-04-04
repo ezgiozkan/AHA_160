@@ -20,7 +20,9 @@ class PetDetailReusableViewCell: UICollectionViewCell {
     
     func configureBackView() {
 
-        layer.cornerRadius = 40
+        contentView.layer.cornerRadius = 24
+        contentView.layer.masksToBounds = true
+        layer.cornerRadius = 24
         layer.masksToBounds = false
         layer.shadowRadius = 8.0
         layer.shadowOpacity = 0.20
