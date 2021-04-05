@@ -30,13 +30,9 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var windowWidth: CGFloat{
         
-        return UIScreen.main.bounds.width - 25
+        return UIScreen.main.bounds.width - 80
     }
     
-    var windowHeight: CGFloat?{
-        
-        return UIScreen.main.bounds.height - 250
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +59,7 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         self.firstBackView.backViewShadow()
         self.secondBackView.backViewShadow()
         
+        self.collectionView.collectionViewLayout.invalidateLayout()
         self.petDetailCollectionViewDataSource = PetDetailCollectionViewDataSource()
         self.petDetailCollectionViewDelegate = PetDetailCollectionViewDelegate(width: self.windowWidth)
         
@@ -70,7 +67,7 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         self.collectionView.delegate = self.petDetailCollectionViewDelegate
         
         self.collectionView.register(UINib(nibName: "PetDetailCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: PetDetailCollectionViewCell.cellIdentifier)
-        self.collectionView.register(UINib(nibName: "PetDetailReusableViewCell", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: PetDetailReusableViewCell.footerReuseIdentifier)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -97,12 +94,3 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
 }
-extension UICollectionView {
-func roundCorners(_ corners:UIRectCorner, radius: CGFloat) {
-let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-let mask = CAShapeLayer()
-mask.path = path.cgPath
-self.layer.mask = mask
-}}
-
-

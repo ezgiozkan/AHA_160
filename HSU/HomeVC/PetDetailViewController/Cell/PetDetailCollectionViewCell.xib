@@ -13,25 +13,25 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PetDetailCollectionViewCell" customModule="HSU" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7p-AT-gvy">
-                        <rect key="frame" x="20" y="0.0" width="280" height="60"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kqL-Bk-99B">
-                                <rect key="frame" x="20" y="16.5" width="30" height="27.5"/>
+                                <rect key="frame" x="16" y="13.5" width="40" height="37.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="4UX-Nd-PIy"/>
-                                    <constraint firstAttribute="height" constant="30" id="bRI-Ev-SrK"/>
+                                    <constraint firstAttribute="width" constant="40" id="4UX-Nd-PIy"/>
+                                    <constraint firstAttribute="height" constant="40" id="bRI-Ev-SrK"/>
                                 </constraints>
                                 <imageReference key="image" image="person" catalog="system" renderingMode="original"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COb-wz-ucq">
-                                <rect key="frame" x="68" y="12.5" width="50" height="15"/>
+                                <rect key="frame" x="74" y="12.5" width="50" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="gmk-n0-Ppu"/>
                                 </constraints>
@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pablo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9k-ty-dHM">
-                                <rect key="frame" x="68" y="31.5" width="35" height="16"/>
+                                <rect key="frame" x="74" y="34.5" width="35" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="nFB-Av-cX5"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="soQ-dY-9ow"/>
@@ -50,7 +50,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMo-6r-Fk0">
-                                <rect key="frame" x="20" y="59" width="240" height="1"/>
+                                <rect key="frame" x="20" y="69" width="260" height="1"/>
                                 <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="EM0-Yw-Rzf"/>
@@ -61,22 +61,22 @@
                         <constraints>
                             <constraint firstItem="COb-wz-ucq" firstAttribute="top" secondItem="E7p-AT-gvy" secondAttribute="top" constant="12.5" id="1GT-h7-TjQ"/>
                             <constraint firstItem="oMo-6r-Fk0" firstAttribute="leading" secondItem="E7p-AT-gvy" secondAttribute="leading" constant="20" id="Jde-9X-por"/>
-                            <constraint firstItem="kqL-Bk-99B" firstAttribute="centerY" secondItem="E7p-AT-gvy" secondAttribute="centerY" id="Pgh-4f-yhA"/>
-                            <constraint firstAttribute="bottom" secondItem="Q9k-ty-dHM" secondAttribute="bottom" constant="12.5" id="TGG-KS-6Bg"/>
-                            <constraint firstItem="kqL-Bk-99B" firstAttribute="leading" secondItem="E7p-AT-gvy" secondAttribute="leading" constant="20" id="ceu-I4-m6W"/>
+                            <constraint firstItem="kqL-Bk-99B" firstAttribute="top" secondItem="E7p-AT-gvy" secondAttribute="top" constant="12" id="a03-uF-p9s"/>
+                            <constraint firstItem="kqL-Bk-99B" firstAttribute="leading" secondItem="E7p-AT-gvy" secondAttribute="leading" constant="16" id="ceu-I4-m6W"/>
                             <constraint firstItem="Q9k-ty-dHM" firstAttribute="leading" secondItem="kqL-Bk-99B" secondAttribute="trailing" constant="18" id="ekb-Ak-fFc"/>
                             <constraint firstItem="COb-wz-ucq" firstAttribute="leading" secondItem="kqL-Bk-99B" secondAttribute="trailing" constant="18" id="lEn-ip-muP"/>
                             <constraint firstAttribute="bottom" secondItem="oMo-6r-Fk0" secondAttribute="bottom" id="ngk-XT-Q0e"/>
                             <constraint firstAttribute="trailing" secondItem="oMo-6r-Fk0" secondAttribute="trailing" constant="20" id="q9T-iu-x68"/>
+                            <constraint firstItem="Q9k-ty-dHM" firstAttribute="top" secondItem="COb-wz-ucq" secondAttribute="bottom" constant="7" id="w6y-fK-HeB"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="E7p-AT-gvy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="788-qd-vZ2"/>
+                <constraint firstItem="E7p-AT-gvy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="788-qd-vZ2"/>
                 <constraint firstAttribute="bottom" secondItem="E7p-AT-gvy" secondAttribute="bottom" id="bB9-uB-cSV"/>
-                <constraint firstAttribute="trailing" secondItem="E7p-AT-gvy" secondAttribute="trailing" constant="20" id="nHo-qO-XTg"/>
+                <constraint firstAttribute="trailing" secondItem="E7p-AT-gvy" secondAttribute="trailing" id="nHo-qO-XTg"/>
                 <constraint firstItem="E7p-AT-gvy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tcf-FV-d5e"/>
             </constraints>
             <point key="canvasLocation" x="-23" y="53"/>
