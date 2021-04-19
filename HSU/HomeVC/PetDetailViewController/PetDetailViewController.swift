@@ -43,12 +43,18 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
 
     func configureNavBar() {
         
-        let backBarButton = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"),
+        let backBarButton = UIBarButtonItem(image: UIImage(named: "backBarButton"),
                                       style: .plain,
                                       target: self,
                                       action: #selector(back))
-        backBarButton.tintColor = .black
         navigationItem.leftBarButtonItem = backBarButton
+
+        
+        let rightBarButton = UIBarButtonItem(image: UIImage(named: "deleteButton"),
+                                      style: .plain,
+                                      target: self,
+                                      action: #selector(deletePet))
+        navigationItem.rightBarButtonItem = rightBarButton
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         
     }
@@ -91,6 +97,11 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     @objc func back() {
         
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func deletePet() {
+        
+        print("delete")
     }
 
 }

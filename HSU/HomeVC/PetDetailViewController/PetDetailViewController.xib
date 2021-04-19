@@ -157,12 +157,22 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="eOX-1r-laL"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="PNK-3Q-71g"/>
                 </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQp-II-MY9">
+                    <rect key="frame" x="351" y="230" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="7Ev-TF-yL9"/>
+                        <constraint firstAttribute="height" constant="40" id="aYy-Ul-L8C"/>
+                    </constraints>
+                    <state key="normal" image="editButton"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="h7n-mW-xeX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8OP-L7-xxN"/>
                 <constraint firstItem="h7n-mW-xeX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DAR-U7-uIQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zQp-II-MY9" secondAttribute="trailing" constant="23" id="HF6-fI-qeL"/>
+                <constraint firstItem="zQp-II-MY9" firstAttribute="top" secondItem="U5x-zp-vbh" secondAttribute="top" constant="-20" id="K8D-3o-5Jb"/>
                 <constraint firstItem="U5x-zp-vbh" firstAttribute="top" secondItem="h7n-mW-xeX" secondAttribute="bottom" id="KDd-rU-5F7"/>
                 <constraint firstItem="U5x-zp-vbh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="NzE-2O-8Ev"/>
                 <constraint firstItem="U5x-zp-vbh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-25" id="Pkd-Sk-x1K"/>
@@ -174,6 +184,7 @@
     </objects>
     <resources>
         <image name="cat1" width="800" height="398"/>
+        <image name="editButton" width="68" height="68"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

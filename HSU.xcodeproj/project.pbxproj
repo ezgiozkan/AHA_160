@@ -141,13 +141,11 @@
 		3B7466C025FCC32E0000FB00 /* HSU */ = {
 			isa = PBXGroup;
 			children = (
+				3B6C603A25FDFC3F00839DA8 /* Authentication */,
 				D8CEAF06260E2F4800A0D762 /* HomeVC */,
-				D8CEAF0B260E2F5A00A0D762 /* HomeViewController.swift */,
-				D8CEAF13260E2F5A00A0D762 /* HomeViewController.xib */,
 				D8E01B78260D15360042C649 /* Helper */,
 				3B7466DA25FCC4A40000FB00 /* Root */,
 				D805153F260CF84800B54EF0 /* TabBarController */,
-				3B6C603A25FDFC3F00839DA8 /* Authentication */,
 				3B7466C125FCC32E0000FB00 /* AppDelegate.swift */,
 				3B7466CD25FCC3320000FB00 /* Assets.xcassets */,
 				3B7466CF25FCC3320000FB00 /* LaunchScreen.storyboard */,
@@ -196,6 +194,8 @@
 		D8CEAF06260E2F4800A0D762 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				D8CEAF0B260E2F5A00A0D762 /* HomeViewController.swift */,
+				D8CEAF13260E2F5A00A0D762 /* HomeViewController.xib */,
 				D8CEAF07260E2F5A00A0D762 /* Cell */,
 				D889670D2610E9DC0092B228 /* PetDetailViewController */,
 				D8CEAF0F260E2F5A00A0D762 /* AddPetViewController */,
