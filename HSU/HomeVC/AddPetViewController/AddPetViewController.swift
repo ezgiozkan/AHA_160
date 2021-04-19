@@ -31,7 +31,32 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
             static let shadowColor = UIColor(red: 0 / 255, green: 0 / 255, blue: 0 / 255, alpha: 0.8)
             static let switchColor = UIColor(red: 157 / 255, green: 155 / 255, blue: 240 / 255, alpha: 1)
             static let bottomBorderColor = UIColor(red: 60 / 255, green: 60 / 255, blue: 67 / 255, alpha: 0.29)
+            static let genderButtonColor = UIColor(red: 254 / 255, green: 203 / 255, blue: 85 / 255, alpha: 1.0)
         }
+    }
+    
+    var selectedGender: String = "Female" {
+        
+        didSet {
+            
+            if selectedGender == "Male" {
+                
+                self.maleButton.setTitleColor(.white, for: .normal)
+                self.maleButton.backgroundColor = Constants.Color.genderButtonColor
+                
+                self.femaleButton.setTitleColor(.black, for: .normal)
+                self.femaleButton.backgroundColor = .white
+            
+            }else{
+                
+                self.maleButton.setTitleColor(.black, for: .normal)
+                self.maleButton.backgroundColor = .white
+                
+                self.femaleButton.setTitleColor(.white, for: .normal)
+                self.femaleButton.backgroundColor = Constants.Color.genderButtonColor
+            }
+        }
+        
     }
     
     override func viewDidLoad() {
@@ -53,6 +78,7 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
         self.imageView.clipsToBounds = true
         
         self.imageButton.layer.cornerRadius = 20
+        
         self.imageButton.addShadow(shadowColor: Constants.Color.shadowColor, radius: 15, opacity: 0.20)
 
     }
@@ -68,11 +94,10 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
         self.view.backgroundColor = .white
         self.title = "Add pet"
         
-        let backBarButton = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"),
+        let backBarButton = UIBarButtonItem(image: UIImage(named: "backBarButton"),
                                       style: .plain,
                                       target: self,
                                       action: #selector(back))
-        backBarButton.tintColor = .black
         navigationItem.leftBarButtonItem = backBarButton
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         
@@ -116,13 +141,15 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     
-    @IBAction func femaleButton(_ sender: Any) {
-        
-        print("Male")
+    @IBAction func femaleButton(_ sender: UIButton) {
+
+        self.selectedGender = sender.currentTitle!
+        print(self.selectedGender)
     }
-    @IBAction func maleButton(_ sender: Any) {
+    @IBAction func maleButton(_ sender: UIButton) {
         
-        print("Male")
+        self.selectedGender = sender.currentTitle!
+        print(self.selectedGender)
     }
     
     @objc func back() {

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -77,8 +78,10 @@
                                                         <constraint firstAttribute="width" constant="40" id="DFf-5c-633"/>
                                                         <constraint firstAttribute="height" constant="40" id="aEl-6Z-gxs"/>
                                                     </constraints>
-                                                    <color key="tintColor" red="0.61568627450000002" green="0.60784313729999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" image="camera.fill" catalog="system"/>
+                                                    <color key="tintColor" red="0.99607843137254903" green="0.79607843137254897" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal">
+                                                        <imageReference key="image" image="camera.fill" catalog="system" renderingMode="template"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="imageButton:" destination="-1" eventType="touchUpInside" id="BSY-oL-Sco"/>
                                                     </connections>
@@ -137,7 +140,7 @@
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                                             <state key="normal" title="Female">
-                                                                <color key="titleColor" red="0.61568627450980395" green="0.60784313725490191" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="titleColor" systemColor="labelColor"/>
                                                             </state>
                                                             <connections>
                                                                 <action selector="femaleButton:" destination="-1" eventType="touchUpInside" id="0wj-vc-tIf"/>
@@ -161,7 +164,7 @@
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                                             <state key="normal" title="Male">
-                                                                <color key="titleColor" red="0.61568627450000002" green="0.60784313729999995" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="titleColor" systemColor="labelColor"/>
                                                             </state>
                                                             <connections>
                                                                 <action selector="maleButton:" destination="-1" eventType="touchUpInside" id="3fE-XX-Fnt"/>
@@ -215,7 +218,6 @@
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mwp-U4-kWW">
                                                             <rect key="frame" x="265" y="10" width="51" height="31"/>
-                                                            <color key="onTintColor" red="0.61568627450000002" green="0.60784313729999995" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         </switch>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -287,6 +289,9 @@
     </objects>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
