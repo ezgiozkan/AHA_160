@@ -21,6 +21,7 @@ class ReminderViewController: UIViewController {
         super.viewDidLoad()
 
         configurationButtons()
+        self.view.backgroundColor = .darkGray
     }
 
 
