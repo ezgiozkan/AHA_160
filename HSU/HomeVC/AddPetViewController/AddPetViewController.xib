@@ -78,7 +78,7 @@
                                                         <constraint firstAttribute="width" constant="40" id="DFf-5c-633"/>
                                                         <constraint firstAttribute="height" constant="40" id="aEl-6Z-gxs"/>
                                                     </constraints>
-                                                    <color key="tintColor" red="0.99607843137254903" green="0.79607843137254897" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.61568627450980395" green="0.60784313725490191" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal">
                                                         <imageReference key="image" image="camera.fill" catalog="system" renderingMode="template"/>
                                                     </state>
@@ -218,6 +218,7 @@
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mwp-U4-kWW">
                                                             <rect key="frame" x="265" y="10" width="51" height="31"/>
+                                                            <color key="onTintColor" red="0.61568627450000002" green="0.60784313729999995" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         </switch>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -22,70 +22,45 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpy-FN-KxR">
-                    <rect key="frame" x="28" y="739" width="366" height="89"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="I3h-51-Pm5">
-                            <rect key="frame" x="20" y="20" width="326" height="49"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hh7-JS-EE5">
-                                    <rect key="frame" x="0.0" y="0.0" width="147" height="49"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="147" id="M2o-hA-Giz"/>
-                                        <constraint firstAttribute="height" constant="49" id="w8n-9i-G4q"/>
-                                    </constraints>
-                                    <state key="normal" title="Login">
-                                        <color key="titleColor" red="0.95194262269999996" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="loginBtn:" destination="-1" eventType="touchUpInside" id="UXp-z8-H9B"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUv-D5-bJe">
-                                    <rect key="frame" x="179" y="0.0" width="147" height="49"/>
-                                    <color key="backgroundColor" red="0.95194262269999996" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="147" id="BZP-Su-5eX"/>
-                                        <constraint firstAttribute="height" constant="49" id="gKf-a9-Gxq"/>
-                                    </constraints>
-                                    <state key="normal" title="Create Account">
-                                        <color key="titleColor" name="Color2"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="signupBtn:" destination="-1" eventType="touchUpInside" id="mUv-Rv-6ri"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="Hh7-JS-EE5" firstAttribute="height" secondItem="kUv-D5-bJe" secondAttribute="height" id="QyX-Kg-L8n"/>
-                                <constraint firstItem="Hh7-JS-EE5" firstAttribute="width" secondItem="kUv-D5-bJe" secondAttribute="width" id="djZ-nt-Wuc"/>
-                            </constraints>
-                        </stackView>
-                    </subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUv-D5-bJe">
+                    <rect key="frame" x="234" y="772" width="120" height="50"/>
+                    <color key="backgroundColor" red="0.95194262269999996" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="3JR-kl-zW7"/>
+                        <constraint firstAttribute="width" constant="120" id="Ig5-Xd-Aue"/>
+                    </constraints>
+                    <state key="normal" title="Create Account">
+                        <color key="titleColor" name="Color2"/>
+                    </state>
+                    <connections>
+                        <action selector="signupBtn:" destination="-1" eventType="touchUpInside" id="mUv-Rv-6ri"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hh7-JS-EE5">
+                    <rect key="frame" x="70" y="772" width="100" height="50"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="I3h-51-Pm5" firstAttribute="centerY" secondItem="Gpy-FN-KxR" secondAttribute="centerY" id="Kf2-wC-QBe"/>
-                        <constraint firstAttribute="width" constant="366" id="Qvv-FY-hQo"/>
-                        <constraint firstItem="I3h-51-Pm5" firstAttribute="centerX" secondItem="Gpy-FN-KxR" secondAttribute="centerX" id="vPp-x8-ckH"/>
-                        <constraint firstAttribute="height" constant="89" id="zrr-9F-xfQ"/>
+                        <constraint firstAttribute="width" constant="100" id="Aij-sM-exH"/>
+                        <constraint firstAttribute="height" constant="50" id="bfS-XL-YN2"/>
                     </constraints>
-                </view>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" red="0.95194262269999996" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="loginBtn:" destination="-1" eventType="touchUpInside" id="UXp-z8-H9B"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Gpy-FN-KxR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="28" id="91p-Dt-we6"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gpy-FN-KxR" secondAttribute="bottom" constant="34" id="L8G-SB-3KI"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gpy-FN-KxR" secondAttribute="trailing" constant="20" id="W9G-6i-k8S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kUv-D5-bJe" secondAttribute="trailing" constant="60" id="6rd-vW-YNX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Hh7-JS-EE5" secondAttribute="bottom" constant="40" id="89u-wA-pSO"/>
+                <constraint firstItem="Hh7-JS-EE5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="70" id="CA5-pC-CbP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kUv-D5-bJe" secondAttribute="bottom" constant="40" id="Wom-nV-sQS"/>
             </constraints>
             <point key="canvasLocation" x="-39.130434782608695" y="75.669642857142847"/>
         </view>
-        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="KKc-Oj-d1x">
-            <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <point key="canvasLocation" x="-72" y="433"/>
-        </switch>
     </objects>
     <resources>
         <namedColor name="Color2">

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReminderViewController" customModule="HSU" customModuleProvider="target">
+            <connections>
+                <outlet property="btnDrugs" destination="2Kw-fe-2x1" id="5mJ-bN-o41"/>
+                <outlet property="btnFood" destination="iiK-xY-VwW" id="T3V-6J-7eh"/>
+                <outlet property="btnVaccine" destination="HAU-0v-uBu" id="fE2-JD-KeL"/>
+                <outlet property="btnVisit" destination="DtR-8Z-6KR" id="LdP-2W-epG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="a3b-u4-oBl">
+                    <rect key="frame" x="47" y="258.66666666666669" width="320" height="219"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="DRu-kA-zuj">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAU-0v-uBu">
+                                    <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                                    <color key="backgroundColor" red="0.95294117649999999" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="88" id="MNv-W2-ztd"/>
+                                        <constraint firstAttribute="height" constant="88" id="eny-ce-Edh"/>
+                                    </constraints>
+                                    <state key="normal" image="vaccineImg"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kw-fe-2x1">
+                                    <rect key="frame" x="116" y="0.0" width="88" height="88"/>
+                                    <color key="backgroundColor" red="0.95294117649999999" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="88" id="Yp3-hC-qBH"/>
+                                        <constraint firstAttribute="height" constant="88" id="a2K-8n-l5g"/>
+                                    </constraints>
+                                    <state key="normal" image="drugsImg"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtR-8Z-6KR">
+                                    <rect key="frame" x="232" y="0.0" width="88" height="88"/>
+                                    <color key="backgroundColor" red="0.95294117649999999" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="88" id="DvM-6V-N3M"/>
+                                        <constraint firstAttribute="width" constant="88" id="f5u-DE-icE"/>
+                                    </constraints>
+                                    <state key="normal" image="vetVisitImg"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-L8-kkx">
+                            <rect key="frame" x="0.0" y="131" width="88" height="88"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iiK-xY-VwW">
+                                    <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
+                                    <color key="backgroundColor" red="0.95294117649999999" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="88" id="K6z-Qr-5Cl"/>
+                                        <constraint firstAttribute="height" constant="88" id="wEv-Ap-pls"/>
+                                    </constraints>
+                                    <state key="normal" image="foodImg"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="a3b-u4-oBl" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="YDv-kW-ejW"/>
+                <constraint firstItem="a3b-u4-oBl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cZL-SD-aYK"/>
+            </constraints>
+            <point key="canvasLocation" x="85.507246376811594" y="70.982142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="drugsImg" width="52" height="52"/>
+        <image name="foodImg" width="46" height="46"/>
+        <image name="vaccineImg" width="49" height="49"/>
+        <image name="vetVisitImg" width="58" height="58"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

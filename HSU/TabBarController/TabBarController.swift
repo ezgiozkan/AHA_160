@@ -12,7 +12,7 @@ class TabBarController: UITabBarController {
     var icon1 = UITabBarItem(title: "", image: #imageLiteral(resourceName: "pin"), tag: 0)
     var icon2 = UITabBarItem(title: "", image: #imageLiteral(resourceName: "vaccine"), tag: 1)
     var icon3 = UITabBarItem(title: "", image: #imageLiteral(resourceName: "home"), tag: 2)
-    var icon4 = UITabBarItem(title: "", image: #imageLiteral(resourceName: "pills"), tag: 3)
+    var icon4 = UITabBarItem(title: "", image: #imageLiteral(resourceName: "bell"), tag: 3)
     var icon5 = UITabBarItem(title: "", image: #imageLiteral(resourceName: "settings"), tag: 4)
     
     var indicatorImage: UIImageView?
@@ -31,7 +31,7 @@ class TabBarController: UITabBarController {
         
         let item3 = UINavigationController(rootViewController: HomeViewController(nibName: "HomeViewController", bundle: .main))
         
-        let item4 = UIViewController()
+        let item4 = UINavigationController(rootViewController: ReminderViewController(nibName: "ReminderViewController", bundle: .main))
         let item5 = UIViewController()
         
         item1.tabBarItem = icon1

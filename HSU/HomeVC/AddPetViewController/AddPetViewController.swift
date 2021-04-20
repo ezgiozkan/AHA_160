@@ -31,7 +31,7 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
             static let shadowColor = UIColor(red: 0 / 255, green: 0 / 255, blue: 0 / 255, alpha: 0.8)
             static let switchColor = UIColor(red: 157 / 255, green: 155 / 255, blue: 240 / 255, alpha: 1)
             static let bottomBorderColor = UIColor(red: 60 / 255, green: 60 / 255, blue: 67 / 255, alpha: 0.29)
-            static let genderButtonColor = UIColor(red: 254 / 255, green: 203 / 255, blue: 85 / 255, alpha: 1.0)
+            static let genderButtonColor = UIColor(red: 157 / 255, green: 155 / 255, blue: 240 / 255, alpha: 1.0)
         }
     }
     
