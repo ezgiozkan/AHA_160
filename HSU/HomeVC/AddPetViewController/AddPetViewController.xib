@@ -15,6 +15,7 @@
                 <outlet property="addButton" destination="z5M-La-96l" id="vZD-Ch-9tz"/>
                 <outlet property="addView" destination="ZGr-cR-LKj" id="ajx-kM-05c"/>
                 <outlet property="backView" destination="CB9-Mk-heb" id="Wwk-Fh-d3V"/>
+                <outlet property="birthTextField" destination="sE5-fH-JBe" id="dwV-2H-ViE"/>
                 <outlet property="breedTextField" destination="nAN-OD-EZV" id="swy-S2-v4T"/>
                 <outlet property="femaleButton" destination="7tP-H8-Be0" id="3KX-y5-K3i"/>
                 <outlet property="fourthBackView" destination="war-Hh-uur" id="g2u-ul-S49"/>
@@ -185,22 +186,19 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="war-Hh-uur">
                                                     <rect key="frame" x="20" y="200" width="314" height="50"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eb5-EJ-IhA">
-                                                            <rect key="frame" x="0.0" y="13" width="87.5" height="25"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="25" id="K9R-Ax-RGv"/>
-                                                                <constraint firstAttribute="width" constant="87.5" id="mo9-M7-i55"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date of birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sE5-fH-JBe">
+                                                            <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="eb5-EJ-IhA" firstAttribute="top" secondItem="war-Hh-uur" secondAttribute="top" constant="13" id="0HD-s1-ieD"/>
-                                                        <constraint firstItem="eb5-EJ-IhA" firstAttribute="leading" secondItem="war-Hh-uur" secondAttribute="leading" id="1Ja-fa-gs6"/>
+                                                        <constraint firstAttribute="bottom" secondItem="sE5-fH-JBe" secondAttribute="bottom" id="3Cx-5i-mS6"/>
+                                                        <constraint firstAttribute="trailing" secondItem="sE5-fH-JBe" secondAttribute="trailing" id="LGW-WS-YdZ"/>
                                                         <constraint firstAttribute="height" constant="50" id="Pyx-9H-Pyy"/>
+                                                        <constraint firstItem="sE5-fH-JBe" firstAttribute="top" secondItem="war-Hh-uur" secondAttribute="top" id="hgM-0k-Y0L"/>
+                                                        <constraint firstItem="sE5-fH-JBe" firstAttribute="leading" secondItem="war-Hh-uur" secondAttribute="leading" id="zQj-64-5IM"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zks-Rw-cqA">

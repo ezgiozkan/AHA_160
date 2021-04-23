@@ -22,6 +22,7 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var femaleButton: UIButton!
     @IBOutlet weak var maleButton: UIButton!
     @IBOutlet weak var neauteredSwitch: UISwitch!
+    @IBOutlet weak var birthTextField: UITextField!
     
     // MARK: - Constants
     private enum Constants{
@@ -59,6 +60,9 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
         
     }
     
+    let datePicker = UIDatePicker()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,8 +71,29 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
         configureNavBar()
         configureBackViews()
         configureAddButton()
+        createDatePicker()
         
     }
+    
+    func createDatePicker() {
+       
+    
+        birthTextField.inputView = datePicker
+        
+        datePicker.datePickerMode = .date
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        } else {
+            // Fallback on earlier versions
+        }
+
+    }
+    
+
+    @objc func doneButtonClicked() {
+           
+
+       }
     
     func configureFirstStackView() {
         
