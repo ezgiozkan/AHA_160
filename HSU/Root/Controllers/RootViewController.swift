@@ -10,21 +10,22 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loginButton.layer.cornerRadius = 10
-        loginButton.layer.shadowOpacity = 0.5
-        loginButton.layer.shadowRadius = 3.0
-        loginButton.layer.shadowOffset = CGSize(width: 0, height: 3)
-        loginButton.layer.shadowColor = UIColor.black.cgColor
-        signupButton.layer.cornerRadius = 10
-      
-       
+        configureButtons()
         
+    }
+    
+    func configureButtons() {
         
+        self.loginButton.layer.cornerRadius = 8
+        self.loginButton.addShadow(shadowColor: .black, radius: 4, opacity: 0.4)
         
+        self.signupButton.layer.cornerRadius = 8
+        self.signupButton.addShadow(shadowColor: .black, radius: 4, opacity: 0.4)
     }
     
 
     @IBAction func loginBtn(_ sender: Any) {
+        
         self.navigationController?.pushViewController(LoginViewController(nibName: "LoginViewController", bundle: nil), animated: true)
         
     }
@@ -32,10 +33,6 @@ class RootViewController: UIViewController {
     
     @IBAction func signupBtn(_ sender: Any) {
         
-        print("xxx")
         self.navigationController?.pushViewController(SignUpViewController(nibName: "SignUpViewController", bundle: nil), animated: true)
     }
-    
-    
-    
 }

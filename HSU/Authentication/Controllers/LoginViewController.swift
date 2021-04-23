@@ -9,7 +9,7 @@ import UIKit
 
 
 @available(iOS 13.0, *)
-class LoginViewController: UIViewController,UITextFieldDelegate {
+class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecognizerDelegate {
 
     //MARK:IBOutlets
     @IBOutlet weak var emailTxtField: UITextField!
@@ -34,7 +34,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         
         configureLoginButton()
         configureTextFields()
-       
+        configureNavBar()
         
      
     }
@@ -73,6 +73,19 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
        
     }
    
+    func configureNavBar() {
+        
+        self.view.backgroundColor = .white
+        self.title = "Login"
+        
+        let backBarButton = UIBarButtonItem(image: UIImage(named: "backBarButton"),
+                                      style: .plain,
+                                      target: self,
+                                      action: #selector(back))
+        navigationItem.leftBarButtonItem = backBarButton
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
+        
+    }
     
     @IBAction func forgotPasswordBtn(_ sender: Any) {
         print("forgot password")
@@ -85,6 +98,11 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         tabVC.modalPresentationStyle = .fullScreen
         self.navigationController?.present(tabVC, animated: true, completion: nil)
         
+    }
+    
+    @objc func back() {
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
     

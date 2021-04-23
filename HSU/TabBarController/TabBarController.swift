@@ -23,9 +23,6 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-
-        
         let item1 = UIViewController()
         let item2 = UIViewController()
         
@@ -40,15 +37,10 @@ class TabBarController: UITabBarController {
         item4.tabBarItem = icon4
         item5.tabBarItem = icon5
         
-        let controllers = [item1, item2, item3, item4, item5]  //array of the root view controllers displayed by the tab bar interface
+        let controllers = [item1, item2, item3, item4, item5]
         self.viewControllers = controllers
         
-        let numberOfItems = CGFloat(tabBar.items!.count)
-        let tabBarItemSize = CGSize(width: (tabBar.frame.width / numberOfItems) - 20, height: tabBar.frame.height)
-        indicatorImage = UIImageView(image: createSelectionIndicator(color: #colorLiteral(red: 0.9803921569, green: 0.7803921569, blue: 0.3529411765, alpha: 1), size: tabBarItemSize, lineHeight: 4))
-        indicatorImage?.center.x =  tabBar.frame.width/5/2
-        tabBar.addSubview(indicatorImage!)
-        
+        self.selectedIndex = 2
         
     }
     
@@ -56,33 +48,45 @@ class TabBarController: UITabBarController {
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         
+        if !((indicatorImage?.isDescendant(of: tabBar)) != nil) {
+            
+            let numberOfItems = CGFloat(tabBar.items!.count)
+            let tabBarItemSize = CGSize(width: (tabBar.frame.width / numberOfItems) - 20, height: tabBar.frame.height)
+            indicatorImage = UIImageView(image: createSelectionIndicator(color: #colorLiteral(red: 0.9803921569, green: 0.7803921569, blue: 0.3529411765, alpha: 1), size: tabBarItemSize, lineHeight: 4))
+            indicatorImage?.center.x =  tabBar.frame.width/5/2
+            tabBar.addSubview(indicatorImage!)
+        }
+        
         UIView.animate(withDuration: 0.3) {
             
             let number = -(tabBar.items?.firstIndex(of: item)?.distance(to: 0))! + 1
             
-            
             if number == 1 {
                 
+                self.indicatorImage?.isHidden = false
                 self.indicatorImage?.center.x =  tabBar.frame.width/5/2
                 
             } else if number == 2 {
                 
+                self.indicatorImage?.isHidden = false
                 self.indicatorImage?.center.x =  tabBar.frame.width/5/2 + tabBar.frame.width/5
                 
             }
             else if number == 3 {
                 
-                self.indicatorImage?.center.x =  tabBar.frame.width/5/2 + tabBar.frame.width/5 * 2
+                self.indicatorImage?.isHidden = true
                 
             }
             else if number == 4 {
                 
+                self.indicatorImage?.isHidden = false
                 self.indicatorImage?.center.x =  tabBar.frame.width/5/2 + tabBar.frame.width/5 * 3
                 
             }
             
             else {
                 
+                self.indicatorImage?.isHidden = false
                 self.indicatorImage?.center.x = tabBar.frame.width - tabBar.frame.width/5/2
                 
             }

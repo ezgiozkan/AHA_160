@@ -66,34 +66,13 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        createDatePicker()
         configureFirstStackView()
         configureNavBar()
         configureBackViews()
         configureAddButton()
-        createDatePicker()
         
     }
-    
-    func createDatePicker() {
-       
-    
-        birthTextField.inputView = datePicker
-        
-        datePicker.datePickerMode = .date
-        if #available(iOS 13.4, *) {
-            datePicker.preferredDatePickerStyle = .wheels
-        } else {
-            // Fallback on earlier versions
-        }
-
-    }
-    
-
-    @objc func doneButtonClicked() {
-           
-
-       }
     
     func configureFirstStackView() {
         
@@ -155,6 +134,27 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
         view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
     }
     
+    func createDatePicker() {
+            
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 35))
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: nil, action: #selector(doneButtonClicked))
+        toolBar.setItems([doneButton], animated: true)
+        
+        
+        birthTextField.inputAccessoryView = toolBar
+        birthTextField.inputView = datePicker
+        
+        datePicker.datePickerMode = .date
+
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        } else {
+       
+        }
+    }
+
     @IBAction func addButton(_ sender: Any) {
         
         print("Add pet")
@@ -171,6 +171,7 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
         self.selectedGender = sender.currentTitle!
         print(self.selectedGender)
     }
+    
     @IBAction func maleButton(_ sender: UIButton) {
         
         self.selectedGender = sender.currentTitle!
@@ -180,6 +181,15 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     @objc func back() {
         
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func doneButtonClicked() {
+           
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        birthTextField.text = dateFormatter.string(from: datePicker.date)
+        
+        self.view.endEditing(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -192,7 +202,6 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-        
         self.tabBarController?.tabBar.isHidden = false
     }
 }

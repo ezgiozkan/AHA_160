@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController,UITextFieldDelegate{
+class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecognizerDelegate{
 
     // MARK: - IBOutlets
     
@@ -34,6 +34,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate{
 
         configureTextFields()
         configureCreateButton()
+        configureNavBar()
     }
 
     
@@ -78,12 +79,31 @@ class SignUpViewController: UIViewController,UITextFieldDelegate{
        
     }
     
+    func configureNavBar() {
+        
+        self.view.backgroundColor = .white
+        self.title = "Sign up"
+        
+        let backBarButton = UIBarButtonItem(image: UIImage(named: "backBarButton"),
+                                      style: .plain,
+                                      target: self,
+                                      action: #selector(back))
+        navigationItem.leftBarButtonItem = backBarButton
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
+        
+    }
+    
     @IBAction func btnCreateAccount(_ sender: Any) {
         
         let tabVC = TabBarController(nibName: "TabBarController", bundle: nil)
         tabVC.modalPresentationStyle = .fullScreen
         self.navigationController?.present(tabVC, animated: true, completion: nil)
         
+    }
+    
+    @objc func back() {
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

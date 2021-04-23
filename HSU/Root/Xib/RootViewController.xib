@@ -22,42 +22,56 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUv-D5-bJe">
-                    <rect key="frame" x="234" y="772" width="120" height="50"/>
-                    <color key="backgroundColor" red="0.95194262269999996" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="3JR-kl-zW7"/>
-                        <constraint firstAttribute="width" constant="120" id="Ig5-Xd-Aue"/>
-                    </constraints>
-                    <state key="normal" title="Create Account">
-                        <color key="titleColor" name="Color2"/>
-                    </state>
-                    <connections>
-                        <action selector="signupBtn:" destination="-1" eventType="touchUpInside" id="mUv-Rv-6ri"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hh7-JS-EE5">
-                    <rect key="frame" x="70" y="772" width="100" height="50"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBk-7U-T3P">
+                    <rect key="frame" x="22" y="742" width="370" height="100"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hh7-JS-EE5">
+                            <rect key="frame" x="0.0" y="25" width="147" height="50"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="EX0-a4-c1A"/>
+                                <constraint firstAttribute="width" constant="147" id="HCP-ev-yWu"/>
+                            </constraints>
+                            <state key="normal" title="Login">
+                                <color key="titleColor" red="0.95194262269999996" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="loginBtn:" destination="-1" eventType="touchUpInside" id="UXp-z8-H9B"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUv-D5-bJe">
+                            <rect key="frame" x="223" y="25" width="147" height="50"/>
+                            <color key="backgroundColor" red="0.95194262269999996" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="nff-50-HmK"/>
+                                <constraint firstAttribute="width" constant="147" id="wdl-Kd-AZ1"/>
+                            </constraints>
+                            <state key="normal" title="Create Account">
+                                <color key="titleColor" name="Color2"/>
+                            </state>
+                            <connections>
+                                <action selector="signupBtn:" destination="-1" eventType="touchUpInside" id="mUv-Rv-6ri"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="Aij-sM-exH"/>
-                        <constraint firstAttribute="height" constant="50" id="bfS-XL-YN2"/>
+                        <constraint firstItem="Hh7-JS-EE5" firstAttribute="leading" secondItem="OBk-7U-T3P" secondAttribute="leading" id="4JS-yS-CtP"/>
+                        <constraint firstItem="kUv-D5-bJe" firstAttribute="top" secondItem="OBk-7U-T3P" secondAttribute="top" constant="25" id="AXz-Px-yqW"/>
+                        <constraint firstAttribute="bottom" secondItem="Hh7-JS-EE5" secondAttribute="bottom" constant="25" id="IXF-aJ-XUU"/>
+                        <constraint firstAttribute="height" constant="100" id="R3e-0u-KVe"/>
+                        <constraint firstAttribute="trailing" secondItem="kUv-D5-bJe" secondAttribute="trailing" id="cbb-Kx-tSZ"/>
+                        <constraint firstAttribute="bottom" secondItem="kUv-D5-bJe" secondAttribute="bottom" constant="25" id="iad-dh-1Rm"/>
+                        <constraint firstItem="Hh7-JS-EE5" firstAttribute="top" secondItem="OBk-7U-T3P" secondAttribute="top" constant="25" id="j5e-rB-bXK"/>
                     </constraints>
-                    <state key="normal" title="Login">
-                        <color key="titleColor" red="0.95194262269999996" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </state>
-                    <connections>
-                        <action selector="loginBtn:" destination="-1" eventType="touchUpInside" id="UXp-z8-H9B"/>
-                    </connections>
-                </button>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kUv-D5-bJe" secondAttribute="trailing" constant="60" id="6rd-vW-YNX"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Hh7-JS-EE5" secondAttribute="bottom" constant="40" id="89u-wA-pSO"/>
-                <constraint firstItem="Hh7-JS-EE5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="70" id="CA5-pC-CbP"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kUv-D5-bJe" secondAttribute="bottom" constant="40" id="Wom-nV-sQS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OBk-7U-T3P" secondAttribute="trailing" constant="22" id="efm-BR-bjm"/>
+                <constraint firstItem="OBk-7U-T3P" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="lsg-PV-x3B"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OBk-7U-T3P" secondAttribute="bottom" constant="20" id="zWk-xx-50i"/>
             </constraints>
             <point key="canvasLocation" x="-39.130434782608695" y="75.669642857142847"/>
         </view>
