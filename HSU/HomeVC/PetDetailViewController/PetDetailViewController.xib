@@ -41,7 +41,7 @@
                                         <constraint firstAttribute="height" constant="45" id="HhD-mR-5Qp"/>
                                     </constraints>
                                     <attributedString key="attributedText">
-                                        <fragment content="Basic Info">
+                                        <fragment content="Genel Bilgi">
                                             <attributes>
                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <font key="NSFont" metaFont="menu" size="14"/>
@@ -93,7 +93,7 @@
                                         <constraint firstAttribute="height" constant="45" id="vb0-oK-weJ"/>
                                     </constraints>
                                     <attributedString key="attributedText">
-                                        <fragment content="Alergies">
+                                        <fragment content="Alerjiler">
                                             <attributes>
                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <font key="NSFont" metaFont="menu" size="14"/>

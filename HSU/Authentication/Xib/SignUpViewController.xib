@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,10 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="HSU" customModuleProvider="target">
             <connections>
-                <outlet property="btnCreateAccount" destination="O8a-eV-Xt6" id="ZyM-mt-gJF"/>
                 <outlet property="confirmTxtField" destination="IJg-g7-8KE" id="QNp-Ol-xFl"/>
                 <outlet property="emailTxtField" destination="ZAw-7X-qBL" id="gMW-RM-pa4"/>
                 <outlet property="passwordTxtField" destination="eHj-HX-WD7" id="d4D-n9-ccS"/>
+                <outlet property="signUpButton" destination="O8a-eV-Xt6" id="ZyM-mt-gJF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -93,7 +93,7 @@
                                         <constraint firstAttribute="width" constant="312" id="FN5-Zw-3jn"/>
                                         <constraint firstAttribute="height" constant="52" id="k9a-fZ-pxb"/>
                                     </constraints>
-                                    <state key="normal" title="Hesap Oluştur">
+                                    <state key="normal" title="Üye ol">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>

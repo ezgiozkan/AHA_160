@@ -62,8 +62,8 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func configureCollectionView() {
     
-        self.firstBackView.backViewShadow()
-        self.secondBackView.backViewShadow()
+        self.firstBackView.backViewShadow(cornerRadius: 24)
+        self.secondBackView.backViewShadow(cornerRadius: 24)
         
         self.collectionView.collectionViewLayout.invalidateLayout()
         self.petDetailCollectionViewDataSource = PetDetailCollectionViewDataSource()

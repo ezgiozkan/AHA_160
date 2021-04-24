@@ -29,11 +29,11 @@
                         <constraint firstAttribute="height" constant="40" id="a4s-Fr-mY0"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My pets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QQ-Dx-bMB">
-                    <rect key="frame" x="20" y="70" width="82" height="27"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evcil hayvanlarım" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QQ-Dx-bMB">
+                    <rect key="frame" x="20" y="70" width="180" height="27"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="27" id="3rh-V8-hL8"/>
-                        <constraint firstAttribute="width" constant="82" id="Sli-5a-vEh"/>
+                        <constraint firstAttribute="width" constant="180" id="Sli-5a-vEh"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                     <nil key="textColor"/>
@@ -58,16 +58,16 @@
                         <constraint firstAttribute="height" constant="30" id="c5f-aR-Zxm"/>
                         <constraint firstAttribute="width" constant="87" id="ppD-27-kpF"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                    <state key="normal" title="See all">
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                    <state key="normal" title="Tümünü gör">
                         <color key="titleColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Services" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7n-9J-fl5">
-                    <rect key="frame" x="20" y="273" width="100" height="27"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hatırlatıcılar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7n-9J-fl5">
+                    <rect key="frame" x="20" y="273" width="130" height="27"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="27" id="1Ff-6J-Lzc"/>
-                        <constraint firstAttribute="width" constant="100" id="cve-3f-JHL"/>
+                        <constraint firstAttribute="width" constant="130" id="cve-3f-JHL"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                     <nil key="textColor"/>

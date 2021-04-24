@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +13,7 @@
             <connections>
                 <outlet property="emailTxtField" destination="SdG-FY-MLo" id="fmi-Io-wGb"/>
                 <outlet property="forgotPasswordBtn" destination="hgw-XY-pge" id="HSY-X4-YR7"/>
-                <outlet property="loginBtn" destination="GPo-8W-Ayk" id="pa1-pQ-29u"/>
+                <outlet property="loginButton" destination="GPo-8W-Ayk" id="pa1-pQ-29u"/>
                 <outlet property="passwordTxtField" destination="zjY-QT-Kcq" id="X0s-qm-FRb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -96,7 +96,7 @@
                                         <constraint firstAttribute="width" constant="312" id="6jF-Ee-46F"/>
                                         <constraint firstAttribute="height" constant="52" id="qu5-Qh-GOh"/>
                                     </constraints>
-                                    <state key="normal" title="Giriş Yap">
+                                    <state key="normal" title="Giriş yap">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>

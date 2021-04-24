@@ -14,7 +14,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
     @IBOutlet weak var confirmTxtField: UITextField!
-    @IBOutlet weak var btnCreateAccount: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     
     
     //MARK:CONSTANTS
@@ -40,8 +40,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
     
     func configureCreateButton(){
         
-        self.btnCreateAccount.buttonShadow()
-        self.btnCreateAccount.layer.cornerRadius = 13
+        self.signUpButton.backViewShadow(cornerRadius: 8)
     }
     
     
@@ -82,7 +81,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
     func configureNavBar() {
         
         self.view.backgroundColor = .white
-        self.title = "Sign up"
+        self.title = "Üye ol"
         
         let backBarButton = UIBarButtonItem(image: UIImage(named: "backBarButton"),
                                       style: .plain,

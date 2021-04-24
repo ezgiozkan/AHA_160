@@ -15,7 +15,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
     @IBOutlet weak var forgotPasswordBtn: UIButton!
-    @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
    
     
     //MARK:CONSTANTS
@@ -41,8 +41,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
     
     func configureLoginButton(){
         
-        self.loginBtn.buttonShadow()
-        self.loginBtn.layer.cornerRadius = 13
+        self.loginButton.backViewShadow(cornerRadius: 8)
+        
     }
     
     func configureTextFields(){
@@ -76,7 +76,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
     func configureNavBar() {
         
         self.view.backgroundColor = .white
-        self.title = "Login"
+        self.title = "Giriş yap"
         
         let backBarButton = UIBarButtonItem(image: UIImage(named: "backBarButton"),
                                       style: .plain,

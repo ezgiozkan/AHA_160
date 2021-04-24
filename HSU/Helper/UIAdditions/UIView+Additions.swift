@@ -32,9 +32,9 @@ extension UIView {
         layer.rasterizationScale = UIScreen.main.scale
     }
     
-    func backViewShadow() {
+    func backViewShadow(cornerRadius: CGFloat?) {
         
-        self.layer.cornerRadius = 24
+        self.layer.cornerRadius = cornerRadius ?? 24
         self.layer.masksToBounds = false
         self.layer.shadowRadius = 8.0
         self.layer.shadowOpacity = 0.20

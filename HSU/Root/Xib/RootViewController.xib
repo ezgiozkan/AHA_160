@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController" customModule="HSU" customModuleProvider="target">
             <connections>
                 <outlet property="loginButton" destination="Hh7-JS-EE5" id="wYV-99-jAO"/>
-                <outlet property="signupButton" destination="kUv-D5-bJe" id="Tx0-m1-AXd"/>
+                <outlet property="signUpButton" destination="kUv-D5-bJe" id="Tx0-m1-AXd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,56 +20,50 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBk-7U-T3P">
-                    <rect key="frame" x="22" y="742" width="370" height="100"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hh7-JS-EE5">
-                            <rect key="frame" x="0.0" y="25" width="147" height="50"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="EX0-a4-c1A"/>
-                                <constraint firstAttribute="width" constant="147" id="HCP-ev-yWu"/>
-                            </constraints>
-                            <state key="normal" title="Login">
-                                <color key="titleColor" red="0.95194262269999996" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </state>
-                            <connections>
-                                <action selector="loginBtn:" destination="-1" eventType="touchUpInside" id="UXp-z8-H9B"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUv-D5-bJe">
-                            <rect key="frame" x="223" y="25" width="147" height="50"/>
-                            <color key="backgroundColor" red="0.95194262269999996" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="nff-50-HmK"/>
-                                <constraint firstAttribute="width" constant="147" id="wdl-Kd-AZ1"/>
-                            </constraints>
-                            <state key="normal" title="Create Account">
-                                <color key="titleColor" name="Color2"/>
-                            </state>
-                            <connections>
-                                <action selector="signupBtn:" destination="-1" eventType="touchUpInside" id="mUv-Rv-6ri"/>
-                            </connections>
-                        </button>
-                    </subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hh7-JS-EE5">
+                    <rect key="frame" x="44" y="708" width="326" height="50"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="Hh7-JS-EE5" firstAttribute="leading" secondItem="OBk-7U-T3P" secondAttribute="leading" id="4JS-yS-CtP"/>
-                        <constraint firstItem="kUv-D5-bJe" firstAttribute="top" secondItem="OBk-7U-T3P" secondAttribute="top" constant="25" id="AXz-Px-yqW"/>
-                        <constraint firstAttribute="bottom" secondItem="Hh7-JS-EE5" secondAttribute="bottom" constant="25" id="IXF-aJ-XUU"/>
-                        <constraint firstAttribute="height" constant="100" id="R3e-0u-KVe"/>
-                        <constraint firstAttribute="trailing" secondItem="kUv-D5-bJe" secondAttribute="trailing" id="cbb-Kx-tSZ"/>
-                        <constraint firstAttribute="bottom" secondItem="kUv-D5-bJe" secondAttribute="bottom" constant="25" id="iad-dh-1Rm"/>
-                        <constraint firstItem="Hh7-JS-EE5" firstAttribute="top" secondItem="OBk-7U-T3P" secondAttribute="top" constant="25" id="j5e-rB-bXK"/>
+                        <constraint firstAttribute="height" constant="50" id="EX0-a4-c1A"/>
                     </constraints>
-                </view>
+                    <state key="normal" title="Giriş yap">
+                        <color key="titleColor" red="0.95194262269999996" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="loginBtn:" destination="-1" eventType="touchUpInside" id="UXp-z8-H9B"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="veya" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98a-Hn-6c3">
+                    <rect key="frame" x="191" y="773" width="32" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUv-D5-bJe">
+                    <rect key="frame" x="44" y="806" width="326" height="50"/>
+                    <color key="backgroundColor" red="0.95194262269999996" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="nff-50-HmK"/>
+                    </constraints>
+                    <state key="normal" title="Üye ol">
+                        <color key="titleColor" name="Color2"/>
+                    </state>
+                    <connections>
+                        <action selector="signupBtn:" destination="-1" eventType="touchUpInside" id="mUv-Rv-6ri"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OBk-7U-T3P" secondAttribute="trailing" constant="22" id="efm-BR-bjm"/>
-                <constraint firstItem="OBk-7U-T3P" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="lsg-PV-x3B"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OBk-7U-T3P" secondAttribute="bottom" constant="20" id="zWk-xx-50i"/>
+                <constraint firstItem="98a-Hn-6c3" firstAttribute="top" secondItem="Hh7-JS-EE5" secondAttribute="bottom" constant="15" id="67y-kG-f4H"/>
+                <constraint firstItem="kUv-D5-bJe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="8Gd-kh-0lv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kUv-D5-bJe" secondAttribute="trailing" constant="44" id="9Yf-Ce-LTc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kUv-D5-bJe" secondAttribute="bottom" constant="40" id="BTF-cL-6yd"/>
+                <constraint firstItem="kUv-D5-bJe" firstAttribute="top" secondItem="98a-Hn-6c3" secondAttribute="bottom" constant="15" id="FOE-Fz-XL4"/>
+                <constraint firstItem="Hh7-JS-EE5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="Jn7-Jp-VVg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hh7-JS-EE5" secondAttribute="trailing" constant="44" id="YSD-Ph-f3e"/>
+                <constraint firstItem="98a-Hn-6c3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="emK-dV-6GO"/>
             </constraints>
             <point key="canvasLocation" x="-39.130434782608695" y="75.669642857142847"/>
         </view>

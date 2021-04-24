@@ -4,7 +4,7 @@ import UIKit
 class RootViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     
   
     override func viewDidLoad() {
@@ -16,11 +16,8 @@ class RootViewController: UIViewController {
     
     func configureButtons() {
         
-        self.loginButton.layer.cornerRadius = 8
-        self.loginButton.addShadow(shadowColor: .black, radius: 4, opacity: 0.4)
-        
-        self.signupButton.layer.cornerRadius = 8
-        self.signupButton.addShadow(shadowColor: .black, radius: 4, opacity: 0.4)
+        self.loginButton.backViewShadow(cornerRadius: 8)
+        self.signUpButton.backViewShadow(cornerRadius: 8)
     }
     
 

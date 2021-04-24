@@ -40,7 +40,7 @@
                             <rect key="frame" x="24" y="15" width="366" height="54"/>
                             <color key="backgroundColor" red="0.99607843137254903" green="0.79607843137254897" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                            <state key="normal" title="Add">
+                            <state key="normal" title="Ekle">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
@@ -114,7 +114,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CB9-Mk-heb">
                                             <rect key="frame" x="31" y="0.0" width="354" height="334"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mcg-D2-Ke4">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="İsim" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mcg-D2-Ke4">
                                                     <rect key="frame" x="20" y="5" width="314" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="oDS-Ph-U6Y"/>
@@ -122,7 +122,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nAN-OD-EZV">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cins" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nAN-OD-EZV">
                                                     <rect key="frame" x="20" y="70" width="314" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="yxr-FC-vLt"/>
@@ -140,14 +140,14 @@
                                                                 <constraint firstAttribute="width" constant="61" id="cUh-QP-npy"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                                                            <state key="normal" title="Female">
+                                                            <state key="normal" title="Dişi">
                                                                 <color key="titleColor" systemColor="labelColor"/>
                                                             </state>
                                                             <connections>
                                                                 <action selector="femaleButton:" destination="-1" eventType="touchUpInside" id="0wj-vc-tIf"/>
                                                             </connections>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sex of your pet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBy-qO-7zV">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cinsiyet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBy-qO-7zV">
                                                             <rect key="frame" x="0.0" y="13" width="87.5" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="87.5" id="hi9-25-khJ"/>
@@ -164,7 +164,7 @@
                                                                 <constraint firstAttribute="height" constant="25" id="oaU-wf-lx7"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                                                            <state key="normal" title="Male">
+                                                            <state key="normal" title="Erkek">
                                                                 <color key="titleColor" systemColor="labelColor"/>
                                                             </state>
                                                             <connections>
@@ -186,7 +186,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="war-Hh-uur">
                                                     <rect key="frame" x="20" y="200" width="314" height="50"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date of birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sE5-fH-JBe">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Doğum yılı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sE5-fH-JBe">
                                                             <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -204,10 +204,10 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zks-Rw-cqA">
                                                     <rect key="frame" x="20" y="265" width="314" height="50"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neautered" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sua-Zc-rZT">
-                                                            <rect key="frame" x="0.0" y="13" width="87.5" height="25"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kısırlık Durumu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sua-Zc-rZT">
+                                                            <rect key="frame" x="0.0" y="13" width="90" height="25"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="87.5" id="doJ-ea-4L2"/>
+                                                                <constraint firstAttribute="width" constant="90" id="doJ-ea-4L2"/>
                                                                 <constraint firstAttribute="height" constant="25" id="wwu-Xy-l2A"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>

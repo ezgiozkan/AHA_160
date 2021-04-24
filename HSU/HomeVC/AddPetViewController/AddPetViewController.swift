@@ -36,11 +36,11 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
-    var selectedGender: String = "Female" {
+    var selectedGender: String = "Dişi" {
         
         didSet {
             
-            if selectedGender == "Male" {
+            if selectedGender == "Erkek" {
                 
                 self.maleButton.setTitleColor(.white, for: .normal)
                 self.maleButton.backgroundColor = Constants.Color.genderButtonColor
@@ -96,7 +96,7 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     func configureNavBar() {
         
         self.view.backgroundColor = .white
-        self.title = "Add pet"
+        self.title = "Evcil hayvan ekle"
         
         let backBarButton = UIBarButtonItem(image: UIImage(named: "backBarButton"),
                                       style: .plain,
@@ -106,12 +106,11 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         
     }
-    
 
     
     func configureBackViews() {
 
-        self.backView.backViewShadow()
+        self.backView.backViewShadow(cornerRadius: 24)
         
         self.nameTextField.addBottomBorder(height: 0.6, color: Constants.Color.bottomBorderColor)
         self.breedTextField.addBottomBorder(height: 0.6, color: Constants.Color.bottomBorderColor)
