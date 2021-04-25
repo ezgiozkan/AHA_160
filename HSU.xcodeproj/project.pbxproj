@@ -19,6 +19,8 @@
 		3B7466E025FCC4DA0000FB00 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */; };
 		D8051542260CF86200B54EF0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8051540260CF86200B54EF0 /* TabBarController.swift */; };
 		D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8051541260CF86200B54EF0 /* TabBarController.xib */; };
+		D83621592635C5A20075A690 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83621572635C5A20075A690 /* SettingsTableViewCell.swift */; };
+		D836215A2635C5A20075A690 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D83621582635C5A20075A690 /* SettingsTableViewCell.xib */; };
 		D85D1CC22635C09200A8FF7D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85D1CC02635C09200A8FF7D /* SettingsViewController.swift */; };
 		D85D1CC32635C09200A8FF7D /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85D1CC12635C09200A8FF7D /* SettingsViewController.xib */; };
 		D86A22C8262F70C5006A91DB /* ReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D86A22C7262F70C5006A91DB /* ReminderViewController.xib */; };
@@ -61,6 +63,8 @@
 		3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		D8051540260CF86200B54EF0 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D8051541260CF86200B54EF0 /* TabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
+		D83621572635C5A20075A690 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		D83621582635C5A20075A690 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		D85D1CC02635C09200A8FF7D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D85D1CC12635C09200A8FF7D /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		D86A22C7262F70C5006A91DB /* ReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderViewController.xib; sourceTree = "<group>"; };
@@ -195,9 +199,19 @@
 			path = TabBarController;
 			sourceTree = "<group>";
 		};
+		D83621562635C5810075A690 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D83621572635C5A20075A690 /* SettingsTableViewCell.swift */,
+				D83621582635C5A20075A690 /* SettingsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		D85D1CBF2635C02A00A8FF7D /* SettingsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D83621562635C5810075A690 /* Cell */,
 				D85D1CC02635C09200A8FF7D /* SettingsViewController.swift */,
 				D85D1CC12635C09200A8FF7D /* SettingsViewController.xib */,
 			);
@@ -407,6 +421,7 @@
 				3B7466E025FCC4DA0000FB00 /* RootViewController.xib in Resources */,
 				D88967112610EA130092B228 /* PetDetailViewController.xib in Resources */,
 				D8DFF1BC260E481B00777F4C /* ServicesCollectionViewCell.xib in Resources */,
+				D836215A2635C5A20075A690 /* SettingsTableViewCell.xib in Resources */,
 				D8DC74612618D96F005EC30A /* PetDetailCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +453,7 @@
 				D8DFF1C0260E482100777F4C /* ServicesCollectionViewCell.swift in Sources */,
 				D8DFF1B4260E480B00777F4C /* ServicesCollectionViewDelegate.swift in Sources */,
 				D8DFF1B2260E480800777F4C /* ServicesCollectionViewDataSource.swift in Sources */,
+				D83621592635C5A20075A690 /* SettingsTableViewCell.swift in Sources */,
 				3B7466C225FCC32E0000FB00 /* AppDelegate.swift in Sources */,
 				D8DC74682618DED1005EC30A /* PetDetailCollectionViewDataSource.swift in Sources */,
 			);
