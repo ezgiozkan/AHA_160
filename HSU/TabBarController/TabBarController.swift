@@ -17,9 +17,6 @@ class TabBarController: UITabBarController {
     
     var indicatorImage: UIImageView?
     
-    var freshLaunch = true
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

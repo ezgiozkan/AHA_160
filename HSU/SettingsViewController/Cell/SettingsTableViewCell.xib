@@ -25,8 +25,8 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qBa-zC-MFV">
-                        <rect key="frame" x="289" y="22" width="13" height="12.5"/>
-                        <color key="tintColor" systemColor="systemGray5Color"/>
+                        <rect key="frame" x="289" y="21.5" width="13" height="12.5"/>
+                        <color key="tintColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="13" id="FOR-Oj-pEF"/>
                             <constraint firstAttribute="height" constant="16" id="dxo-3I-djf"/>
@@ -34,21 +34,24 @@
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="qBa-zC-MFV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="8T6-Dk-fBf"/>
                     <constraint firstItem="icL-1z-lTd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="AZB-ES-L2m"/>
                     <constraint firstItem="icL-1z-lTd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="27" id="Eo8-B1-tQ6"/>
                     <constraint firstAttribute="trailing" secondItem="qBa-zC-MFV" secondAttribute="trailing" constant="18" id="SrQ-Zu-YBS"/>
+                    <constraint firstItem="qBa-zC-MFV" firstAttribute="centerY" secondItem="icL-1z-lTd" secondAttribute="centerY" id="VJ7-9b-nTZ"/>
                     <constraint firstAttribute="bottom" secondItem="icL-1z-lTd" secondAttribute="bottom" constant="17" id="iZA-ng-qV4"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="titleLabel" destination="icL-1z-lTd" id="EfC-oz-bxV"/>
+            </connections>
             <point key="canvasLocation" x="14" y="90"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

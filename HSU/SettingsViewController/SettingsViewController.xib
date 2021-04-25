@@ -22,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZg-EU-bDj">
-                    <rect key="frame" x="16" y="92" width="382" height="330"/>
+                    <rect key="frame" x="16" y="92" width="382" height="385"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bg6-4x-Jd2">
-                            <rect key="frame" x="0.0" y="0.0" width="382" height="330"/>
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="385"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                     </subviews>
@@ -33,7 +33,7 @@
                     <constraints>
                         <constraint firstItem="bg6-4x-Jd2" firstAttribute="top" secondItem="LZg-EU-bDj" secondAttribute="top" id="6IK-YA-Zwp"/>
                         <constraint firstAttribute="bottom" secondItem="bg6-4x-Jd2" secondAttribute="bottom" id="Asv-ly-VNz"/>
-                        <constraint firstAttribute="height" constant="330" id="FIv-my-3aJ"/>
+                        <constraint firstAttribute="height" constant="385" id="FIv-my-3aJ"/>
                         <constraint firstAttribute="trailing" secondItem="bg6-4x-Jd2" secondAttribute="trailing" id="PPu-iL-evt"/>
                         <constraint firstItem="bg6-4x-Jd2" firstAttribute="leading" secondItem="LZg-EU-bDj" secondAttribute="leading" id="jnu-HZ-5CN"/>
                     </constraints>

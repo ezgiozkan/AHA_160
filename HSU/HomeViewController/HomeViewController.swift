@@ -96,6 +96,7 @@ class HomeViewController: UIViewController {
 
 
 extension HomeViewController: PetsCollectionViewDelegateOutput {
+    
     func didSelect(indexPath: IndexPath) {
         
         if indexPath.row == 0 {
