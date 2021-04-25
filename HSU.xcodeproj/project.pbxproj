@@ -21,6 +21,8 @@
 		D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8051541260CF86200B54EF0 /* TabBarController.xib */; };
 		D86A22C8262F70C5006A91DB /* ReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D86A22C7262F70C5006A91DB /* ReminderViewController.xib */; };
 		D86A22CC262F71B1006A91DB /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86A22CB262F71B1006A91DB /* ReminderViewController.swift */; };
+		D87A400426358F6500363F3C /* UpdatePetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87A400226358F6500363F3C /* UpdatePetViewController.swift */; };
+		D87A400526358F6500363F3C /* UpdatePetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87A400326358F6500363F3C /* UpdatePetViewController.xib */; };
 		D88967102610EA130092B228 /* PetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D889670E2610EA130092B228 /* PetDetailViewController.swift */; };
 		D88967112610EA130092B228 /* PetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D889670F2610EA130092B228 /* PetDetailViewController.xib */; };
 		D8DC74602618D96F005EC30A /* PetDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DC745E2618D96F005EC30A /* PetDetailCollectionViewCell.swift */; };
@@ -59,6 +61,8 @@
 		D8051541260CF86200B54EF0 /* TabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
 		D86A22C7262F70C5006A91DB /* ReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderViewController.xib; sourceTree = "<group>"; };
 		D86A22CB262F71B1006A91DB /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		D87A400226358F6500363F3C /* UpdatePetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePetViewController.swift; sourceTree = "<group>"; };
+		D87A400326358F6500363F3C /* UpdatePetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdatePetViewController.xib; sourceTree = "<group>"; };
 		D889670E2610EA130092B228 /* PetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailViewController.swift; sourceTree = "<group>"; };
 		D889670F2610EA130092B228 /* PetDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetDetailViewController.xib; sourceTree = "<group>"; };
 		D8CEAF08260E2F5A00A0D762 /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -195,9 +199,19 @@
 			path = ReminderViewController;
 			sourceTree = "<group>";
 		};
+		D87A400126358F3300363F3C /* UpdatePetViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D87A400226358F6500363F3C /* UpdatePetViewController.swift */,
+				D87A400326358F6500363F3C /* UpdatePetViewController.xib */,
+			);
+			path = UpdatePetViewController;
+			sourceTree = "<group>";
+		};
 		D889670D2610E9DC0092B228 /* PetDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D87A400126358F3300363F3C /* UpdatePetViewController */,
 				D8DC745D2618D944005EC30A /* Cell */,
 				D889670F2610EA130092B228 /* PetDetailViewController.xib */,
 				D889670E2610EA130092B228 /* PetDetailViewController.swift */,
@@ -374,6 +388,7 @@
 				3B7466CE25FCC3320000FB00 /* Assets.xcassets in Resources */,
 				D8DFF1BA260E481900777F4C /* PetsCollectionViewCell.xib in Resources */,
 				D8DFF1C2260E482700777F4C /* HomeViewController.xib in Resources */,
+				D87A400526358F6500363F3C /* UpdatePetViewController.xib in Resources */,
 				3B7466E025FCC4DA0000FB00 /* RootViewController.xib in Resources */,
 				D88967112610EA130092B228 /* PetDetailViewController.xib in Resources */,
 				D8DFF1BC260E481B00777F4C /* ServicesCollectionViewCell.xib in Resources */,
@@ -399,6 +414,7 @@
 				D8DFF1BE260E481F00777F4C /* PetsCollectionViewCell.swift in Sources */,
 				3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */,
 				D8DFF1AE260E47E900777F4C /* HomeViewController.swift in Sources */,
+				D87A400426358F6500363F3C /* UpdatePetViewController.swift in Sources */,
 				3B7466CC25FCC32F0000FB00 /* HSU.xcdatamodeld in Sources */,
 				D86A22CC262F71B1006A91DB /* ReminderViewController.swift in Sources */,
 				3B53A584260FC90700FD4F5D /* SignUpViewController.swift in Sources */,

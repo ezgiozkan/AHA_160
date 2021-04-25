@@ -164,6 +164,9 @@
                         <constraint firstAttribute="height" constant="40" id="aYy-Ul-L8C"/>
                     </constraints>
                     <state key="normal" image="editButton"/>
+                    <connections>
+                        <action selector="updateButton:" destination="-1" eventType="touchUpInside" id="Dri-yK-xWo"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

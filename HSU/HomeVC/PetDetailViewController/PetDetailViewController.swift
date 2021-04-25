@@ -76,6 +76,22 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
 
     }
     
+    @objc func back() {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func deletePet() {
+        
+        print("delete")
+    }
+    
+    @IBAction func updateButton(_ sender: Any) {
+        
+        self.navigationController?.pushViewController(UpdatePetViewController(nibName: "UpdatePetViewController", bundle: nil), animated: true)
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -92,16 +108,6 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         self.navigationController?.navigationBar.shadowImage = nil
         self.navigationController?.navigationBar.isTranslucent = true
         self.tabBarController?.tabBar.isHidden = false
-    }
-    
-    @objc func back() {
-        
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    @objc func deletePet() {
-        
-        print("delete")
     }
 
 }
