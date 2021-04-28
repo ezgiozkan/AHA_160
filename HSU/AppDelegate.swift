@@ -17,14 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-       
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let rootViewController = RootViewController(nibName: "RootViewController", bundle: .main) //TabBarController(nibName: "TabBarController", bundle: nil) 
-        let navigationController = UINavigationController(rootViewController: rootViewController)
-        
-        window?.rootViewController = navigationController
+        if UserDefaults.standard.string(forKey: "token") != nil {
+            
+            let rootViewController = TabBarController(nibName: "TabBarController", bundle: .main)
+            window?.rootViewController = rootViewController
+            
+        }else{
+            
+            let rootViewController = RootViewController(nibName: "RootViewController", bundle: .main)
+            let navigationController = UINavigationController(rootViewController: rootViewController)
+            
+            window?.rootViewController = navigationController
+        }
        
         
         

@@ -16,7 +16,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
     @IBOutlet weak var passwordTxtField: UITextField!
     @IBOutlet weak var forgotPasswordBtn: UIButton!
     @IBOutlet weak var loginButton: UIButton!
-   
+    @IBOutlet weak var rememberMeButton: UIButton!
     
     //MARK:CONSTANTS
     private enum Constants{
@@ -28,6 +28,13 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
         }
     }
     
+    var isRemember: Bool = false {
+        
+        didSet {
+            
+            isRemember ? self.rememberMeButton.setImage(#imageLiteral(resourceName: "checkBoxOn"), for: .normal) : self.rememberMeButton.setImage(#imageLiteral(resourceName: "checkBoxOff"), for: .normal)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +59,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
         self.emailTxtField.buttonShadow()
         self.emailTxtField.keyboardType = .emailAddress
         self.emailTxtField.delegate = self
+        txtPaddingVw(txt: self.emailTxtField)
         emailTxtField.tag = 1
         
        
@@ -59,6 +67,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
         self.passwordTxtField.backgroundColor = Constants.Color.txtBackgroundColor
         self.passwordTxtField.buttonShadow()
         self.passwordTxtField.delegate = self
+        txtPaddingVw(txt: self.passwordTxtField)
         passwordTxtField.tag = 2
     }
     
@@ -88,6 +97,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
     }
     
     @IBAction func forgotPasswordBtn(_ sender: Any) {
+        
         print("forgot password")
     }
     
@@ -101,6 +111,18 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
                 Network.shared.signIn(email: self.emailTxtField.text ?? "", password: self.passwordTxtField.text ?? "") { (response,token)  in
                     
                     if response == 200 && token != nil {
+                        
+                        if self.isRemember {
+                            
+                            UserDefaults.standard.setValue(token, forKey: "token")
+                            
+                        }else{
+                            
+                            if (UserDefaults.standard.string(forKey: "token") != nil) {
+                                
+                                UserDefaults.standard.setValue(nil, forKey: "token")
+                            }
+                        }
                         
                         DispatchQueue.main.async {
                             
@@ -133,10 +155,21 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
         
     }
     
+    @IBAction func rememberMeButton(_ sender: UIButton) {
+        
+        self.isRemember = !self.isRemember
+        
+    }
+    
     @objc func back() {
         
         self.navigationController?.popViewController(animated: true)
     }
     
+    func txtPaddingVw(txt:UITextField) {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 7, height: 5))
+        txt.leftViewMode = .always
+        txt.leftView = paddingView
+    }
     
 }

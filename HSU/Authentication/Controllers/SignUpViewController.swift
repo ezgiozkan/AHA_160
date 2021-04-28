@@ -53,6 +53,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
         self.fullNameTxtField.buttonShadow()
         self.fullNameTxtField.keyboardType = .emailAddress
         self.fullNameTxtField.delegate = self
+        txtPaddingVw(txt: self.fullNameTxtField)
         fullNameTxtField.tag = 1
         
         self.phoneNumberTxtField.layer.cornerRadius = 5
@@ -60,6 +61,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
         self.phoneNumberTxtField.buttonShadow()
         self.phoneNumberTxtField.keyboardType = .emailAddress
         self.phoneNumberTxtField.delegate = self
+        txtPaddingVw(txt: self.phoneNumberTxtField)
         phoneNumberTxtField.tag = 2
         
         self.emailTxtField.layer.cornerRadius = 5
@@ -67,12 +69,14 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
         self.emailTxtField.buttonShadow()
         self.emailTxtField.keyboardType = .emailAddress
         self.emailTxtField.delegate = self
+        txtPaddingVw(txt: self.emailTxtField)
         emailTxtField.tag = 3
        
         self.passwordTxtField.layer.cornerRadius = 5
         self.passwordTxtField.backgroundColor = Constants.Color.txtBackgroundColor
         self.passwordTxtField.buttonShadow()
         self.passwordTxtField.delegate = self
+        txtPaddingVw(txt: self.passwordTxtField)
         passwordTxtField.tag = 4
       
         
@@ -80,6 +84,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
         self.confirmTxtField.backgroundColor = Constants.Color.txtBackgroundColor
         self.confirmTxtField.buttonShadow()
         self.confirmTxtField.delegate = self
+        txtPaddingVw(txt: self.confirmTxtField)
         confirmTxtField.tag = 5
     }
     
@@ -168,6 +173,12 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
     @objc func back() {
         
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func txtPaddingVw(txt:UITextField) {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 7, height: 5))
+        txt.leftViewMode = .always
+        txt.leftView = paddingView
     }
     
 }
