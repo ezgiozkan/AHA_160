@@ -17,6 +17,8 @@
 		3B7466D125FCC3320000FB00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7466CF25FCC3320000FB00 /* LaunchScreen.storyboard */; };
 		3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7466DD25FCC4DA0000FB00 /* RootViewController.swift */; };
 		3B7466E025FCC4DA0000FB00 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */; };
+		3BD437912638432800F4893B /* ChosenReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD4378F2638432800F4893B /* ChosenReminderViewController.swift */; };
+		3BD437922638432800F4893B /* ChosenReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD437902638432800F4893B /* ChosenReminderViewController.xib */; };
 		D8051542260CF86200B54EF0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8051540260CF86200B54EF0 /* TabBarController.swift */; };
 		D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8051541260CF86200B54EF0 /* TabBarController.xib */; };
 		D86A22C8262F70C5006A91DB /* ReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D86A22C7262F70C5006A91DB /* ReminderViewController.xib */; };
@@ -40,8 +42,6 @@
 		D8DFF1C2260E482700777F4C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CEAF13260E2F5A00A0D762 /* HomeViewController.xib */; };
 		D8DFF1C4260E482900777F4C /* AddPetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CEAF12260E2F5A00A0D762 /* AddPetViewController.xib */; };
 		D8E01B7B260D15AA0042C649 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E01B7A260D15AA0042C649 /* UIView+Additions.swift */; };
-		D8FF25F4262F78E300D4E3A4 /* VaccineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FF25F2262F78E300D4E3A4 /* VaccineViewController.swift */; };
-		D8FF25F5262F78E300D4E3A4 /* VaccineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8FF25F3262F78E300D4E3A4 /* VaccineViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +57,8 @@
 		3B7466D225FCC3320000FB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B7466DD25FCC4DA0000FB00 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		3BD4378F2638432800F4893B /* ChosenReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenReminderViewController.swift; sourceTree = "<group>"; };
+		3BD437902638432800F4893B /* ChosenReminderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChosenReminderViewController.xib; sourceTree = "<group>"; };
 		D8051540260CF86200B54EF0 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D8051541260CF86200B54EF0 /* TabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
 		D86A22C7262F70C5006A91DB /* ReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderViewController.xib; sourceTree = "<group>"; };
@@ -80,8 +82,6 @@
 		D8DC74642618DEBC005EC30A /* PetDetailCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		D8DC74672618DED1005EC30A /* PetDetailCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		D8E01B7A260D15AA0042C649 /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
-		D8FF25F2262F78E300D4E3A4 /* VaccineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineViewController.swift; sourceTree = "<group>"; };
-		D8FF25F3262F78E300D4E3A4 /* VaccineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VaccineViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,7 @@
 		D86A22BF262F6EEE006A91DB /* ReminderViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D8FF25F1262F78C600D4E3A4 /* VaccineViewController */,
+				D8FF25F1262F78C600D4E3A4 /* ChosenReminderVC */,
 				D86A22CB262F71B1006A91DB /* ReminderViewController.swift */,
 				D86A22C7262F70C5006A91DB /* ReminderViewController.xib */,
 			);
@@ -313,13 +313,13 @@
 			path = UIAdditions;
 			sourceTree = "<group>";
 		};
-		D8FF25F1262F78C600D4E3A4 /* VaccineViewController */ = {
+		D8FF25F1262F78C600D4E3A4 /* ChosenReminderVC */ = {
 			isa = PBXGroup;
 			children = (
-				D8FF25F2262F78E300D4E3A4 /* VaccineViewController.swift */,
-				D8FF25F3262F78E300D4E3A4 /* VaccineViewController.xib */,
+				3BD4378F2638432800F4893B /* ChosenReminderViewController.swift */,
+				3BD437902638432800F4893B /* ChosenReminderViewController.xib */,
 			);
-			path = VaccineViewController;
+			path = ChosenReminderVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,7 +379,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8FF25F5262F78E300D4E3A4 /* VaccineViewController.xib in Resources */,
 				3B53A585260FC90700FD4F5D /* SignUpViewController.xib in Resources */,
 				3B6C604025FDFC7700839DA8 /* LoginViewController.xib in Resources */,
 				D86A22C8262F70C5006A91DB /* ReminderViewController.xib in Resources */,
@@ -388,6 +387,7 @@
 				D8DFF1C4260E482900777F4C /* AddPetViewController.xib in Resources */,
 				3B7466CE25FCC3320000FB00 /* Assets.xcassets in Resources */,
 				D8DFF1BA260E481900777F4C /* PetsCollectionViewCell.xib in Resources */,
+				3BD437922638432800F4893B /* ChosenReminderViewController.xib in Resources */,
 				D8DFF1C2260E482700777F4C /* HomeViewController.xib in Resources */,
 				3B7466E025FCC4DA0000FB00 /* RootViewController.xib in Resources */,
 				D88967112610EA130092B228 /* PetDetailViewController.xib in Resources */,
@@ -403,7 +403,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8FF25F4262F78E300D4E3A4 /* VaccineViewController.swift in Sources */,
 				D8DC74652618DEBC005EC30A /* PetDetailCollectionViewDelegate.swift in Sources */,
 				D8E01B7B260D15AA0042C649 /* UIView+Additions.swift in Sources */,
 				D8DFF1B8260E481100777F4C /* PetsCollectionViewDelegate.swift in Sources */,
@@ -415,6 +414,7 @@
 				D8DFF1BE260E481F00777F4C /* PetsCollectionViewCell.swift in Sources */,
 				3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */,
 				D8DFF1AE260E47E900777F4C /* HomeViewController.swift in Sources */,
+				3BD437912638432800F4893B /* ChosenReminderViewController.swift in Sources */,
 				3B7466CC25FCC32F0000FB00 /* HSU.xcdatamodeld in Sources */,
 				D86A22CC262F71B1006A91DB /* ReminderViewController.swift in Sources */,
 				3B53A584260FC90700FD4F5D /* SignUpViewController.swift in Sources */,

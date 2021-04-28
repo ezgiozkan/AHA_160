@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ReminderViewController: UIViewController {
+ class ReminderViewController: UIViewController {
     
     //MARK: IBOutlets
     
@@ -17,11 +17,11 @@ class ReminderViewController: UIViewController {
     @IBOutlet weak var btnFood: UIButton!
     
     
-    override func viewDidLoad() {
+     override func viewDidLoad() {
         super.viewDidLoad()
 
         configurationButtons()
-        self.view.backgroundColor = .darkGray
+       
     }
 
 
@@ -35,5 +35,30 @@ class ReminderViewController: UIViewController {
         btnDrugs.layer.cornerRadius = btnDrugs.frame.size.height/2
         btnFood.layer.cornerRadius = btnFood.frame.size.height/2
     }
+    
+    //Actions
+    
+    @IBAction func btnVaccine(_ sender: Any) {
+        
+        self.navigationController?.pushViewController(ChosenReminderViewController(nibName: "ChosenReminderViewController", bundle: nil), animated: true)
+       
+        
+    }
+    
+    @IBAction func btnDrugs(_ sender: Any) {
+        
+        self.navigationController?.pushViewController(ChosenReminderViewController(nibName: "ChosenReminderViewController", bundle: nil), animated: true)
+    }
+    
+    @IBAction func btnVisit(_ sender: Any) {
+        
+        self.navigationController?.pushViewController(ChosenReminderViewController(nibName: "ChosenReminderViewController", bundle: nil), animated: true)
+    }
+    
+    @IBAction func btnFood(_ sender: Any) {
+        
+        self.navigationController?.pushViewController(ChosenReminderViewController(nibName: "ChosenReminderViewController", bundle: nil), animated: true)
+    }
+    
 
 }

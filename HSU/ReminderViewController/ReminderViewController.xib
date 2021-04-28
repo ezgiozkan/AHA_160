@@ -37,6 +37,9 @@
                                         <constraint firstAttribute="height" constant="88" id="eny-ce-Edh"/>
                                     </constraints>
                                     <state key="normal" image="vaccineImg"/>
+                                    <connections>
+                                        <action selector="btnVaccine:" destination="-1" eventType="touchUpInside" id="Vva-h9-FMA"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kw-fe-2x1">
                                     <rect key="frame" x="116" y="0.0" width="88" height="88"/>
@@ -46,6 +49,9 @@
                                         <constraint firstAttribute="height" constant="88" id="a2K-8n-l5g"/>
                                     </constraints>
                                     <state key="normal" image="drugsImg"/>
+                                    <connections>
+                                        <action selector="btnDrugs:" destination="-1" eventType="touchUpInside" id="DFS-uV-LDk"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtR-8Z-6KR">
                                     <rect key="frame" x="232" y="0.0" width="88" height="88"/>
@@ -55,6 +61,9 @@
                                         <constraint firstAttribute="width" constant="88" id="f5u-DE-icE"/>
                                     </constraints>
                                     <state key="normal" image="vetVisitImg"/>
+                                    <connections>
+                                        <action selector="btnVisit:" destination="-1" eventType="touchUpInside" id="Bu4-17-0de"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -69,6 +78,9 @@
                                         <constraint firstAttribute="height" constant="88" id="wEv-Ap-pls"/>
                                     </constraints>
                                     <state key="normal" image="foodImg"/>
+                                    <connections>
+                                        <action selector="btnFood:" destination="-1" eventType="touchUpInside" id="HsT-8z-LQO"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
