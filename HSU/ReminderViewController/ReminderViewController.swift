@@ -21,7 +21,6 @@ class ReminderViewController: UIViewController {
         super.viewDidLoad()
 
         configurationButtons()
-        self.view.backgroundColor = .darkGray
     }
 
 
@@ -36,4 +35,27 @@ class ReminderViewController: UIViewController {
         btnFood.layer.cornerRadius = btnFood.frame.size.height/2
     }
 
+    //Actions
+    
+    @IBAction func btnVaccine(_ sender: Any) {
+        
+        self.navigationController?.pushViewController(ChosenReminderViewController(nibName: "ChosenReminderViewController", bundle: nil), animated: true)
+       
+        
+    }
+    
+    @IBAction func btnDrugs(_ sender: Any) {
+        
+        self.navigationController?.pushViewController(ChosenReminderViewController(nibName: "ChosenReminderViewController", bundle: nil), animated: true)
+    }
+    
+    @IBAction func btnVisit(_ sender: Any) {
+        
+        self.navigationController?.pushViewController(ChosenReminderViewController(nibName: "ChosenReminderViewController", bundle: nil), animated: true)
+    }
+    
+    @IBAction func btnFood(_ sender: Any) {
+        
+        self.navigationController?.pushViewController(ChosenReminderViewController(nibName: "ChosenReminderViewController", bundle: nil), animated: true)
+    }
 }
