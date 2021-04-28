@@ -94,9 +94,42 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
     
     @IBAction func loginBtn(_ sender: Any) {
         
-        let tabVC = TabBarController(nibName: "TabBarController", bundle: nil)
-        tabVC.modalPresentationStyle = .fullScreen
-        self.navigationController?.present(tabVC, animated: true, completion: nil)
+        if let email = emailTxtField.text, let password = passwordTxtField.text{
+            
+            if !email.isEmpty && !password.isEmpty {
+                
+                Network.shared.signIn(email: self.emailTxtField.text ?? "", password: self.passwordTxtField.text ?? "") { (response,token)  in
+                    
+                    if response == 200 && token != nil {
+                        
+                        DispatchQueue.main.async {
+                            
+                            let tabVC = TabBarController(nibName: "TabBarController", bundle: nil)
+                            tabVC.modalPresentationStyle = .fullScreen
+                            self.navigationController?.present(tabVC, animated: true, completion: nil)
+                        }
+                        
+                    }
+                    else if response == 401 && token == nil{
+                        
+                        DispatchQueue.main.async {
+                            
+                            let alert = UIAlertController(title: "Hata", message: "Email veya şifre yanlış", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                    }
+                }
+                
+            }else{
+                
+                let alert = UIAlertController(title: "Hata", message: "Email ve şifre alanı boş bırakılamaz!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+        }
+        
         
     }
     

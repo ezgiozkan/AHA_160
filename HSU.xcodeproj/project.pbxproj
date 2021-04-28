@@ -31,6 +31,7 @@
 		D87A400526358F6500363F3C /* UpdatePetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87A400326358F6500363F3C /* UpdatePetViewController.xib */; };
 		D88967102610EA130092B228 /* PetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D889670E2610EA130092B228 /* PetDetailViewController.swift */; };
 		D88967112610EA130092B228 /* PetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D889670F2610EA130092B228 /* PetDetailViewController.xib */; };
+		D8D0237C2639B67D0023068B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0237B2639B67D0023068B /* Network.swift */; };
 		D8DC74602618D96F005EC30A /* PetDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DC745E2618D96F005EC30A /* PetDetailCollectionViewCell.swift */; };
 		D8DC74612618D96F005EC30A /* PetDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8DC745F2618D96F005EC30A /* PetDetailCollectionViewCell.xib */; };
 		D8DC74652618DEBC005EC30A /* PetDetailCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DC74642618DEBC005EC30A /* PetDetailCollectionViewDelegate.swift */; };
@@ -89,6 +90,7 @@
 		D8CEAF17260E2F7300A0D762 /* ServicesCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		D8CEAF19260E2F7300A0D762 /* PetsCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		D8CEAF1A260E2F7300A0D762 /* PetsCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		D8D0237B2639B67D0023068B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		D8DC745E2618D96F005EC30A /* PetDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		D8DC745F2618D96F005EC30A /* PetDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		D8DC74642618DEBC005EC30A /* PetDetailCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailCollectionViewDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		3B7466C025FCC32E0000FB00 /* HSU */ = {
 			isa = PBXGroup;
 			children = (
+				D8D0237A2639B6670023068B /* Service */,
 				D85D1CBF2635C02A00A8FF7D /* SettingsViewController */,
 				3B6C603A25FDFC3F00839DA8 /* Authentication */,
 				D86A22BF262F6EEE006A91DB /* ReminderViewController */,
@@ -329,6 +332,14 @@
 			path = PetsCollectionViewSources;
 			sourceTree = "<group>";
 		};
+		D8D0237A2639B6670023068B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D8D0237B2639B67D0023068B /* Network.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		D8DC745D2618D944005EC30A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,6 +469,7 @@
 				D8DC74602618D96F005EC30A /* PetDetailCollectionViewCell.swift in Sources */,
 				D8DFF1B6260E480F00777F4C /* PetsCollectionViewDataSource.swift in Sources */,
 				D8DFF1BE260E481F00777F4C /* PetsCollectionViewCell.swift in Sources */,
+				D8D0237C2639B67D0023068B /* Network.swift in Sources */,
 				3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */,
 				D85D1CC22635C09200A8FF7D /* SettingsViewController.swift in Sources */,
 				D8DFF1AE260E47E900777F4C /* HomeViewController.swift in Sources */,

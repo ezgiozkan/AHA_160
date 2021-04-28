@@ -11,6 +11,8 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
 
     // MARK: - IBOutlets
     
+    @IBOutlet weak var fullNameTxtField: UITextField!
+    @IBOutlet weak var phoneNumberTxtField: UITextField!
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
     @IBOutlet weak var confirmTxtField: UITextField!
@@ -46,25 +48,39 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
     
     func configureTextFields(){
         
+        self.fullNameTxtField.layer.cornerRadius = 5
+        self.fullNameTxtField.backgroundColor = Constants.Color.txtBackgroundColor
+        self.fullNameTxtField.buttonShadow()
+        self.fullNameTxtField.keyboardType = .emailAddress
+        self.fullNameTxtField.delegate = self
+        fullNameTxtField.tag = 1
+        
+        self.phoneNumberTxtField.layer.cornerRadius = 5
+        self.phoneNumberTxtField.backgroundColor = Constants.Color.txtBackgroundColor
+        self.phoneNumberTxtField.buttonShadow()
+        self.phoneNumberTxtField.keyboardType = .emailAddress
+        self.phoneNumberTxtField.delegate = self
+        phoneNumberTxtField.tag = 2
+        
         self.emailTxtField.layer.cornerRadius = 5
         self.emailTxtField.backgroundColor = Constants.Color.txtBackgroundColor
         self.emailTxtField.buttonShadow()
         self.emailTxtField.keyboardType = .emailAddress
         self.emailTxtField.delegate = self
-        emailTxtField.tag = 1
+        emailTxtField.tag = 3
        
         self.passwordTxtField.layer.cornerRadius = 5
         self.passwordTxtField.backgroundColor = Constants.Color.txtBackgroundColor
         self.passwordTxtField.buttonShadow()
         self.passwordTxtField.delegate = self
-        passwordTxtField.tag = 2
+        passwordTxtField.tag = 4
       
         
         self.confirmTxtField.layer.cornerRadius = 5
         self.confirmTxtField.backgroundColor = Constants.Color.txtBackgroundColor
         self.confirmTxtField.buttonShadow()
         self.confirmTxtField.delegate = self
-        confirmTxtField.tag = 3
+        confirmTxtField.tag = 5
     }
     
     
@@ -91,14 +107,63 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         
     }
+ 
     
     @IBAction func btnCreateAccount(_ sender: Any) {
         
-        let tabVC = TabBarController(nibName: "TabBarController", bundle: nil)
-        tabVC.modalPresentationStyle = .fullScreen
-        self.navigationController?.present(tabVC, animated: true, completion: nil)
-        
+        if let fullName = fullNameTxtField.text, let phoneNumber = phoneNumberTxtField.text,
+           let email = emailTxtField.text, let password = passwordTxtField.text,
+           let confirmPassword = confirmTxtField.text {
+            
+            if !fullName.isEmpty && !phoneNumber.isEmpty && !email.isEmpty && !password.isEmpty && !confirmPassword.isEmpty {
+                
+                if password == confirmPassword {
+                    
+                    Network.shared.signUp(fullName: fullName, phoneNumber: phoneNumber, email: email, password: password) { (statusCode, error) in
+                        
+                        if statusCode == 201 && error == nil {
+                            
+                            DispatchQueue.main.async {
+                                
+                                let alert = UIAlertController(title: "", message: "Üye kayıtı başarılı.", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { (action) in
+                                    
+                                    let loginVC = LoginViewController(nibName: "LoginViewController", bundle: nil)
+                                    loginVC.modalPresentationStyle = .fullScreen
+                                    self.navigationController?.pushViewController(loginVC, animated: true)
+                                }))
+                                
+                                self.present(alert, animated: true, completion: nil)
+
+                            }
+                            
+                        }else{
+                            
+                            print("register failure")
+                        }
+                    }
+                    
+                }else{
+                    
+                    DispatchQueue.main.async {
+                        
+                        let alert = UIAlertController(title: "Hata", message: "Şifreler aynı değil lütfen kontrol ediniz!", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                }
+            }else{
+                
+                DispatchQueue.main.async {
+                    
+                    let alert = UIAlertController(title: "Hata", message: "Bütün alanları doldurduğunuzdan emin olun!", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
     }
+
     
     @objc func back() {
         
