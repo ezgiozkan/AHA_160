@@ -6,7 +6,7 @@
 //
 import UIKit
 
-public class ChosenReminderViewController: UIViewController, UIGestureRecognizerDelegate {
+public class ChosenReminderViewController: UIViewController, UIGestureRecognizerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     
     // MARK: - IBOutlets
@@ -19,6 +19,10 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
     // @IBOutlet weak var repeatView: UIView!
     // @IBOutlet weak var selectPetView: UIView!
     @IBOutlet weak var birthTextField: UITextField!
+    @IBOutlet weak var typeTextField: UITextField!
+    @IBOutlet weak var petNameTextField: UITextField!
+    
+    var reminderPickerView : UIPickerView!
     
     // MARK: - Constants
     private enum Constants{
@@ -38,9 +42,11 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
         configureAddButton()
         configureNavBar()
         createDatePicker()
+        pickUp(typeTextField)
     }
 
     let datePicker = UIDatePicker()
+    let typeReminder = ["Vaccine", "Vet Visit", "Food"]
     
     // MARK: - Configures
     
@@ -85,7 +91,17 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
     
     @IBAction func btnAdd(_ sender: Any) {
         
-        print("Add")
+        if typeTextField.text == "" || birthTextField.text == "" || petNameTextField.text == ""
+        {
+            let alertController = UIAlertController(title: "", message: "Lütfen bütün alanları doldurunuz", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "", style: .default, handler: nil)
+            alertController.addAction(alertAction)
+            
+            present(alertController,animated: true,completion: nil)
+            return
+        }
+        dismiss(animated: true, completion: nil)
+        
     }
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -100,6 +116,8 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
         self.tabBarController?.tabBar.isHidden = false
     }
     
+    
+    //MARK: Date Picker
     func createDatePicker() {
             
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 35))
@@ -129,5 +147,56 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
         
         self.view.endEditing(true)
     }
+    
+    
+    //MARK: Type Reminder
+    
+    func pickUp(_ textField : UITextField){
+        
+        // UIPickerView
+        self.reminderPickerView = UIPickerView(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        self.reminderPickerView.delegate = self
+        self.reminderPickerView.dataSource = self
+        self.reminderPickerView.backgroundColor = UIColor.white
+        textField.inputView = self.reminderPickerView
+        
+        // ToolBar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 92/255, green: 216/255, blue: 255/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        // Adding Button ToolBar
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: nil, action: #selector(doneClick))
+       
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        textField.inputAccessoryView = toolBar
+        
+    }
+    //MARK:- PickerView Delegate & DataSource
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return typeReminder.count
+    }
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return typeReminder[row]
+    }
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.typeTextField.text = typeReminder[row]
+    }
+    //MARK:- TextFiled Delegate
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.pickUp(typeTextField)
+    }
+    
+    //MARK:- Button
+    @objc func doneClick() {
+        typeTextField.resignFirstResponder()
+    }
+   
     
 }
