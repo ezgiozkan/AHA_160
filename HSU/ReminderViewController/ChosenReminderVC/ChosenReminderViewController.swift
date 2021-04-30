@@ -11,13 +11,13 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var reminderView: UIView!
-    @IBOutlet weak var additionalNoteView: UIView!
-    @IBOutlet weak var addBtn: UIButton!
-    @IBOutlet weak var reminderNameTextField: UITextField!
-    @IBOutlet weak var dateView: UIView!
-    @IBOutlet weak var repeatView: UIView!
-    @IBOutlet weak var selectPetView: UIView!
+   // @IBOutlet weak var reminderView: UIView!
+    // @IBOutlet weak var additionalNoteView: UIView!
+     @IBOutlet weak var addBtn: UIButton!
+    // @IBOutlet weak var reminderNameTextField: UITextField!
+    // @IBOutlet weak var dateView: UIView!
+    // @IBOutlet weak var repeatView: UIView!
+    // @IBOutlet weak var selectPetView: UIView!
     
     // MARK: - Constants
     private enum Constants{
@@ -33,14 +33,14 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureViews()
+       // configureViews()
         configureAddButton()
         configureNavBar()
     }
 
     // MARK: - Configures
     
-    func configureViews(){
+    /*func configureViews(){
         
         self.reminderView.backViewShadow(cornerRadius: 24)
         self.additionalNoteView.backViewShadow(cornerRadius: 24)
@@ -51,7 +51,7 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
         self.dateView.addBottomBorder(height: 0.6, color: Constants.Color.bottomBorderColor)
         self.repeatView.addBottomBorder(height: 0.6, color: Constants.Color.bottomBorderColor)
       
-    }
+    }*/
     
     func configureAddButton(){
         self.addBtn.addShadow(shadowColor: Constants.Color.shadowColor, radius: 4, opacity: 0.4)
@@ -83,7 +83,18 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
         
         print("Add")
     }
-    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        
+        self.tabBarController?.tabBar.isHidden = true
+    }
+
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        self.tabBarController?.tabBar.isHidden = false
+    }
     
     
 }
