@@ -18,6 +18,7 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
     // @IBOutlet weak var dateView: UIView!
     // @IBOutlet weak var repeatView: UIView!
     // @IBOutlet weak var selectPetView: UIView!
+    @IBOutlet weak var birthTextField: UITextField!
     
     // MARK: - Constants
     private enum Constants{
@@ -36,8 +37,11 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
        // configureViews()
         configureAddButton()
         configureNavBar()
+        createDatePicker()
     }
 
+    let datePicker = UIDatePicker()
+    
     // MARK: - Configures
     
     /*func configureViews(){
@@ -96,5 +100,34 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
         self.tabBarController?.tabBar.isHidden = false
     }
     
+    func createDatePicker() {
+            
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 35))
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: nil, action: #selector(doneButtonClicked))
+        toolBar.setItems([doneButton], animated: true)
+        
+        
+        birthTextField.inputAccessoryView = toolBar
+        birthTextField.inputView = datePicker
+        
+        datePicker.datePickerMode = .date
+
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        } else {
+       
+        }
+    }
+    
+    @objc func doneButtonClicked() {
+           
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        birthTextField.text = dateFormatter.string(from: datePicker.date)
+        
+        self.view.endEditing(true)
+    }
     
 }
