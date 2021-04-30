@@ -172,4 +172,12 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
         txt.leftView = paddingView
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if self.emailTxtField.text != "" && self.passwordTxtField.text != ""{
+            
+            self.navigationController?.popViewController(animated: false)
+        }
+    }
+    
 }
