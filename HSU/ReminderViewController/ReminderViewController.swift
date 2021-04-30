@@ -7,55 +7,58 @@
 
 import UIKit
 
-class ReminderViewController: UIViewController {
+class ReminderViewController: UIViewController, UIGestureRecognizerDelegate {
     
-    //MARK: IBOutlets
+    // MARK: - IBOutlets
+    @IBOutlet weak var reminderCollectionView: UICollectionView!
     
-    @IBOutlet weak var btnVaccine: UIButton!
-    @IBOutlet weak var btnVisit: UIButton!
-    @IBOutlet weak var btnDrugs: UIButton!
-    @IBOutlet weak var btnFood: UIButton!
+    var reminderCollectionViewDataSource: ReminderCollectionViewDataSource?
+    var reminderCollectionViewDelegate: ReminderCollectionViewDelegate?
     
+    var windowWidth: CGFloat?{
+        
+        return UIScreen.main.bounds.width - 25
+    }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
-        configurationButtons()
+        configureCollectionViews()
+        configureNavBar()
     }
+    
+    
+    //MARK: - Configurations
+    func configureCollectionViews() {
 
-
-    
-    //MARK: CONFİGURATİONS
-    
-    func configurationButtons(){
-        
-        btnVaccine.layer.cornerRadius = btnVaccine.frame.size.height/2
-        btnVisit.layer.cornerRadius = btnVisit.frame.size.height/2
-        btnDrugs.layer.cornerRadius = btnDrugs.frame.size.height/2
-        btnFood.layer.cornerRadius = btnFood.frame.size.height/2
-    }
-
-    //Actions
-    
-    @IBAction func btnVaccine(_ sender: Any) {
-        
-        self.navigationController?.pushViewController(ChosenReminderViewController(nibName: "ChosenReminderViewController", bundle: nil), animated: true)
-       
+            self.reminderCollectionViewDataSource = ReminderCollectionViewDataSource()
+            self.reminderCollectionViewDelegate = ReminderCollectionViewDelegate(width: self.windowWidth ?? 0.0)
+            
+            self.reminderCollectionView.dataSource = self.reminderCollectionViewDataSource
+            self.reminderCollectionView.delegate = self.reminderCollectionViewDelegate
+            
+            self.reminderCollectionView.register(UINib(nibName: "ReminderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ReminderCollectionViewCell.cellIdentifier)
         
     }
     
-    @IBAction func btnDrugs(_ sender: Any) {
-        
-        self.navigationController?.pushViewController(ChosenReminderViewController(nibName: "ChosenReminderViewController", bundle: nil), animated: true)
-    }
     
-    @IBAction func btnVisit(_ sender: Any) {
+    func configureNavBar() {
+            
+        self.view.backgroundColor = .white
+        let rightBarButton = UIBarButtonItem(image: UIImage(systemName: "plus"),
+                                      style: .plain,
+                                      target: self,
+                                      action: #selector(addReminder))
+        navigationItem.rightBarButtonItem = rightBarButton
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
+    
+    }
+   
+    @objc func addReminder() {
         
         self.navigationController?.pushViewController(ChosenReminderViewController(nibName: "ChosenReminderViewController", bundle: nil), animated: true)
     }
     
-    @IBAction func btnFood(_ sender: Any) {
-        
-        self.navigationController?.pushViewController(ChosenReminderViewController(nibName: "ChosenReminderViewController", bundle: nil), animated: true)
-    }
 }
+
+

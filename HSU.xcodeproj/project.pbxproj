@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B29BBA6263C2C4700399D71 /* ReminderCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B29BBA5263C2C4700399D71 /* ReminderCollectionViewDataSource.swift */; };
+		3B29BBA9263C2C5900399D71 /* ReminderCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B29BBA8263C2C5900399D71 /* ReminderCollectionViewDelegate.swift */; };
+		3B29BBAD263C2C7900399D71 /* ReminderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B29BBAB263C2C7900399D71 /* ReminderCollectionViewCell.swift */; };
+		3B29BBAE263C2C7900399D71 /* ReminderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B29BBAC263C2C7900399D71 /* ReminderCollectionViewCell.xib */; };
 		3B53A584260FC90700FD4F5D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53A582260FC90700FD4F5D /* SignUpViewController.swift */; };
 		3B53A585260FC90700FD4F5D /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B53A583260FC90700FD4F5D /* SignUpViewController.xib */; };
 		3B6C603F25FDFC7700839DA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C603D25FDFC7700839DA8 /* LoginViewController.swift */; };
@@ -52,6 +56,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B29BBA5263C2C4700399D71 /* ReminderCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		3B29BBA8263C2C5900399D71 /* ReminderCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		3B29BBAB263C2C7900399D71 /* ReminderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B29BBAC263C2C7900399D71 /* ReminderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReminderCollectionViewCell.xib; sourceTree = "<group>"; };
 		3B53A582260FC90700FD4F5D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3B53A583260FC90700FD4F5D /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		3B6C603D25FDFC7700839DA8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +117,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B29BBA1263C2BF100399D71 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3B29BBA3263C2C0900399D71 /* Sources */,
+				3B29BBA2263C2C0400399D71 /* Xib */,
+				3B29BBAB263C2C7900399D71 /* ReminderCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3B29BBA2263C2C0400399D71 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				3B29BBAC263C2C7900399D71 /* ReminderCollectionViewCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		3B29BBA3263C2C0900399D71 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3B29BBA4263C2C1500399D71 /* ReminderCollectionViewSource */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3B29BBA4263C2C1500399D71 /* ReminderCollectionViewSource */ = {
+			isa = PBXGroup;
+			children = (
+				3B29BBA5263C2C4700399D71 /* ReminderCollectionViewDataSource.swift */,
+				3B29BBA8263C2C5900399D71 /* ReminderCollectionViewDelegate.swift */,
+			);
+			path = ReminderCollectionViewSource;
+			sourceTree = "<group>";
+		};
 		3B6C603825FDF82E00839DA8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +280,7 @@
 		D86A22BF262F6EEE006A91DB /* ReminderViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3B29BBA1263C2BF100399D71 /* Cell */,
 				D83A8C072639AC9D0068574A /* ChosenReminderVC */,
 				D86A22CB262F71B1006A91DB /* ReminderViewController.swift */,
 				D86A22C7262F70C5006A91DB /* ReminderViewController.xib */,
@@ -438,6 +482,7 @@
 				D83A8C0B2639ACC20068574A /* ChosenReminderViewController.xib in Resources */,
 				D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */,
 				D85D1CC32635C09200A8FF7D /* SettingsViewController.xib in Resources */,
+				3B29BBAE263C2C7900399D71 /* ReminderCollectionViewCell.xib in Resources */,
 				3B7466D125FCC3320000FB00 /* LaunchScreen.storyboard in Resources */,
 				D8DFF1C4260E482900777F4C /* AddPetViewController.xib in Resources */,
 				3B7466CE25FCC3320000FB00 /* Assets.xcassets in Resources */,
@@ -471,13 +516,16 @@
 				D8DFF1BE260E481F00777F4C /* PetsCollectionViewCell.swift in Sources */,
 				D8D0237C2639B67D0023068B /* Network.swift in Sources */,
 				3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */,
+				3B29BBAD263C2C7900399D71 /* ReminderCollectionViewCell.swift in Sources */,
 				D85D1CC22635C09200A8FF7D /* SettingsViewController.swift in Sources */,
 				D8DFF1AE260E47E900777F4C /* HomeViewController.swift in Sources */,
 				D87A400426358F6500363F3C /* UpdatePetViewController.swift in Sources */,
 				3B7466CC25FCC32F0000FB00 /* HSU.xcdatamodeld in Sources */,
+				3B29BBA9263C2C5900399D71 /* ReminderCollectionViewDelegate.swift in Sources */,
 				D86A22CC262F71B1006A91DB /* ReminderViewController.swift in Sources */,
 				3B53A584260FC90700FD4F5D /* SignUpViewController.swift in Sources */,
 				3B6C603F25FDFC7700839DA8 /* LoginViewController.swift in Sources */,
+				3B29BBA6263C2C4700399D71 /* ReminderCollectionViewDataSource.swift in Sources */,
 				D8DFF1C0260E482100777F4C /* ServicesCollectionViewCell.swift in Sources */,
 				D8DFF1B4260E480B00777F4C /* ServicesCollectionViewDelegate.swift in Sources */,
 				D8DFF1B2260E480800777F4C /* ServicesCollectionViewDataSource.swift in Sources */,

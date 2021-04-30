@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,10 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReminderViewController" customModule="HSU" customModuleProvider="target">
             <connections>
-                <outlet property="btnDrugs" destination="2Kw-fe-2x1" id="5mJ-bN-o41"/>
-                <outlet property="btnFood" destination="iiK-xY-VwW" id="T3V-6J-7eh"/>
-                <outlet property="btnVaccine" destination="HAU-0v-uBu" id="fE2-JD-KeL"/>
-                <outlet property="btnVisit" destination="DtR-8Z-6KR" id="LdP-2W-epG"/>
+                <outlet property="reminderCollectionView" destination="UoG-zx-ncf" id="iGt-17-aVe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,84 +20,41 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="a3b-u4-oBl">
-                    <rect key="frame" x="47" y="258.66666666666669" width="320" height="219"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="DRu-kA-zuj">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAU-0v-uBu">
-                                    <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
-                                    <color key="backgroundColor" red="0.95294117649999999" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="88" id="MNv-W2-ztd"/>
-                                        <constraint firstAttribute="height" constant="88" id="eny-ce-Edh"/>
-                                    </constraints>
-                                    <state key="normal" image="vaccineImg"/>
-                                    <connections>
-                                        <action selector="btnVaccine:" destination="-1" eventType="touchUpInside" id="aKD-Sx-ckT"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kw-fe-2x1">
-                                    <rect key="frame" x="116" y="0.0" width="88" height="88"/>
-                                    <color key="backgroundColor" red="0.95294117649999999" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="88" id="Yp3-hC-qBH"/>
-                                        <constraint firstAttribute="height" constant="88" id="a2K-8n-l5g"/>
-                                    </constraints>
-                                    <state key="normal" image="drugsImg"/>
-                                    <connections>
-                                        <action selector="btnDrugs:" destination="-1" eventType="touchUpInside" id="awU-7k-K0t"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtR-8Z-6KR">
-                                    <rect key="frame" x="232" y="0.0" width="88" height="88"/>
-                                    <color key="backgroundColor" red="0.95294117649999999" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="88" id="DvM-6V-N3M"/>
-                                        <constraint firstAttribute="width" constant="88" id="f5u-DE-icE"/>
-                                    </constraints>
-                                    <state key="normal" image="vetVisitImg"/>
-                                    <connections>
-                                        <action selector="btnVisit:" destination="-1" eventType="touchUpInside" id="lbq-xq-tD2"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-L8-kkx">
-                            <rect key="frame" x="0.0" y="131" width="88" height="88"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iiK-xY-VwW">
-                                    <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
-                                    <color key="backgroundColor" red="0.95294117649999999" green="0.78536677359999996" blue="0.42735743520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="88" id="K6z-Qr-5Cl"/>
-                                        <constraint firstAttribute="height" constant="88" id="wEv-Ap-pls"/>
-                                    </constraints>
-                                    <state key="normal" image="foodImg"/>
-                                    <connections>
-                                        <action selector="btnFood:" destination="-1" eventType="touchUpInside" id="SKb-18-a66"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </stackView>
-                    </subviews>
-                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hatırlatıcılar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iB3-Iq-wh0">
+                    <rect key="frame" x="20" y="35" width="180" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27" id="HY5-3Q-akv"/>
+                        <constraint firstAttribute="width" constant="180" id="SLE-Le-qyd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UoG-zx-ncf">
+                    <rect key="frame" x="0.0" y="92" width="414" height="644"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dVB-kd-7DB">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="a3b-u4-oBl" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="YDv-kW-ejW"/>
-                <constraint firstItem="a3b-u4-oBl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cZL-SD-aYK"/>
+                <constraint firstItem="iB3-Iq-wh0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="QJB-bQ-xnX"/>
+                <constraint firstItem="iB3-Iq-wh0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="Rbw-HH-3XI"/>
+                <constraint firstItem="UoG-zx-ncf" firstAttribute="top" secondItem="iB3-Iq-wh0" secondAttribute="bottom" constant="30" id="ZvT-Ln-1OG"/>
+                <constraint firstItem="UoG-zx-ncf" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="dpY-bI-toC"/>
+                <constraint firstItem="UoG-zx-ncf" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="pLJ-O4-vyj"/>
+                <constraint firstItem="UoG-zx-ncf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qz6-ga-4S5"/>
             </constraints>
-            <point key="canvasLocation" x="85.507246376811594" y="70.982142857142847"/>
+            <point key="canvasLocation" x="85.507246376811594" y="70.923913043478265"/>
         </view>
     </objects>
     <resources>
-        <image name="drugsImg" width="52" height="52"/>
-        <image name="foodImg" width="46" height="46"/>
-        <image name="vaccineImg" width="49" height="49"/>
-        <image name="vetVisitImg" width="58" height="58"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
