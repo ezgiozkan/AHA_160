@@ -24,9 +24,9 @@ extension ServicesCollectionViewDataSource: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ServicesCollectionViewCell.cellIdentifier, for: indexPath) as! ServicesCollectionViewCell
         
-        cell.titleLabel.text = "Name"
-        cell.subtitleLabel.text = "Description"
-        cell.imageView.image = #imageLiteral(resourceName: "face")
+        //cell.titleLabel.text = "Name"
+        //cell.subtitleLabel.text = "Description"
+        //cell.imageView.image = #imageLiteral(resourceName: "face")
         
         return cell
         

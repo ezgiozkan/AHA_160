@@ -45,6 +45,8 @@ class ReminderViewController: UIViewController, UIGestureRecognizerDelegate {
     func configureNavBar() {
             
         self.view.backgroundColor = .white
+        
+        self.navigationController?.navigationBar.topItem?.title = "Hatırlatıcılar"
         let rightBarButton = UIBarButtonItem(image: UIImage(systemName: "plus"),
                                       style: .plain,
                                       target: self,
