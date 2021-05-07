@@ -112,10 +112,12 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
                     
                     if response == 200 && token != nil {
                         
+                        UserDefaults.standard.setValue(self.emailTxtField.text!, forKey: "currentUserEmail")
+                        
                         if self.isRemember {
                             
                             UserDefaults.standard.setValue(token, forKey: "token")
-                            
+
                         }else{
                             
                             if (UserDefaults.standard.string(forKey: "token") != nil) {

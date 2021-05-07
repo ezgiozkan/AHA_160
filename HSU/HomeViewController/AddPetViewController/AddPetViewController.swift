@@ -36,7 +36,7 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
-    var selectedGender: String = "Dişi" {
+    var selectedGender: String? = "Dişi" {
         
         didSet {
             
@@ -156,7 +156,39 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @IBAction func addButton(_ sender: Any) {
         
-        print("Add pet")
+        if let name = self.nameTextField.text, let gender = self.selectedGender,
+           let breed = self.breedTextField.text, let dateOfBirth = self.birthTextField.text{
+            
+            if !name.isEmpty && !gender.isEmpty && !breed.isEmpty && !dateOfBirth.isEmpty {
+                
+                let params = [
+                    
+                    "name": self.nameTextField.text!,
+                    "gender": self.selectedGender!,
+                    "breed": self.breedTextField.text!,
+                    "dateOfBirth": self.birthTextField.text!,
+                    "isneutered": neauteredSwitch.isOn ? true : false
+                    
+                ] as [String : Any]
+                
+                Network.shared.addPet(params: params) { (status) in
+                    
+                    if status == 200 {
+                        
+                        print("added succesfully")
+                    }else{
+                        
+                        print("failure")
+                    }
+                }
+            }else{
+                
+                print("fill all")
+            }
+        }
+        
+
+        
     }
     
 
@@ -185,7 +217,7 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     @objc func doneButtonClicked() {
            
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         birthTextField.text = dateFormatter.string(from: datePicker.date)
         
         self.view.endEditing(true)

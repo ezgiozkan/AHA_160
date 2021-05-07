@@ -128,6 +128,8 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
                         
                         if statusCode == 201 && error == nil {
                             
+                            UserDefaults.standard.setValue(self.emailTxtField.text!, forKey: "currentUserEmail")
+                            
                             DispatchQueue.main.async {
                                 
                                 let alert = UIAlertController(title: "", message: "Üye kayıtı başarılı.", preferredStyle: .alert)

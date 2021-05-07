@@ -24,7 +24,8 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         
         let item1 = UIViewController()
-        let item2 = UIViewController()
+        
+        let item2 = UINavigationController(rootViewController: HealthInformationViewController(nibName: "HealthInformationViewController", bundle: .main))
         
         let item3 = UINavigationController(rootViewController: HomeViewController(nibName: "HomeViewController", bundle: .main))
         

@@ -38,6 +38,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(UserDefaults.standard.string(forKey: "currentUserEmail") ?? "boş")
+        
         configureImageView()
         configureCollectionViews()
         
