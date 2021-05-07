@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JWTDecode
 
 class Network {
     
@@ -47,8 +48,6 @@ class Network {
             URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
                 
                 
-                guard let data = data else { return }
-                
                 if let httpResponse = response as? HTTPURLResponse {
                     
                     completion(httpResponse.statusCode,nil)
@@ -89,7 +88,34 @@ class Network {
 
                         guard let data = data else { return }
                         let token = String(data: data, encoding: .utf8)
+                        
                         completion(httpResponse.statusCode,token)
+                        
+                        do {
+                            
+                            let jwt = try decode(jwt: token ?? "")
+                            
+                            let emailClaim = jwt.claim(name: "email")
+                            
+                            if let email = emailClaim.string {
+                                
+                                UserDefaults.standard.setValue(email, forKey: "currentUserEmail")
+
+                            }
+                            
+                            let idClaim = jwt.claim(name: "nameid")
+                            
+                            if let nameid = idClaim.string {
+                                
+                                UserDefaults.standard.setValue(nameid, forKey: "currentUserId")
+                            }
+                       
+                        }catch {
+                            
+                            print("tokenError")
+                        }
+                        
+                        
                     }
                     
                     else if httpResponse.statusCode == 401 {
@@ -108,9 +134,8 @@ class Network {
 
     }
     
-    func addPet(params: [String: Any],completion: @escaping (Int?) -> ()) {
+    func addPet(params: [String: Any],completion: @escaping (Int?,PetResponse?) -> ()) {
         
-        print(params)
         self.endPoint = "/animals/add"
         
         guard let url = URL(string: self.baseUrl + self.endPoint) else { return }
@@ -133,12 +158,26 @@ class Network {
 
                     if httpResponse.statusCode == 200 {
 
-                        completion(httpResponse.statusCode)
+                        guard let data = data else { return }
+                        
+                        let decoder = JSONDecoder()
+                        
+                        do {
+                            
+                            let jsonData = try decoder.decode(PetResponse.self, from: data)
+                            completion(httpResponse.statusCode,jsonData)
+                        
+                        }catch{
+                            
+                            completion(Int(error.localizedDescription),nil)
+                            
+                        }
+                        
                     }
                     
                     else if httpResponse.statusCode == 401 {
 
-                        completion(httpResponse.statusCode)
+                        completion(httpResponse.statusCode,nil)
                     }
                     
                 }
@@ -147,7 +186,7 @@ class Network {
             
         }catch {
             
-            completion(Int(error.localizedDescription))
+            completion(Int(error.localizedDescription),nil)
         }
     }
     
@@ -174,4 +213,6 @@ class Network {
         }.resume()
         
     }
+
+
 }

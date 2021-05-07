@@ -7,6 +7,12 @@
 
 import UIKit
 
+protocol AddPetOutputDelegate: class {
+    
+    func petIds(id: Int)
+}
+
+
 class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     
     // MARK: - IBOutlets
@@ -62,10 +68,13 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     
     let datePicker = UIDatePicker()
     
+    var petIds: [String] = []
+    
+    var outputDelegate: AddPetOutputDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         createDatePicker()
         configureFirstStackView()
         configureNavBar()
@@ -157,12 +166,14 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func addButton(_ sender: Any) {
         
         if let name = self.nameTextField.text, let gender = self.selectedGender,
-           let breed = self.breedTextField.text, let dateOfBirth = self.birthTextField.text{
+           let breed = self.breedTextField.text, let dateOfBirth = self.birthTextField.text,
+           let userId = UserDefaults.standard.string(forKey: "currentUserId") {
             
-            if !name.isEmpty && !gender.isEmpty && !breed.isEmpty && !dateOfBirth.isEmpty {
+            if !name.isEmpty && !gender.isEmpty && !breed.isEmpty && !dateOfBirth.isEmpty && !userId.isEmpty{
                 
                 let params = [
                     
+                    "userId": userId,
                     "name": self.nameTextField.text!,
                     "gender": self.selectedGender!,
                     "breed": self.breedTextField.text!,
@@ -171,11 +182,17 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
                     
                 ] as [String : Any]
                 
-                Network.shared.addPet(params: params) { (status) in
+                Network.shared.addPet(params: params) { (status, response) in
                     
                     if status == 200 {
                         
-                        print("added succesfully")
+                        self.outputDelegate?.petIds(id: response?.id ?? 0)
+                        
+                        DispatchQueue.main.async {
+                            
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                        
                     }else{
                         
                         print("failure")
@@ -186,8 +203,6 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
                 print("fill all")
             }
         }
-        
-
         
     }
     
@@ -200,13 +215,13 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func femaleButton(_ sender: UIButton) {
 
         self.selectedGender = sender.currentTitle!
-        print(self.selectedGender)
+        //print(self.selectedGender)
     }
     
     @IBAction func maleButton(_ sender: UIButton) {
         
         self.selectedGender = sender.currentTitle!
-        print(self.selectedGender)
+        //print(self.selectedGender)
     }
     
     @objc func back() {

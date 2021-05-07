@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,6 +37,8 @@
 		D872A39026459A77006D439A /* HealthInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D872A38E26459A77006D439A /* HealthInformationViewController.xib */; };
 		D872A39626459B7C006D439A /* HealthInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D872A39426459B7C006D439A /* HealthInformationCollectionViewCell.swift */; };
 		D872A39726459B7C006D439A /* HealthInformationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D872A39526459B7C006D439A /* HealthInformationCollectionViewCell.xib */; };
+		D872A39B2645C0AD006D439A /* PetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D872A39A2645C0AD006D439A /* PetResponse.swift */; };
+		D872A39F2645E385006D439A /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = D872A39E2645E385006D439A /* JWTDecode */; };
 		D87A400426358F6500363F3C /* UpdatePetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87A400226358F6500363F3C /* UpdatePetViewController.swift */; };
 		D87A400526358F6500363F3C /* UpdatePetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87A400326358F6500363F3C /* UpdatePetViewController.xib */; };
 		D88967102610EA130092B228 /* PetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D889670E2610EA130092B228 /* PetDetailViewController.swift */; };
@@ -94,6 +96,7 @@
 		D872A38E26459A77006D439A /* HealthInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthInformationViewController.xib; sourceTree = "<group>"; };
 		D872A39426459B7C006D439A /* HealthInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthInformationCollectionViewCell.swift; sourceTree = "<group>"; };
 		D872A39526459B7C006D439A /* HealthInformationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthInformationCollectionViewCell.xib; sourceTree = "<group>"; };
+		D872A39A2645C0AD006D439A /* PetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetResponse.swift; sourceTree = "<group>"; };
 		D87A400226358F6500363F3C /* UpdatePetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePetViewController.swift; sourceTree = "<group>"; };
 		D87A400326358F6500363F3C /* UpdatePetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdatePetViewController.xib; sourceTree = "<group>"; };
 		D889670E2610EA130092B228 /* PetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D872A39F2645E385006D439A /* JWTDecode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				D872A388264598F0006D439A /* Pets.swift */,
+				D872A39A2645C0AD006D439A /* PetResponse.swift */,
 			);
 			path = CommonModels;
 			sourceTree = "<group>";
@@ -477,6 +482,9 @@
 			dependencies = (
 			);
 			name = HSU;
+			packageProductDependencies = (
+				D872A39E2645E385006D439A /* JWTDecode */,
+			);
 			productName = HSU;
 			productReference = 3B7466BE25FCC32E0000FB00 /* HSU.app */;
 			productType = "com.apple.product-type.application";
@@ -504,6 +512,9 @@
 				Base,
 			);
 			mainGroup = 3B7466B525FCC32E0000FB00;
+			packageReferences = (
+				D872A39D2645E385006D439A /* XCRemoteSwiftPackageReference "JWTDecode.swift" */,
+			);
 			productRefGroup = 3B7466BF25FCC32E0000FB00 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -561,6 +572,7 @@
 				D8DFF1BE260E481F00777F4C /* PetsCollectionViewCell.swift in Sources */,
 				D8D0237C2639B67D0023068B /* Network.swift in Sources */,
 				3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */,
+				D872A39B2645C0AD006D439A /* PetResponse.swift in Sources */,
 				D872A385264594BB006D439A /* Auth.swift in Sources */,
 				3B29BBAD263C2C7900399D71 /* ReminderCollectionViewCell.swift in Sources */,
 				D85D1CC22635C09200A8FF7D /* SettingsViewController.swift in Sources */,
@@ -775,6 +787,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D872A39D2645E385006D439A /* XCRemoteSwiftPackageReference "JWTDecode.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/JWTDecode.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D872A39E2645E385006D439A /* JWTDecode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D872A39D2645E385006D439A /* XCRemoteSwiftPackageReference "JWTDecode.swift" */;
+			productName = JWTDecode;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3B7466CA25FCC32F0000FB00 /* HSU.xcdatamodeld */ = {

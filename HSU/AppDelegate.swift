@@ -12,7 +12,7 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    
     var window: UIWindow?
     
 
@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let rootViewController = TabBarController(nibName: "TabBarController", bundle: .main)
             window?.rootViewController = rootViewController
             
+            
         }else{
             
             let rootViewController = RootViewController(nibName: "RootViewController", bundle: .main)
@@ -35,11 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
        
         
-        
         return true
     }
+    
 
- 
+
     
     // MARK: - Core Data stack
 

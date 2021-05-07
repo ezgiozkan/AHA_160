@@ -35,16 +35,21 @@ class HomeViewController: UIViewController {
         return UIScreen.main.bounds.width - 25
     }
     
+    var users = [Auth]()
+    var petIds: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print(UserDefaults.standard.string(forKey: "currentUserEmail") ?? "boş")
         
         configureImageView()
         configureCollectionViews()
         
+        print(UserDefaults.standard.string(forKey: "currentUserEmail") ?? "boşMail")
+        print(UserDefaults.standard.string(forKey: "currentUserId") ?? "boşId")
+        
     }
     
+
     
     func configureImageView() {
         
@@ -76,6 +81,7 @@ class HomeViewController: UIViewController {
         self.servicesCollectionView.register(UINib(nibName: "ServicesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ServicesCollectionViewCell.cellIdentifier)
         
     }
+    
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -83,6 +89,9 @@ class HomeViewController: UIViewController {
         // Hide the navigation bar on the this view controller
         
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        print(UserDefaults.standard.array(forKey: "nums") ?? [])
+        
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -102,7 +111,10 @@ extension HomeViewController: PetsCollectionViewDelegateOutput {
         
         if indexPath.row == 0 {
             
-            self.navigationController?.pushViewController(AddPetViewController(nibName: "AddPetViewController", bundle: nil), animated: true)
+            let addPetVC = AddPetViewController(nibName: "AddPetViewController", bundle: nil)
+            addPetVC.outputDelegate = self
+            
+            self.navigationController?.pushViewController(addPetVC, animated: true)
             
         }else{
             
@@ -111,3 +123,15 @@ extension HomeViewController: PetsCollectionViewDelegateOutput {
     }
 }
 
+extension HomeViewController: AddPetOutputDelegate {
+    
+    func petIds(id: Int) {
+        
+        var nums = UserDefaults.standard.array(forKey: "nums") ?? []
+        nums.append(id)
+        UserDefaults.standard.set(nums, forKey: "nums")
+        
+        print(UserDefaults.standard.array(forKey: "nums")!)
+    }
+    
+}

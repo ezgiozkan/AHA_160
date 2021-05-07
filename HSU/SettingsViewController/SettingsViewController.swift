@@ -88,8 +88,10 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             
             alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { (action) in
                 
-                UserDefaults.standard.setValue(nil, forKey: "token")
+                UserDefaults.standard.removeObject(forKey: "token")
+                //UserDefaults.standard.removeObject(forKey: "nums")
                 
+                print("log out")
                 self.dismiss(animated: true)
             }))
             

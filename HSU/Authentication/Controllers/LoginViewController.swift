@@ -112,8 +112,6 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
                     
                     if response == 200 && token != nil {
                         
-                        UserDefaults.standard.setValue(self.emailTxtField.text!, forKey: "currentUserEmail")
-                        
                         if self.isRemember {
                             
                             UserDefaults.standard.setValue(token, forKey: "token")
@@ -131,6 +129,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
                             let tabVC = TabBarController(nibName: "TabBarController", bundle: nil)
                             tabVC.modalPresentationStyle = .fullScreen
                             self.navigationController?.present(tabVC, animated: true, completion: nil)
+                            
+
                         }
                         
                     }
@@ -156,6 +156,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
         
         
     }
+    
+    
     
     @IBAction func rememberMeButton(_ sender: UIButton) {
         
