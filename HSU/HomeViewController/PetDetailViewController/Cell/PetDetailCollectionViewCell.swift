@@ -11,6 +11,11 @@ class PetDetailCollectionViewCell: UICollectionViewCell {
     
     static let cellIdentifier = "petDetailCollectionViewCell"
     
+    // MARK: - IBOutlets
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
+    
+    
     // MARK: - Constants
     private enum Constants{
         

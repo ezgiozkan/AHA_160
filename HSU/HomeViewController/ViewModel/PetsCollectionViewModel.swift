@@ -22,4 +22,21 @@ class PetsCollectionViewModel {
         
         return (responseModel?.count ?? 0) + 1
     }
+    
+    func cellForItemAt(indexPath: IndexPath) -> Pets?{
+        
+        let pet = responseModel?[indexPath.row]
+        
+        return pet
+    }
 }
+
+
+/*
+ "name": "hsutestanimal",
+ "gender": "Erkek",
+ "type": null,
+ "breed": "küçük",
+ "dateOfBirth": "2021-10-05T00:00:00",
+ "isNeutered": true,
+ */

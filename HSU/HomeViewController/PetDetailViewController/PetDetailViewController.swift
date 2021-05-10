@@ -28,6 +28,10 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     var petDetailCollectionViewDataSource: PetDetailCollectionViewDataSource?
     var petDetailCollectionViewDelegate: PetDetailCollectionViewDelegate?
     
+    var viewModel: PetsCollectionViewModel?
+    
+    var selectedIndexPathRow: Int = 0
+    
     var windowWidth: CGFloat{
         
         return UIScreen.main.bounds.width - 80
@@ -36,6 +40,7 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         configureNavBar()
         configureCollectionView()
@@ -66,7 +71,10 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         self.secondBackView.backViewShadow(cornerRadius: 24)
         
         self.collectionView.collectionViewLayout.invalidateLayout()
-        self.petDetailCollectionViewDataSource = PetDetailCollectionViewDataSource()
+        
+        if let viewModel = self.viewModel {
+            self.petDetailCollectionViewDataSource = PetDetailCollectionViewDataSource(selectedPet: viewModel.responseModel?[self.selectedIndexPathRow - 1])
+        }
         self.petDetailCollectionViewDelegate = PetDetailCollectionViewDelegate(width: self.windowWidth)
         
         self.collectionView.dataSource = self.petDetailCollectionViewDataSource

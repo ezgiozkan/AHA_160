@@ -124,7 +124,15 @@ class HomeViewController: UIViewController {
         
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
-        //self.getPets()
+        getPets { (viewModel) in
+            
+            self.viewModel = viewModel
+            
+            DispatchQueue.main.async {
+                
+                self.configureCollectionViews()
+            }
+        }
         
     }
 
@@ -152,7 +160,11 @@ extension HomeViewController: PetsCollectionViewDelegateOutput {
             
         }else{
             
-            self.navigationController?.pushViewController(PetDetailViewController(nibName: "PetDetailViewController", bundle: nil), animated: true)
+            let petDetailVC = PetDetailViewController(nibName: "PetDetailViewController", bundle: nil)
+            petDetailVC.selectedIndexPathRow = indexPath.row
+            petDetailVC.viewModel = self.viewModel
+            
+            self.navigationController?.pushViewController(petDetailVC, animated: true)
         }
     }
 }
