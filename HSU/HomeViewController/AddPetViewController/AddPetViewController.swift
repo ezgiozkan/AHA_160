@@ -173,7 +173,7 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
                 
                 let params = [
                     
-                    "userId": userId,
+                    "userid": userId,
                     "name": self.nameTextField.text!,
                     "gender": self.selectedGender!,
                     "breed": self.breedTextField.text!,

@@ -21,6 +21,8 @@ class HomeViewController: UIViewController {
     var petsCollectionViewDelegate: PetsCollectionViewDelegate?
     var servicesCollectionViewDelegate: ServicesCollectionViewDelegate?
     
+    var viewModel: PetsCollectionViewModel?
+    
     // MARK: - Constants
     private enum Constants{
         
@@ -42,14 +44,42 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         configureImageView()
-        configureCollectionViews()
+        getPets { (viewModel) in
+            
+            self.viewModel = viewModel
+            
+            DispatchQueue.main.async {
+                
+                self.configureCollectionViews()
+            }
+        }
         
         print(UserDefaults.standard.string(forKey: "currentUserEmail") ?? "boşMail")
-        print(UserDefaults.standard.string(forKey: "currentUserId") ?? "boşId")
         
     }
     
+    func getPets(completion: @escaping (PetsCollectionViewModel) ->()) {
+        
+        let userId = UserDefaults.standard.integer(forKey: "currentUserId")
 
+        Network.shared.getPet(userId: userId) { (result) in
+            
+            switch result {
+            
+            case .success(let responseModel):
+                
+                let viewModel = PetsCollectionViewModel(responseModel: responseModel)
+                completion(viewModel)
+                
+            case .failure(let error):
+                
+                print(error.localizedDescription)
+                
+            }
+            
+        }
+
+    }
     
     func configureImageView() {
         
@@ -64,7 +94,11 @@ class HomeViewController: UIViewController {
     func configureCollectionViews() {
         
         self.petsCollectionViewDelegate = PetsCollectionViewDelegate(outputDelegate: self)
-        self.petsCollectionViewDataSource = PetsCollectionViewDataSource()
+        
+        if let viewModel = self.viewModel {
+           
+            self.petsCollectionViewDataSource = PetsCollectionViewDataSource(viewModel: viewModel)
+        }
         
         self.petsCollectionView.dataSource = self.petsCollectionViewDataSource
         self.petsCollectionView.delegate = self.petsCollectionViewDelegate
@@ -90,7 +124,7 @@ class HomeViewController: UIViewController {
         
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
-        print(UserDefaults.standard.array(forKey: "nums") ?? [])
+        //self.getPets()
         
     }
 

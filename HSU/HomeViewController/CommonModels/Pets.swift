@@ -11,16 +11,9 @@ struct Pets: Decodable {
     
     let name: String
     let gender: String
-    let breed: Bool
-    let dateOfBirth: Date
+    let breed: String
+    let dateOfBirth: String
     let isNeutered: Bool
     
+    //TODO: healthInfo or media...
 }
-//"id": 3,
-//"name": "pablo",
-//"gender": "female",
-//"breed": "true",
-//"dateOfBirth": "2020-01-01T00:00:00",
-//"isNeutered": true,
-//"url": null,
-//"healthInformations": []

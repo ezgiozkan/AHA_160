@@ -8,6 +8,10 @@
 import Foundation
 import JWTDecode
 
+protocol PetsCollectionViewModelDelegateOutput: class {
+    func responseViewModel(viewModel: PetsCollectionViewModel)
+}
+
 class Network {
     
     static let shared = Network()
@@ -15,15 +19,17 @@ class Network {
     var baseUrl: String
     var endPoint: String
     
+    weak var delegate: PetsCollectionViewModelDelegateOutput?
+    
     init() {
         
         self.baseUrl = "http://api.hayvansaglikuygulamasi.com/api"
         self.endPoint = ""
     }
-    
+ 
     func signUp(fullName: String, phoneNumber: String, email: String, password: String, completion: @escaping (Int?,String?) -> ()) {
         
-        self.endPoint = "/auth/register"
+        self.endPoint = "/users/register"
         
         guard let url = URL(string: self.baseUrl + self.endPoint) else { return }
         
@@ -64,7 +70,7 @@ class Network {
     
     func signIn(email: String, password: String, completion: @escaping (Int?,String?) -> ()) {
         
-        self.endPoint = "/auth/login"
+        self.endPoint = "/users/login"
         
         guard let url = URL(string: self.baseUrl + self.endPoint) else { return }
         
@@ -190,9 +196,9 @@ class Network {
         }
     }
     
-    func getPet(id: Int, completion: @escaping (Result<[Pets],Error>) -> ()) {
+    func getPet(userId: Int, completion: @escaping (Result<[Pets],Error>) -> ()) {
         
-        self.endPoint = "/animals/detail/?id=\(id)"
+        self.endPoint = "/users/animals/?userId=\(userId)"
         
         guard let url = URL(string: self.baseUrl + self.endPoint) else { return }
         
@@ -203,6 +209,8 @@ class Network {
             do {
                 
                 let jsonData = try decoder.decode([Pets].self, from: data!)
+                //self.delegate?.responseViewModel(viewModel: viewModel)
+                
                 completion(.success(jsonData))
             
             }catch{
