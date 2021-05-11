@@ -14,6 +14,7 @@ class PetDetailCollectionViewCell: UICollectionViewCell {
     // MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet weak var image: UIImageView!
     
     
     // MARK: - Constants

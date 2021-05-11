@@ -51,7 +51,7 @@ extension HealthInformationViewController: UICollectionViewDataSource, UICollect
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
      
-        return CGSize.init(width: UIScreen.main.bounds.width - 11, height: 313.5)
+        return CGSize.init(width: UIScreen.main.bounds.width - 22, height: 313.5)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

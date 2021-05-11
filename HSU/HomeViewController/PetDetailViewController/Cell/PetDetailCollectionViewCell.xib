@@ -80,6 +80,7 @@
                 <constraint firstItem="E7p-AT-gvy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tcf-FV-d5e"/>
             </constraints>
             <connections>
+                <outlet property="image" destination="kqL-Bk-99B" id="Jg0-rc-RCv"/>
                 <outlet property="subTitleLabel" destination="Q9k-ty-dHM" id="RGF-Qe-nPP"/>
                 <outlet property="titleLabel" destination="COb-wz-ucq" id="Dc1-gh-GUT"/>
             </connections>

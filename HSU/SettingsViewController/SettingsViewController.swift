@@ -89,10 +89,9 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { (action) in
                 
                 UserDefaults.standard.removeObject(forKey: "token")
-                //UserDefaults.standard.removeObject(forKey: "nums")
                 
-                print("log out")
-                self.dismiss(animated: true)
+                self.navigationController?.popViewController(animated: true)
+                self.tabBarController?.dismiss(animated: true, completion: nil)
             }))
             
             self.present(alert, animated: true, completion: nil)

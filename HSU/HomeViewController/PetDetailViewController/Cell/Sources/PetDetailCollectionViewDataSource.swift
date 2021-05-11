@@ -12,6 +12,8 @@ class PetDetailCollectionViewDataSource: NSObject {
     
     var titles = ["İsim","Cins","Cinsiyet","Doğum Yılı","Kısırlık Durumu"]
     var subTitles = [String]()
+    var images: [UIImage] = [#imageLiteral(resourceName: "name"),#imageLiteral(resourceName: "pawprint"),#imageLiteral(resourceName: "gender"),#imageLiteral(resourceName: "cake"),#imageLiteral(resourceName: "information")]
+    
     var selectedPet: Pets?
     
     init(selectedPet: Pets?) {
@@ -35,7 +37,6 @@ class PetDetailCollectionViewDataSource: NSObject {
 extension PetDetailCollectionViewDataSource: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return self.titles.count
         
     }
@@ -44,12 +45,12 @@ extension PetDetailCollectionViewDataSource: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PetDetailCollectionViewCell.cellIdentifier, for: indexPath) as! PetDetailCollectionViewCell
         
+        
         cell.titleLabel.text = self.titles[indexPath.row]
         cell.subTitleLabel.text = self.subTitles[indexPath.row]
+        cell.image.image = self.images[indexPath.row]
         
         return cell
     }
 
-
-    
 }

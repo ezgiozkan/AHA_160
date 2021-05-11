@@ -157,16 +157,12 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
         
     }
     
-    
-    
     @IBAction func rememberMeButton(_ sender: UIButton) {
-        
         self.isRemember = !self.isRemember
         
     }
     
     @objc func back() {
-        
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -177,7 +173,6 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         if self.emailTxtField.text != "" && self.passwordTxtField.text != ""{
             
             self.navigationController?.popViewController(animated: false)

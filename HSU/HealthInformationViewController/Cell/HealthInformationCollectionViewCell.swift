@@ -17,7 +17,20 @@ class HealthInformationCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.backView.backViewShadow(cornerRadius: 5)
+        configureBackView()
+    }
+    
+    func configureBackView() {
+
+        contentView.layer.cornerRadius = 8
+        contentView.layer.masksToBounds = true
+        layer.cornerRadius = 8
+        layer.masksToBounds = false
+        layer.shadowRadius = 8.0
+        layer.shadowOpacity = 0.20
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 5)
+
     }
 
 }
