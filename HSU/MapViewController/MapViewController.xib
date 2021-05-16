@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +23,55 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvk-KI-0Js">
                     <rect key="frame" x="0.0" y="637" width="419" height="253"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CbQ-uh-hOS">
+                            <rect key="frame" x="17" y="35" width="374" height="128"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bear" translatesAutoresizingMaskIntoConstraints="NO" id="bcm-RA-EMa">
+                                    <rect key="frame" x="21" y="28" width="70" height="70"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="TtS-ZW-CuS"/>
+                                        <constraint firstAttribute="width" constant="70" id="dC9-oU-Qef"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dobido Vet Clinic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riv-nE-Tc3">
+                                    <rect key="frame" x="113" y="28" width="125" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16" id="BYK-Fk-Zrh"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harbiye Mahallesi  06460 Çankaya/Ankara" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWf-hL-8nL">
+                                    <rect key="frame" x="113" y="44" width="255.5" height="52"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="52" id="1Ft-7F-TbN"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="labelColor"/>
+                            <constraints>
+                                <constraint firstItem="riv-nE-Tc3" firstAttribute="top" secondItem="CbQ-uh-hOS" secondAttribute="top" constant="28" id="0lk-Qr-5lr"/>
+                                <constraint firstItem="riv-nE-Tc3" firstAttribute="leading" secondItem="bcm-RA-EMa" secondAttribute="trailing" constant="22" id="3GS-MB-Emm"/>
+                                <constraint firstItem="NWf-hL-8nL" firstAttribute="top" secondItem="riv-nE-Tc3" secondAttribute="bottom" id="5NG-6g-UFC"/>
+                                <constraint firstItem="NWf-hL-8nL" firstAttribute="leading" secondItem="bcm-RA-EMa" secondAttribute="trailing" constant="22" id="igf-RS-Gka"/>
+                                <constraint firstItem="bcm-RA-EMa" firstAttribute="leading" secondItem="CbQ-uh-hOS" secondAttribute="leading" constant="21" id="jfw-SR-Uyh"/>
+                                <constraint firstAttribute="height" constant="128" id="rMU-6x-Qei"/>
+                                <constraint firstItem="bcm-RA-EMa" firstAttribute="top" secondItem="CbQ-uh-hOS" secondAttribute="top" constant="28" id="rnj-Cv-FuF"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" systemColor="labelColor"/>
+                    <constraints>
+                        <constraint firstItem="CbQ-uh-hOS" firstAttribute="leading" secondItem="nvk-KI-0Js" secondAttribute="leading" constant="17" id="1aa-4U-egy"/>
+                        <constraint firstAttribute="bottom" secondItem="CbQ-uh-hOS" secondAttribute="bottom" constant="90" id="7cG-eI-sqV"/>
+                        <constraint firstItem="CbQ-uh-hOS" firstAttribute="top" secondItem="nvk-KI-0Js" secondAttribute="top" constant="35" id="bWZ-Bq-Mgg"/>
+                        <constraint firstAttribute="trailing" secondItem="CbQ-uh-hOS" secondAttribute="trailing" constant="28" id="ccs-hs-zng"/>
+                    </constraints>
                 </view>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TUg-2M-m3D">
                     <rect key="frame" x="0.0" y="44" width="414" height="593"/>
@@ -45,6 +93,7 @@
         </view>
     </objects>
     <resources>
+        <image name="bear" width="252" height="252"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

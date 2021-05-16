@@ -25,6 +25,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
 
         getLocation()
+      
         backView.layer.cornerRadius = 38
         //configureBackView()
     }
@@ -39,19 +40,29 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         
+      
+        
         if CLLocationManager.locationServicesEnabled(){
             
             locationManager.startUpdatingLocation()
+            myMap.showsUserLocation = true
         }
-        
     }
  
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:[CLLocation]){
 
-        myMap.addAnnotation(Location(vcoordinate: locations[0].coordinate))
+        //myMap.addAnnotation(Location(vcoordinate: locations[0].coordinate))
+        
+        let kullaniciAlani:CLLocation = locations[0] as CLLocation
         locationManager.stopUpdatingLocation()
+        
+        let Alan = CLLocationCoordinate2D(latitude: kullaniciAlani.coordinate.latitude, longitude: kullaniciAlani.coordinate.longitude)
+        let aralik = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let bolge = MKCoordinateRegion(center: Alan, span: aralik)
+              myMap.setRegion(bolge, animated: true)
     }
+    
     
     func configureBackView(){
         backView.roundedButton()
@@ -62,9 +73,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 class Location : NSObject, MKAnnotation{
     
     var coordinate : CLLocationCoordinate2D
-    
+  
     init( vcoordinate : CLLocationCoordinate2D){
         coordinate = vcoordinate
+       
     }
 }
 
