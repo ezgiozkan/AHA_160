@@ -10,7 +10,7 @@ import CoreLocation
 import MapKit
 
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
 
     //IBoutles
     
@@ -18,8 +18,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var backView: UIView!
     
     var locationManager : CLLocationManager!
+    let searchRadius: CLLocationDistance = 2000
+ 
     
+    let annotationLocations = [
     
+        ["title":"Dorukgiller Veteriner KLinik","latitude":39.895177 , "longitude":32.838194],
+        ["title":"Arda Veteriner Klinik","latitude": 39.894749, "longitude":32.841074],
+        ["title":"Korusev Veteriner Klinik","latitude":  39.893615, "longitude":32.841476]
+      
+    ]
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +37,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
       
         backView.layer.cornerRadius = 38
         //configureBackView()
+        createAnnotations(locations: annotationLocations)
+      
     }
     
     
@@ -54,13 +65,24 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
         //myMap.addAnnotation(Location(vcoordinate: locations[0].coordinate))
         
-        let kullaniciAlani:CLLocation = locations[0] as CLLocation
+        let userArea:CLLocation = locations[0] as CLLocation
         locationManager.stopUpdatingLocation()
         
-        let Alan = CLLocationCoordinate2D(latitude: kullaniciAlani.coordinate.latitude, longitude: kullaniciAlani.coordinate.longitude)
-        let aralik = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        let bolge = MKCoordinateRegion(center: Alan, span: aralik)
-              myMap.setRegion(bolge, animated: true)
+        let Area = CLLocationCoordinate2D(latitude: userArea.coordinate.latitude, longitude: userArea.coordinate.longitude)
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let area = MKCoordinateRegion(center: Area, span: span)
+              myMap.setRegion(area, animated: true)
+    }
+    
+    func createAnnotations(locations: [[String: Any]])
+    {
+        
+        for location in locations{
+            let annotations = MKPointAnnotation()
+            annotations.title = location["title"] as? String
+            annotations.coordinate = CLLocationCoordinate2D(latitude: location["latitude"] as! CLLocationDegrees, longitude:  location["longitude"] as! CLLocationDegrees)
+            myMap.addAnnotation(annotations)
+        }
     }
     
     
