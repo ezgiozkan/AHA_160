@@ -25,8 +25,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
 
         getLocation()
-        
-        configureBackView()
+        backView.layer.cornerRadius = 38
+        //configureBackView()
     }
     
     

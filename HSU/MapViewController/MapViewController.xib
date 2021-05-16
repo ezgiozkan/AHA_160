@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,31 +22,24 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvk-KI-0Js">
-                    <rect key="frame" x="0.0" y="598" width="414" height="264"/>
+                    <rect key="frame" x="0.0" y="637" width="419" height="253"/>
                     <color key="backgroundColor" systemColor="labelColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="264" id="Tfm-h6-q2R"/>
-                        <constraint firstAttribute="width" constant="414" id="lN0-ni-a1a"/>
-                    </constraints>
                 </view>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TUg-2M-m3D">
-                    <rect key="frame" x="0.0" y="44" width="414" height="554"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="414" id="Pnf-Nc-Sym"/>
-                        <constraint firstAttribute="height" constant="554" id="ZNp-LN-FsV"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="44" width="414" height="593"/>
                 </mapView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="nvk-KI-0Js" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="9mg-2G-rM0"/>
+                <constraint firstItem="TUg-2M-m3D" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9Ko-aC-bzB"/>
+                <constraint firstItem="nvk-KI-0Js" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="28" id="9mg-2G-rM0"/>
+                <constraint firstItem="TUg-2M-m3D" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="AZy-sC-FAt"/>
+                <constraint firstItem="nvk-KI-0Js" firstAttribute="top" secondItem="TUg-2M-m3D" secondAttribute="bottom" id="JgT-5T-F1j"/>
+                <constraint firstItem="TUg-2M-m3D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TIS-dE-rq4"/>
                 <constraint firstItem="nvk-KI-0Js" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Y7F-A5-Uah"/>
-                <constraint firstItem="TUg-2M-m3D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="afT-Fo-utk"/>
-                <constraint firstItem="nvk-KI-0Js" firstAttribute="top" secondItem="TUg-2M-m3D" secondAttribute="bottom" id="put-SW-bZe"/>
-                <constraint firstItem="TUg-2M-m3D" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uBm-09-44r"/>
-                <constraint firstItem="TUg-2M-m3D" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ulw-BX-96M"/>
-                <constraint firstItem="nvk-KI-0Js" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="w4b-bN-TMN"/>
+                <constraint firstItem="nvk-KI-0Js" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-225" id="put-SW-bZe"/>
+                <constraint firstItem="nvk-KI-0Js" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="5" id="w4b-bN-TMN"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="23.4375"/>
         </view>
