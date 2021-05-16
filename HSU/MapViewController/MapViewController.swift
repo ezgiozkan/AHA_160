@@ -35,11 +35,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     func getLocation(){
         
         locationManager = CLLocationManager()
-        
         locationManager.delegate = self
-        
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        
         locationManager.requestAlwaysAuthorization()
         
         if CLLocationManager.locationServicesEnabled(){
@@ -51,8 +48,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
  
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:[CLLocation]){
-        
-       
+
         myMap.addAnnotation(Location(vcoordinate: locations[0].coordinate))
         locationManager.stopUpdatingLocation()
     }
