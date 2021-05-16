@@ -87,7 +87,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     
     func configureBackView(){
-        backView.roundedButton()
+       
+        self.backView.backViewShadow(cornerRadius: 8)
        
     }
 }
@@ -102,16 +103,6 @@ class Location : NSObject, MKAnnotation{
     }
 }
 
-extension UIView{
-    func roundedButton(){
-        let maskPath1 = UIBezierPath(roundedRect: bounds,
-            byRoundingCorners: [.topLeft , .topRight],
-            cornerRadii: CGSize(width: 38, height: 38))
-        let maskLayer1 = CAShapeLayer()
-        maskLayer1.frame = bounds
-        maskLayer1.path = maskPath1.cgPath
-        layer.mask = maskLayer1
-    }
-}
+
 
 
