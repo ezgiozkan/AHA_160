@@ -21,6 +21,8 @@
 		3B7466D125FCC3320000FB00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7466CF25FCC3320000FB00 /* LaunchScreen.storyboard */; };
 		3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7466DD25FCC4DA0000FB00 /* RootViewController.swift */; };
 		3B7466E025FCC4DA0000FB00 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */; };
+		3B7A796326513F5F005E92BC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A796126513F5F005E92BC /* MapViewController.swift */; };
+		3B7A796426513F5F005E92BC /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7A796226513F5F005E92BC /* MapViewController.xib */; };
 		D8051542260CF86200B54EF0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8051540260CF86200B54EF0 /* TabBarController.swift */; };
 		D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8051541260CF86200B54EF0 /* TabBarController.xib */; };
 		D83621592635C5A20075A690 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83621572635C5A20075A690 /* SettingsTableViewCell.swift */; };
@@ -82,6 +84,8 @@
 		3B7466D225FCC3320000FB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B7466DD25FCC4DA0000FB00 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		3B7A796126513F5F005E92BC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3B7A796226513F5F005E92BC /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		D8051540260CF86200B54EF0 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D8051541260CF86200B54EF0 /* TabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
 		D83621572635C5A20075A690 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 		3B7466C025FCC32E0000FB00 /* HSU */ = {
 			isa = PBXGroup;
 			children = (
+				3B7A796026513F29005E92BC /* MapViewController */,
 				D872A38C26459A47006D439A /* HealthInformationViewController */,
 				D8D0237A2639B6670023068B /* Service */,
 				D85D1CBF2635C02A00A8FF7D /* SettingsViewController */,
@@ -260,6 +265,15 @@
 				3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */,
 			);
 			path = Xib;
+			sourceTree = "<group>";
+		};
+		3B7A796026513F29005E92BC /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3B7A796126513F5F005E92BC /* MapViewController.swift */,
+				3B7A796226513F5F005E92BC /* MapViewController.xib */,
+			);
+			path = MapViewController;
 			sourceTree = "<group>";
 		};
 		D805153F260CF84800B54EF0 /* TabBarController */ = {
@@ -555,6 +569,7 @@
 				3B6C604025FDFC7700839DA8 /* LoginViewController.xib in Resources */,
 				D86A22C8262F70C5006A91DB /* ReminderViewController.xib in Resources */,
 				D83A8C0B2639ACC20068574A /* ChosenReminderViewController.xib in Resources */,
+				3B7A796426513F5F005E92BC /* MapViewController.xib in Resources */,
 				D872A39026459A77006D439A /* HealthInformationViewController.xib in Resources */,
 				D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */,
 				D85D1CC32635C09200A8FF7D /* SettingsViewController.xib in Resources */,
@@ -612,6 +627,7 @@
 				D872A38F26459A77006D439A /* HealthInformationViewController.swift in Sources */,
 				D8DFF1C0260E482100777F4C /* ServicesCollectionViewCell.swift in Sources */,
 				D8DFF1B4260E480B00777F4C /* ServicesCollectionViewDelegate.swift in Sources */,
+				3B7A796326513F5F005E92BC /* MapViewController.swift in Sources */,
 				D8DFF1B2260E480800777F4C /* ServicesCollectionViewDataSource.swift in Sources */,
 				D83621592635C5A20075A690 /* SettingsTableViewCell.swift in Sources */,
 				3B7466C225FCC32E0000FB00 /* AppDelegate.swift in Sources */,
@@ -755,7 +771,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3MCKVUYN29;
+				DEVELOPMENT_TEAM = YJ43G2NR3P;
 				INFOPLIST_FILE = HSU/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -775,7 +791,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3MCKVUYN29;
+				DEVELOPMENT_TEAM = YJ43G2NR3P;
 				INFOPLIST_FILE = HSU/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

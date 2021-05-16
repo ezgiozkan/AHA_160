@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="HSU" customModuleProvider="target">
+            <connections>
+                <outlet property="backView" destination="nvk-KI-0Js" id="xVg-eo-Efh"/>
+                <outlet property="myMap" destination="TUg-2M-m3D" id="FP5-JL-RhA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvk-KI-0Js">
+                    <rect key="frame" x="0.0" y="598" width="414" height="264"/>
+                    <color key="backgroundColor" systemColor="labelColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="264" id="Tfm-h6-q2R"/>
+                        <constraint firstAttribute="width" constant="414" id="lN0-ni-a1a"/>
+                    </constraints>
+                </view>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TUg-2M-m3D">
+                    <rect key="frame" x="0.0" y="44" width="414" height="554"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="414" id="Pnf-Nc-Sym"/>
+                        <constraint firstAttribute="height" constant="554" id="ZNp-LN-FsV"/>
+                    </constraints>
+                </mapView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="nvk-KI-0Js" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="9mg-2G-rM0"/>
+                <constraint firstItem="nvk-KI-0Js" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Y7F-A5-Uah"/>
+                <constraint firstItem="TUg-2M-m3D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="afT-Fo-utk"/>
+                <constraint firstItem="nvk-KI-0Js" firstAttribute="top" secondItem="TUg-2M-m3D" secondAttribute="bottom" id="put-SW-bZe"/>
+                <constraint firstItem="TUg-2M-m3D" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uBm-09-44r"/>
+                <constraint firstItem="TUg-2M-m3D" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ulw-BX-96M"/>
+                <constraint firstItem="nvk-KI-0Js" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="w4b-bN-TMN"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="23.4375"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

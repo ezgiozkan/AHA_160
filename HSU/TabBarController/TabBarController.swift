@@ -23,7 +23,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let item1 = UIViewController()
+        let item1 = UINavigationController(rootViewController: MapViewController(nibName: "MapViewController", bundle: .main))
         
         let item2 = UINavigationController(rootViewController: HealthInformationViewController(nibName: "HealthInformationViewController", bundle: .main))
         
