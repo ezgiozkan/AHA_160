@@ -145,18 +145,38 @@
                                 <constraint firstItem="tGI-K3-hIW" firstAttribute="top" secondItem="Z8i-OQ-Vzk" secondAttribute="top" constant="8" id="qEx-57-DuV"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMe-v3-NaN">
+                            <rect key="frame" x="20" y="113" width="286" height="1"/>
+                            <color key="backgroundColor" systemColor="separatorColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="wDQ-nd-7wt"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEl-no-JbT">
+                            <rect key="frame" x="13" y="223" width="286" height="1"/>
+                            <color key="backgroundColor" systemColor="separatorColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="8S9-7V-rIi"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="YMe-v3-NaN" firstAttribute="top" secondItem="0P7-yU-vJm" secondAttribute="bottom" constant="19" id="53l-dT-ycd"/>
                         <constraint firstAttribute="trailing" secondItem="0P7-yU-vJm" secondAttribute="trailing" constant="8" id="DhX-YB-FT1"/>
                         <constraint firstItem="0P7-yU-vJm" firstAttribute="leading" secondItem="fK8-bE-HyU" secondAttribute="leading" constant="13" id="GyP-gS-wcP"/>
                         <constraint firstAttribute="bottom" secondItem="Z8i-OQ-Vzk" secondAttribute="bottom" constant="47" id="L3a-wq-KQn"/>
                         <constraint firstAttribute="height" constant="358" id="OJo-gx-yku"/>
                         <constraint firstItem="0P7-yU-vJm" firstAttribute="top" secondItem="fK8-bE-HyU" secondAttribute="top" constant="28" id="TmN-7c-tja"/>
+                        <constraint firstItem="gEl-no-JbT" firstAttribute="top" secondItem="MCL-0R-PTe" secondAttribute="bottom" constant="23" id="Ug3-7G-2E0"/>
                         <constraint firstAttribute="trailing" secondItem="Z8i-OQ-Vzk" secondAttribute="trailing" constant="11" id="VXI-aK-Epb"/>
+                        <constraint firstAttribute="trailing" secondItem="YMe-v3-NaN" secondAttribute="trailing" constant="21" id="VqC-ua-uvy"/>
                         <constraint firstItem="Z8i-OQ-Vzk" firstAttribute="leading" secondItem="fK8-bE-HyU" secondAttribute="leading" constant="10" id="ZDP-1p-YWl"/>
+                        <constraint firstAttribute="trailing" secondItem="gEl-no-JbT" secondAttribute="trailing" constant="28" id="cr3-Ow-9bg"/>
+                        <constraint firstItem="gEl-no-JbT" firstAttribute="leading" secondItem="fK8-bE-HyU" secondAttribute="leading" constant="13" id="e69-0C-Dza"/>
                         <constraint firstItem="MCL-0R-PTe" firstAttribute="top" secondItem="0P7-yU-vJm" secondAttribute="bottom" constant="40" id="nhR-1W-3P8"/>
                         <constraint firstItem="MCL-0R-PTe" firstAttribute="leading" secondItem="fK8-bE-HyU" secondAttribute="leading" constant="10" id="pdH-3V-JS5"/>
+                        <constraint firstItem="YMe-v3-NaN" firstAttribute="leading" secondItem="fK8-bE-HyU" secondAttribute="leading" constant="20" symbolic="YES" id="pnE-hb-B7P"/>
                         <constraint firstAttribute="trailing" secondItem="MCL-0R-PTe" secondAttribute="trailing" constant="11" id="vUg-Ge-Ssd"/>
                     </constraints>
                 </view>
@@ -171,7 +191,7 @@
                 <constraint firstItem="Yem-jg-DxV" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="sR1-wR-w8J"/>
                 <constraint firstItem="fK8-bE-HyU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="uBz-Kz-8FN"/>
             </constraints>
-            <point key="canvasLocation" x="-320.28985507246381" y="72.991071428571431"/>
+            <point key="canvasLocation" x="-320.28985507246381" y="72.554347826086968"/>
         </view>
     </objects>
     <resources>
@@ -181,6 +201,9 @@
         <namedColor name="Color3">
             <color red="0.56800001859664917" green="0.55299997329711914" blue="0.55299997329711914" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
