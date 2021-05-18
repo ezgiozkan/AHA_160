@@ -11,16 +11,12 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
     
     // MARK: - IBOutlets
     
-   // @IBOutlet weak var reminderView: UIView!
-    // @IBOutlet weak var additionalNoteView: UIView!
-     @IBOutlet weak var addBtn: UIButton!
-    // @IBOutlet weak var reminderNameTextField: UITextField!
-    // @IBOutlet weak var dateView: UIView!
-    // @IBOutlet weak var repeatView: UIView!
-    // @IBOutlet weak var selectPetView: UIView!
+  
+    @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var birthTextField: UITextField!
     @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var petNameTextField: UITextField!
+    @IBOutlet weak var backView: UIView!
     
     var reminderPickerView : UIPickerView!
     
@@ -38,7 +34,7 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-       // configureViews()
+        configureBackView()
         configureAddButton()
         configureNavBar()
         createDatePicker()
@@ -49,19 +45,11 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
     let typeReminder = ["Vaccine", "Vet Visit", "Food"]
     
     // MARK: - Configures
-    
-    /*func configureViews(){
+   
+    func configureBackView(){
         
-        self.reminderView.backViewShadow(cornerRadius: 24)
-        self.additionalNoteView.backViewShadow(cornerRadius: 24)
-        self.reminderView.layer.cornerRadius = 10
-        self.additionalNoteView.layer.cornerRadius = 10
-        
-        self.reminderNameTextField.addBottomBorder(height: 0.6, color: Constants.Color.bottomBorderColor)
-        self.dateView.addBottomBorder(height: 0.6, color: Constants.Color.bottomBorderColor)
-        self.repeatView.addBottomBorder(height: 0.6, color: Constants.Color.bottomBorderColor)
-      
-    }*/
+        self.backView.backViewShadow(cornerRadius: 8)
+    }
     
     func configureAddButton(){
         self.addBtn.addShadow(shadowColor: Constants.Color.shadowColor, radius: 4, opacity: 0.4)
@@ -173,6 +161,7 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
         toolBar.setItems([doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         textField.inputAccessoryView = toolBar
+        
         
     }
     //MARK:- PickerView Delegate & DataSource

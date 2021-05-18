@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="HSU" customModuleProvider="target">
             <connections>
                 <outlet property="backView" destination="nvk-KI-0Js" id="xVg-eo-Efh"/>
+                <outlet property="clinicName" destination="riv-nE-Tc3" id="wuf-cy-Fjb"/>
                 <outlet property="myMap" destination="TUg-2M-m3D" id="FP5-JL-RhA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

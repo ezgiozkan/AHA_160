@@ -20,6 +20,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var locationManager : CLLocationManager!
     let searchRadius: CLLocationDistance = 2000
  
+    @IBOutlet weak var clinicName: UILabel!
     
     let annotationLocations = [
     
@@ -34,6 +35,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         super.viewDidLoad()
 
         getLocation()
+        configureNavBar()
       
         backView.layer.cornerRadius = 38
         //configureBackView()
@@ -89,8 +91,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func configureBackView(){
        
         self.backView.backViewShadow(cornerRadius: 8)
+        
        
     }
+    
+    func configureNavBar() {
+        
+        self.navigationController?.navigationBar.topItem?.title = "Harita"
+    }
+    
+    
 }
 
 class Location : NSObject, MKAnnotation{
