@@ -28,9 +28,8 @@ class PetDetailCollectionViewDataSource: NSObject {
         self.subTitles.append(self.selectedPet?.name ?? "name")
         self.subTitles.append(self.selectedPet?.breed ?? "breed")
         self.subTitles.append(self.selectedPet?.gender ?? "gender")
-        self.subTitles.append(self.selectedPet?.dateOfBirth ?? "dateOfBirth")
+        self.subTitles.append(String(self.selectedPet?.dateOfBirth.split(separator: "T").first ?? "").replacingOccurrences(of: "-", with: "/"))
         self.subTitles.append((self.selectedPet?.isNeutered == true) ? "Kısır" : "Kısır değil")
-        
     }
 }
 

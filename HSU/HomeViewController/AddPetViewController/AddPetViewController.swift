@@ -72,6 +72,8 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var outputDelegate: AddPetOutputDelegate?
     
+    var dateOfBirth: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -166,21 +168,20 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func addButton(_ sender: Any) {
         
         if let name = self.nameTextField.text, let gender = self.selectedGender,
-           let breed = self.breedTextField.text, let dateOfBirth = self.birthTextField.text,
+           let breed = self.breedTextField.text,
            let userId = UserDefaults.standard.string(forKey: "currentUserId") {
             
             if !name.isEmpty && !gender.isEmpty && !breed.isEmpty && !dateOfBirth.isEmpty && !userId.isEmpty{
                 
                 let params = [
-                    
-                    "userid": userId,
-                    "name": self.nameTextField.text!,
-                    "gender": self.selectedGender!,
-                    "breed": self.breedTextField.text!,
-                    "dateOfBirth": self.birthTextField.text!,
+                    "userId": userId,
+                    "name": name,
+                    "gender": gender,
+                    "breed": breed,
+                    "dateOfBirth": self.dateOfBirth,
                     "isneutered": neauteredSwitch.isOn ? true : false
-                    
-                ] as [String : Any]
+                ]
+                as [String : Any]
                 
                 Network.shared.addPet(params: params) { (status, response) in
                     
@@ -195,12 +196,22 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
                         
                     }else{
                         
-                        print("failure")
+                        DispatchQueue.main.async {
+                            let alert = UIAlertController(title: "Hata!", message: "Bir hata oluştu lütfen daha sonra tekrar deneyin.", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { (action) in
+                                self.navigationController?.popViewController(animated: true)
+                            }))
+                            self.present(alert, animated: true, completion: nil)
+                        }
                     }
                 }
             }else{
                 
-                print("fill all")
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Hata!", message: "Lütfen tüm alanları doldurduğunuzdan emin olun.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
         }
         
@@ -232,8 +243,9 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     @objc func doneButtonClicked() {
            
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        birthTextField.text = dateFormatter.string(from: datePicker.date)
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        self.dateOfBirth = dateFormatter.string(from: datePicker.date)
+        birthTextField.text = String(dateFormatter.string(from: datePicker.date).split(separator: "T").first ?? "").replacingOccurrences(of: "-", with: "/")
         
         self.view.endEditing(true)
     }

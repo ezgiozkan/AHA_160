@@ -150,7 +150,7 @@ class Network {
         urlRequest.httpMethod = "POST"
         
         let params = params
-        
+        print(params)
         do {
             
             let data = try JSONSerialization.data(withJSONObject: params, options: .init())
@@ -182,7 +182,12 @@ class Network {
                     }
                     
                     else if httpResponse.statusCode == 401 {
-
+                        print("fail")
+                        completion(httpResponse.statusCode,nil)
+                    }
+                    
+                    else {
+                        
                         completion(httpResponse.statusCode,nil)
                     }
                     
