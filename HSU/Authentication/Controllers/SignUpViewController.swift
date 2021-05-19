@@ -181,4 +181,10 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
         txt.leftView = paddingView
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if self.emailTxtField.text != "" && self.passwordTxtField.text != ""{
+            
+            self.navigationController?.popViewController(animated: false)
+        }
+    }
 }
