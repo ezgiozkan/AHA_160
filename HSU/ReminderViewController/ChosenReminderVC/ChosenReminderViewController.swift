@@ -5,6 +5,7 @@
 //  Created by ezgi on 27.04.2021.
 //
 import UIKit
+import CoreData
 
 public class ChosenReminderViewController: UIViewController, UIGestureRecognizerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -13,7 +14,7 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
     
   
     @IBOutlet weak var addBtn: UIButton!
-    @IBOutlet weak var birthTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var petNameTextField: UITextField!
     @IBOutlet weak var backView: UIView!
@@ -79,30 +80,35 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
     
     @IBAction func btnAdd(_ sender: Any) {
         
-        if typeTextField.text == "" || birthTextField.text == "" || petNameTextField.text == ""
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let entity  = NSEntityDescription.entity(forEntityName: "Reminder", in: context)
+        let reminder = NSManagedObject(entity: entity!, insertInto: context)
+        
+        reminder.setValue(typeTextField.text, forKey: "reminderType")
+        reminder.setValue(dateTextField.text, forKey: "reminderDate")
+        reminder.setValue(petNameTextField.text, forKey: "petName")
+        
+      
+        
+        if typeTextField.text == "" || dateTextField.text == "" || petNameTextField.text == ""
         {
             let alertController = UIAlertController(title: "", message: "Lütfen bütün alanları doldurunuz", preferredStyle: .alert)
-            let alertAction = UIAlertAction(title: "", style: .default, handler: nil)
+            let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(alertAction)
             
             present(alertController,animated: true,completion: nil)
             return
+        }else{
+            
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            dismiss(animated: true, completion: nil)
         }
-        dismiss(animated: true, completion: nil)
+       
         
     }
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    
 
-        
-        self.tabBarController?.tabBar.isHidden = true
-    }
-
-    public override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-        self.tabBarController?.tabBar.isHidden = false
-    }
     
     
     //MARK: Date Picker
@@ -115,8 +121,8 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
         toolBar.setItems([doneButton], animated: true)
         
         
-        birthTextField.inputAccessoryView = toolBar
-        birthTextField.inputView = datePicker
+        dateTextField.inputAccessoryView = toolBar
+        dateTextField.inputView = datePicker
         
         datePicker.datePickerMode = .date
 
@@ -131,7 +137,7 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
            
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
-        birthTextField.text = dateFormatter.string(from: datePicker.date)
+        dateTextField.text = dateFormatter.string(from: datePicker.date)
         
         self.view.endEditing(true)
     }

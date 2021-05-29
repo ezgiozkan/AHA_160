@@ -23,6 +23,10 @@
 		3B7466E025FCC4DA0000FB00 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */; };
 		3B7A796326513F5F005E92BC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7A796126513F5F005E92BC /* MapViewController.swift */; };
 		3B7A796426513F5F005E92BC /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7A796226513F5F005E92BC /* MapViewController.xib */; };
+		3B7DB70A26595644000A1BB3 /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7DB70826595644000A1BB3 /* ReminderTableViewCell.swift */; };
+		3B7DB70B26595644000A1BB3 /* ReminderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7DB70926595644000A1BB3 /* ReminderTableViewCell.xib */; };
+		3B7DB70E26595A2D000A1BB3 /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7DB70C26595A2D000A1BB3 /* RemindersViewController.swift */; };
+		3B7DB70F26595A2D000A1BB3 /* RemindersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7DB70D26595A2D000A1BB3 /* RemindersViewController.xib */; };
 		D8051542260CF86200B54EF0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8051540260CF86200B54EF0 /* TabBarController.swift */; };
 		D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8051541260CF86200B54EF0 /* TabBarController.xib */; };
 		D83621592635C5A20075A690 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83621572635C5A20075A690 /* SettingsTableViewCell.swift */; };
@@ -86,6 +90,10 @@
 		3B7466DE25FCC4DA0000FB00 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		3B7A796126513F5F005E92BC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3B7A796226513F5F005E92BC /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		3B7DB70826595644000A1BB3 /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
+		3B7DB70926595644000A1BB3 /* ReminderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReminderTableViewCell.xib; sourceTree = "<group>"; };
+		3B7DB70C26595A2D000A1BB3 /* RemindersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
+		3B7DB70D26595A2D000A1BB3 /* RemindersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemindersViewController.xib; sourceTree = "<group>"; };
 		D8051540260CF86200B54EF0 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D8051541260CF86200B54EF0 /* TabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
 		D83621572635C5A20075A690 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -276,6 +284,25 @@
 			path = MapViewController;
 			sourceTree = "<group>";
 		};
+		3B7DB702265955F9000A1BB3 /* ReminderTableView */ = {
+			isa = PBXGroup;
+			children = (
+				3B7DB7072659562C000A1BB3 /* Cell */,
+				3B7DB70C26595A2D000A1BB3 /* RemindersViewController.swift */,
+				3B7DB70D26595A2D000A1BB3 /* RemindersViewController.xib */,
+			);
+			path = ReminderTableView;
+			sourceTree = "<group>";
+		};
+		3B7DB7072659562C000A1BB3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3B7DB70826595644000A1BB3 /* ReminderTableViewCell.swift */,
+				3B7DB70926595644000A1BB3 /* ReminderTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		D805153F260CF84800B54EF0 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +359,7 @@
 		D86A22BF262F6EEE006A91DB /* ReminderViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3B7DB702265955F9000A1BB3 /* ReminderTableView */,
 				3B29BBA1263C2BF100399D71 /* Cell */,
 				D83A8C072639AC9D0068574A /* ChosenReminderVC */,
 				D86A22CB262F71B1006A91DB /* ReminderViewController.swift */,
@@ -571,8 +599,10 @@
 				D83A8C0B2639ACC20068574A /* ChosenReminderViewController.xib in Resources */,
 				3B7A796426513F5F005E92BC /* MapViewController.xib in Resources */,
 				D872A39026459A77006D439A /* HealthInformationViewController.xib in Resources */,
+				3B7DB70F26595A2D000A1BB3 /* RemindersViewController.xib in Resources */,
 				D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */,
 				D85D1CC32635C09200A8FF7D /* SettingsViewController.xib in Resources */,
+				3B7DB70B26595644000A1BB3 /* ReminderTableViewCell.xib in Resources */,
 				3B29BBAE263C2C7900399D71 /* ReminderCollectionViewCell.xib in Resources */,
 				3B7466D125FCC3320000FB00 /* LaunchScreen.storyboard in Resources */,
 				D8DFF1C4260E482900777F4C /* AddPetViewController.xib in Resources */,
@@ -612,11 +642,13 @@
 				D8D0237C2639B67D0023068B /* Network.swift in Sources */,
 				3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */,
 				D872A39B2645C0AD006D439A /* PetResponse.swift in Sources */,
+				3B7DB70E26595A2D000A1BB3 /* RemindersViewController.swift in Sources */,
 				D872A385264594BB006D439A /* Auth.swift in Sources */,
 				3B29BBAD263C2C7900399D71 /* ReminderCollectionViewCell.swift in Sources */,
 				D85D1CC22635C09200A8FF7D /* SettingsViewController.swift in Sources */,
 				D8DFF1AE260E47E900777F4C /* HomeViewController.swift in Sources */,
 				D87A400426358F6500363F3C /* UpdatePetViewController.swift in Sources */,
+				3B7DB70A26595644000A1BB3 /* ReminderTableViewCell.swift in Sources */,
 				3B7466CC25FCC32F0000FB00 /* HSU.xcdatamodeld in Sources */,
 				3B29BBA9263C2C5900399D71 /* ReminderCollectionViewDelegate.swift in Sources */,
 				D86A22CC262F71B1006A91DB /* ReminderViewController.swift in Sources */,

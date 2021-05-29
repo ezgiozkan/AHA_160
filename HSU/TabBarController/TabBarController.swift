@@ -29,7 +29,7 @@ class TabBarController: UITabBarController {
         
         let item3 = UINavigationController(rootViewController: HomeViewController(nibName: "HomeViewController", bundle: .main))
         
-        let item4 = UINavigationController(rootViewController: ReminderViewController(nibName: "ReminderViewController", bundle: .main))
+        let item4 = UINavigationController(rootViewController: RemindersViewController(nibName: "RemindersViewController", bundle: .main))
         
         let item5 = UINavigationController(rootViewController: SettingsViewController(nibName: "SettingsViewController", bundle: .main))
         

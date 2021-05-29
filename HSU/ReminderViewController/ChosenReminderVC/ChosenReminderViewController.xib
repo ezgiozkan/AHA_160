@@ -14,7 +14,7 @@
             <connections>
                 <outlet property="addBtn" destination="w0v-QO-we9" id="v07-98-34Q"/>
                 <outlet property="backView" destination="fK8-bE-HyU" id="0Cr-pD-Dr1"/>
-                <outlet property="birthTextField" destination="tH9-1C-acg" id="ZZf-Cu-zKq"/>
+                <outlet property="dateTextField" destination="tH9-1C-acg" id="tGR-k1-dZr"/>
                 <outlet property="petNameTextField" destination="ntw-kt-Phf" id="81K-hH-aMq"/>
                 <outlet property="typeTextField" destination="fjH-0l-gP1" id="RJD-Tb-yxm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

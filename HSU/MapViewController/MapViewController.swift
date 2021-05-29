@@ -16,19 +16,27 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     @IBOutlet weak var myMap: MKMapView!
     @IBOutlet weak var backView: UIView!
-    
-    var locationManager : CLLocationManager!
-    let searchRadius: CLLocationDistance = 2000
- 
+    @IBOutlet weak var clinicImage: UIImageView!
+    @IBOutlet weak var clinicTitle: UILabel!
+    @IBOutlet weak var clinicAddress: UILabel!
     @IBOutlet weak var clinicName: UILabel!
     
-    let annotationLocations = [
+    var locationManager : CLLocationManager!
+    //let searchRadius: CLLocationDistance = 2000
+   
     
-        ["title":"Dorukgiller Veteriner KLinik","latitude":39.895177 , "longitude":32.838194],
+   
+    
+    
+    
+    let annotationLocations = [
+        
+        ["title":"Dobido Veteriner KLiniği","latitude":39.895177 , "longitude":32.838194],
         ["title":"Arda Veteriner Klinik","latitude": 39.894749, "longitude":32.841074],
         ["title":"Korusev Veteriner Klinik","latitude":  39.893615, "longitude":32.841476]
       
     ]
+   
   
     
     override func viewDidLoad() {
@@ -36,11 +44,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 
         getLocation()
         configureNavBar()
-      
+ 
         backView.layer.cornerRadius = 38
         //configureBackView()
         createAnnotations(locations: annotationLocations)
-      
+       
     }
     
     
@@ -82,11 +90,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         for location in locations{
             let annotations = MKPointAnnotation()
             annotations.title = location["title"] as? String
+         
             annotations.coordinate = CLLocationCoordinate2D(latitude: location["latitude"] as! CLLocationDegrees, longitude:  location["longitude"] as! CLLocationDegrees)
             myMap.addAnnotation(annotations)
+            
         }
+       
+        
     }
     
+   
+
     
     func configureBackView(){
        
