@@ -24,6 +24,8 @@ class UpdatePetViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var neauteredSwitch: UISwitch!
     @IBOutlet weak var birthTextField: UITextField!
     
+    var willUpdatePet: Pets?
+    
     // MARK: - Constants
     private enum Constants{
         
@@ -62,6 +64,15 @@ class UpdatePetViewController: UIViewController, UIGestureRecognizerDelegate {
     
     let datePicker = UIDatePicker()
     
+     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, willUpdatePet: Pets) {
+        super.init(nibName: "UpdatePetViewController", bundle: nil)
+        
+        self.willUpdatePet = willUpdatePet
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +82,22 @@ class UpdatePetViewController: UIViewController, UIGestureRecognizerDelegate {
         configureNavBar()
         configureBackViews()
         configureAddButton()
+        setWillUpdatePet()
         
+    }
+    
+    func setWillUpdatePet() {
+        
+        self.nameTextField.text = self.willUpdatePet?.name
+        self.breedTextField.text = self.willUpdatePet?.breed
+        self.birthTextField.text = self.willUpdatePet?.dateOfBirth
+        self.selectedGender = self.willUpdatePet?.gender ?? "nil gender"
+        
+        if self.willUpdatePet?.isNeutered ?? false{
+            self.neauteredSwitch.isOn = true
+        }else{
+            self.neauteredSwitch.isOn = false
+        }
     }
     
     func configureFirstStackView() {
