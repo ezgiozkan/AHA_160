@@ -226,17 +226,14 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func femaleButton(_ sender: UIButton) {
 
         self.selectedGender = sender.currentTitle!
-        //print(self.selectedGender)
     }
     
     @IBAction func maleButton(_ sender: UIButton) {
         
         self.selectedGender = sender.currentTitle!
-        //print(self.selectedGender)
     }
     
     @objc func back() {
-        
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -252,14 +249,11 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        
         self.tabBarController?.tabBar.isHidden = true
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
         self.tabBarController?.tabBar.isHidden = false
     }
 }

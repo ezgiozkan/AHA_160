@@ -96,7 +96,9 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBAction func updateButton(_ sender: Any) {
         
-        self.navigationController?.pushViewController(UpdatePetViewController(nibName: "UpdatePetViewController", bundle: nil), animated: true)
+        let pet = self.viewModel?.cellForItemAt(indexPath: self.selectedIndexPathRow - 1)
+        let updatePetVC = UpdatePetViewController(nibName: "UpdatePetViewController", bundle: nil, willUpdatePet: pet!)
+        self.navigationController?.pushViewController(updatePetVC, animated: true)
     }
     
     

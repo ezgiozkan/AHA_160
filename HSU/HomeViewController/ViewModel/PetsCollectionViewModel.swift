@@ -21,9 +21,9 @@ class PetsCollectionViewModel {
         return (responseModel?.count ?? 0) + 1
     }
     
-    func cellForItemAt(indexPath: IndexPath) -> Pets?{
+    func cellForItemAt(indexPath: Int) -> Pets?{
         
-        let pet = responseModel?[indexPath.row]
+        let pet = responseModel?[indexPath]
         return pet
     }
 }

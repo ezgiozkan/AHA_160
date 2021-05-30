@@ -13,6 +13,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var backView: UIView!
     
+    
     let options: [String] = [
         
         "Sıkça Sorulan Sorular",
@@ -44,7 +45,6 @@ class SettingsViewController: UIViewController {
     }
     
     func configureBackView() {
-        
         self.backView.backViewShadow(cornerRadius: 8)
     }
 
@@ -73,7 +73,10 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             print(self.options[0])
         case 1:
-            print(self.options[1])
+            let accountVC = AccountViewController(nibName: "AccountViewController", bundle: nil)
+            accountVC.title = "Hesap"
+            accountVC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(accountVC, animated: true)
         case 2:
             print(self.options[2])
         case 3:
@@ -90,8 +93,13 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 UserDefaults.standard.removeObject(forKey: "token")
                 
-                self.navigationController?.popViewController(animated: true)
-                self.tabBarController?.dismiss(animated: true, completion: nil)
+                let rootViewController = RootViewController(nibName: "RootViewController", bundle: .main)
+                let rootNavigationController = UINavigationController(rootViewController: rootViewController)
+                rootNavigationController.modalPresentationStyle = .fullScreen
+                
+                self.present(rootNavigationController, animated: true, completion: nil)
+                
+
             }))
             
             self.present(alert, animated: true, completion: nil)
@@ -102,7 +110,6 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         return 65
     }
 }
