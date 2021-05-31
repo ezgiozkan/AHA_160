@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeViewController: UIViewController {
     
@@ -23,6 +24,9 @@ class HomeViewController: UIViewController {
     
     var viewModel: PetsCollectionViewModel?
     
+    @IBOutlet weak var seeAll: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    
     // MARK: - Constants
     private enum Constants{
         
@@ -39,10 +43,13 @@ class HomeViewController: UIViewController {
     
     var users = [Auth]()
     var petIds: [String] = []
-    
+    var reminderList : [Reminder]?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        configureTableView()
         configureImageView()
         getPets { (viewModel) in
             
@@ -57,6 +64,7 @@ class HomeViewController: UIViewController {
         print(UserDefaults.standard.string(forKey: "currentUserEmail") ?? "boşMail")
         
     }
+    
     
     func getPets(completion: @escaping (PetsCollectionViewModel) ->()) {
         
@@ -106,13 +114,13 @@ class HomeViewController: UIViewController {
         self.petsCollectionView.register(UINib(nibName: "PetsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: PetsCollectionViewCell.cellIdentifier)
         
        
-        self.servicesCollectionViewDataSource = ServicesCollectionViewDataSource()
+       self.servicesCollectionViewDataSource = ServicesCollectionViewDataSource()
         self.servicesCollectionViewDelegate = ServicesCollectionViewDelegate(width: self.windowWidth ?? 0.0)
         
-        self.servicesCollectionView.dataSource = self.servicesCollectionViewDataSource
+        /*  self.servicesCollectionView.dataSource = self.servicesCollectionViewDataSource
         self.servicesCollectionView.delegate = self.servicesCollectionViewDelegate
         
-        self.servicesCollectionView.register(UINib(nibName: "ServicesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ServicesCollectionViewCell.cellIdentifier)
+        self.servicesCollectionView.register(UINib(nibName: "ServicesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ServicesCollectionViewCell.cellIdentifier)*/
         
     }
     
@@ -120,6 +128,8 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        
+        getAllReminder()
         // Hide the navigation bar on the this view controller
         
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -134,8 +144,26 @@ class HomeViewController: UIViewController {
             }
         }
         
+       
+        
+    }
+    
+    func configureTableView() {
+        
+        self.tableView.separatorStyle = .none
+        self.tableView.showsVerticalScrollIndicator = false
+        self.tableView.register(UINib(nibName: "ReminderTableViewCell", bundle: nil), forCellReuseIdentifier: "reminderCell")
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
 
+    @IBAction func seeAll(_ sender: Any) {
+        
+        self.navigationController?.pushViewController(RemindersViewController(nibName: "RemindersViewController", bundle: nil), animated: true)
+    }
+    
+   
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
@@ -143,6 +171,8 @@ class HomeViewController: UIViewController {
         
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    
+   
     
 
 }
@@ -180,4 +210,76 @@ extension HomeViewController: AddPetOutputDelegate {
         print(UserDefaults.standard.array(forKey: "nums")!)
     }
     
+}
+
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if reminderList != nil {
+            return reminderList!.count
+        }
+        
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "reminderCell", for: indexPath) as? ReminderTableViewCell else { return UITableViewCell() }
+        
+      cell.rTitleLabel.text = reminderList![indexPath.row].reminderType
+        
+        if cell.rTitleLabel.text == "Vaccine" {
+            cell.imgReminder.image = UIImage(named:"vaccineImg")
+        }else if cell.rTitleLabel.text == "Vet Visit"
+        {
+            cell.imgReminder.image = UIImage(named:"stethoscope")
+        }else{
+            cell.imgReminder.image = UIImage(named:"dog-food")
+        }
+        
+        cell.dtitleLabel.text = reminderList![indexPath.row].reminderDate
+        cell.petName.text = reminderList![indexPath.row].petName
+       //cell.imgReminder.image = #imageLiteral(resourceName: "foodImg")
+       
+        
+        return cell
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            
+            (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext.delete(reminderList![indexPath.row])
+            
+            do{
+                
+                try(UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext.save()
+                    
+                tableView.reloadData()
+                getAllReminder()
+            }catch let error as NSError{
+                print("error \(error)")
+            }
+        }
+    }
+    
+    
+    
+    func getAllReminder(){
+        
+        let fetchRequest : NSFetchRequest<Reminder> = Reminder.fetchRequest()
+        
+        do{
+        
+            reminderList = try (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext.fetch(fetchRequest)
+            tableView.reloadData()
+           
+        }
+        catch{
+            
+        }
+    }
 }

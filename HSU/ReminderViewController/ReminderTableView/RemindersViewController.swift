@@ -80,12 +80,12 @@ extension RemindersViewController: UITableViewDelegate, UITableViewDataSource {
       cell.rTitleLabel.text = reminderList![indexPath.row].reminderType
         
         if cell.rTitleLabel.text == "Vaccine" {
-            cell.imgReminder.image = #imageLiteral(resourceName: "settings")
+            cell.imgReminder.image = UIImage(named:"vaccineImg")
         }else if cell.rTitleLabel.text == "Vet Visit"
         {
-            cell.imgReminder.image = #imageLiteral(resourceName: "vaccine")
+            cell.imgReminder.image = UIImage(named:"stethoscope")
         }else{
-            cell.imgReminder.image = #imageLiteral(resourceName: "foodImg")
+            cell.imgReminder.image = UIImage(named:"dog-food")
         }
         
         cell.dtitleLabel.text = reminderList![indexPath.row].reminderDate

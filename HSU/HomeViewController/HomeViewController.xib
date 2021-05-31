@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +13,8 @@
             <connections>
                 <outlet property="imageView" destination="C7M-cS-bDL" id="5Wn-o3-jJn"/>
                 <outlet property="petsCollectionView" destination="I1S-fv-EAr" id="jXt-3f-6a4"/>
-                <outlet property="servicesCollectionView" destination="r4v-b1-vIQ" id="Ch3-mm-Uc5"/>
+                <outlet property="seeAll" destination="PaD-lF-O8C" id="Ooz-E4-9E9"/>
+                <outlet property="tableView" destination="X5k-HB-Y67" id="Yu6-KZ-o7Q"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -62,6 +63,9 @@
                     <state key="normal" title="Tümünü gör">
                         <color key="titleColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="seeAll:" destination="-1" eventType="touchUpInside" id="dHu-lR-FsK"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hatırlatıcılar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7n-9J-fl5">
                     <rect key="frame" x="20" y="273" width="130" height="27"/>
@@ -73,37 +77,31 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="r4v-b1-vIQ">
-                    <rect key="frame" x="0.0" y="328" width="414" height="408"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X5k-HB-Y67">
+                    <rect key="frame" x="0.0" y="327" width="414" height="409"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zfT-wi-lht">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="C7M-cS-bDL" secondAttribute="trailing" constant="20" id="2jL-mR-htQ"/>
-                <constraint firstItem="r4v-b1-vIQ" firstAttribute="top" secondItem="E7n-9J-fl5" secondAttribute="bottom" constant="28" id="7h5-Cs-znm"/>
                 <constraint firstItem="C7M-cS-bDL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="874-uw-iQ8"/>
                 <constraint firstItem="1QQ-Dx-bMB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="90l-cK-HSv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="I1S-fv-EAr" secondAttribute="trailing" id="9f5-Y2-HZl"/>
-                <constraint firstItem="r4v-b1-vIQ" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="AeS-xj-gWu"/>
+                <constraint firstAttribute="bottom" secondItem="X5k-HB-Y67" secondAttribute="bottom" id="HY4-uy-rkP"/>
+                <constraint firstItem="X5k-HB-Y67" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NXW-Bb-7d6"/>
+                <constraint firstItem="X5k-HB-Y67" firstAttribute="top" secondItem="E7n-9J-fl5" secondAttribute="bottom" constant="27" id="TLI-cq-a2I"/>
                 <constraint firstItem="E7n-9J-fl5" firstAttribute="top" secondItem="I1S-fv-EAr" secondAttribute="bottom" constant="37" id="UEO-rw-NWd"/>
                 <constraint firstItem="1QQ-Dx-bMB" firstAttribute="top" secondItem="C7M-cS-bDL" secondAttribute="bottom" constant="30" id="XWi-Sz-fdn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PaD-lF-O8C" secondAttribute="trailing" constant="20" id="XbM-gU-sMJ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="r4v-b1-vIQ" secondAttribute="trailing" id="Xdq-8x-jvH"/>
-                <constraint firstItem="r4v-b1-vIQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="czD-c8-rNX"/>
+                <constraint firstAttribute="trailing" secondItem="X5k-HB-Y67" secondAttribute="trailing" id="a7f-0E-8ey"/>
                 <constraint firstItem="I1S-fv-EAr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="oB3-s8-zEC"/>
                 <constraint firstItem="PaD-lF-O8C" firstAttribute="top" secondItem="I1S-fv-EAr" secondAttribute="bottom" constant="37" id="rs8-aD-s6k"/>
                 <constraint firstItem="E7n-9J-fl5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="sJ1-Rh-mXj"/>
                 <constraint firstItem="I1S-fv-EAr" firstAttribute="top" secondItem="1QQ-Dx-bMB" secondAttribute="bottom" constant="29" id="zyF-ev-M3H"/>
             </constraints>
-            <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
+            <point key="canvasLocation" x="131.8840579710145" y="109.23913043478262"/>
         </view>
     </objects>
     <resources>

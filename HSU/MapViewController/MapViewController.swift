@@ -22,18 +22,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBOutlet weak var clinicName: UILabel!
     
     var locationManager : CLLocationManager!
-    //let searchRadius: CLLocationDistance = 2000
-   
-    
-   
     
     
     
     let annotationLocations = [
         
-        ["title":"Dobido Veteriner KLiniği","latitude":39.895177 , "longitude":32.838194],
-        ["title":"Arda Veteriner Klinik","latitude": 39.894749, "longitude":32.841074],
-        ["title":"Korusev Veteriner Klinik","latitude":  39.893615, "longitude":32.841476]
+        ["title":"Dobido Veteriner Kliniği","latitude":39.895177 , "longitude":32.838194],
+        ["title":"Arda Veteriner Kliniği","latitude": 39.894749, "longitude":32.841074],
+        ["title":"Korusev Veteriner Kliniği","latitude":  39.893615, "longitude":32.841476]
       
     ]
    
@@ -48,7 +44,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         backView.layer.cornerRadius = 38
         //configureBackView()
         createAnnotations(locations: annotationLocations)
-       
+        self.view.bringSubviewToFront(backView)
+        myMap.delegate = self
     }
     
     
@@ -88,8 +85,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     {
         
         for location in locations{
-            let annotations = MKPointAnnotation()
-            annotations.title = location["title"] as? String
+           let annotations = MKPointAnnotation()
+           annotations.title = location["title"] as? String
          
             annotations.coordinate = CLLocationCoordinate2D(latitude: location["latitude"] as! CLLocationDegrees, longitude:  location["longitude"] as! CLLocationDegrees)
             myMap.addAnnotation(annotations)
@@ -99,14 +96,36 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
+    func mapView(_ mapView: MKMapView,didSelect view: MKAnnotationView) {
+       let ann = view.annotation as! MKPointAnnotation
+        
+      //Logoların değişmesi gerek
+        
+        if ann.title == nil {
+            clinicTitle.text = ""
+        }
+        else if ann.title == "Dobido Veteriner Kliniği"{
+            clinicTitle.text = "Dobido Veteriner KLiniği"
+            clinicImage.image = UIImage(named: "bear")
+            clinicAddress.text = "Harbiye Mahallesi, Dikili Sk. No:17, 06460 Çankaya/Ankara"
+        }
+        else if ann.title == "Arda Veteriner Kliniği"{
+            clinicTitle.text = "Arda Veteriner KLiniği"
+            clinicImage.image = UIImage(named: "bear")
+            clinicAddress.text = "Dikmen Cd. 120/1, 06450 Çankaya/Ankara"
+        }
+        else if ann.title == "Korusev Veteriner Kliniği"{
+            clinicTitle.text = "Korusev Veteriner Kliniği"
+            clinicImage.image = UIImage(named: "bear")
+            clinicAddress.text = "Mahir Turan Sk. No:3, 06690 Çankaya/Ankara"
+        }
+    }
    
-
-    
+   
     func configureBackView(){
        
-        self.backView.backViewShadow(cornerRadius: 8)
+    self.backView.backViewShadow(cornerRadius: 100)
         
-       
     }
     
     func configureNavBar() {
