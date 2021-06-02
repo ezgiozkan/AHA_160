@@ -8,6 +8,10 @@
 import UIKit
 import CoreData
 
+protocol HomeViewControllerDelegateOutput: class {
+    func currentPetIds(petIds: [Int])
+}
+
 class HomeViewController: UIViewController {
     
     
@@ -27,6 +31,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var seeAll: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    weak var delegate: HomeViewControllerDelegateOutput?
+    
     // MARK: - Constants
     private enum Constants{
         
@@ -41,7 +47,7 @@ class HomeViewController: UIViewController {
         return UIScreen.main.bounds.width - 25
     }
     
-    var users = [Auth]()
+    var currentUserPetIds = [Int]()
     var petIds: [String] = []
     var reminderList : [Reminder]?
 
@@ -55,8 +61,13 @@ class HomeViewController: UIViewController {
             
             self.viewModel = viewModel
             
+            for res in viewModel.responseModel! {
+                self.currentUserPetIds.append(res.id)
+            }
+            
+            UserDefaults.standard.setValue(self.currentUserPetIds, forKey: "currentUserPetIds")
+            
             DispatchQueue.main.async {
-                
                 self.configureCollectionViews()
             }
         }
@@ -84,7 +95,6 @@ class HomeViewController: UIViewController {
                 print(error.localizedDescription)
                 
             }
-            
         }
 
     }

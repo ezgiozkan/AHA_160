@@ -9,6 +9,7 @@ import Foundation
 
 struct Pets: Decodable {
     
+    let id: Int
     let name: String
     let gender: String
     let breed: String

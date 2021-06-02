@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HealthInformationViewController" customModule="HSU" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="19H-nS-rfx" id="LUp-BY-KvU"/>
+                <outlet property="tableView" destination="YQh-zF-d6i" id="fu6-Nt-zpS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,26 +20,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="19H-nS-rfx">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YQh-zF-d6i">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f9L-7l-zYP">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="19H-nS-rfx" secondAttribute="bottom" id="406-hN-du5"/>
-                <constraint firstItem="19H-nS-rfx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Q5r-AG-il5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="19H-nS-rfx" secondAttribute="trailing" id="f6I-IE-L7q"/>
-                <constraint firstItem="19H-nS-rfx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uAH-Gp-Na1"/>
+                <constraint firstItem="YQh-zF-d6i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HQR-fr-HuT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YQh-zF-d6i" secondAttribute="bottom" id="IiN-BM-EBn"/>
+                <constraint firstItem="YQh-zF-d6i" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="aZX-JQ-8Qj"/>
+                <constraint firstItem="YQh-zF-d6i" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="sWi-nm-ofk"/>
             </constraints>
-            <point key="canvasLocation" x="64" y="62"/>
+            <point key="canvasLocation" x="63.768115942028992" y="61.607142857142854"/>
         </view>
     </objects>
     <resources>

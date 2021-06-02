@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="collectionView" destination="yGk-A5-o3c" id="Tz7-77-Otq"/>
                 <outlet property="firstBackView" destination="Skj-wh-iQA" id="KOf-Da-mU9"/>
+                <outlet property="petId" destination="5kw-ko-w5r" id="Ntp-rZ-sCj"/>
                 <outlet property="secondBackView" destination="hy4-5U-0Rm" id="OQt-KJ-5sF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -93,7 +94,7 @@
                                         <constraint firstAttribute="height" constant="45" id="vb0-oK-weJ"/>
                                     </constraints>
                                     <attributedString key="attributedText">
-                                        <fragment content="Alerjiler">
+                                        <fragment content="Hayvan numarası:1">
                                             <attributes>
                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <font key="NSFont" metaFont="menu" size="14"/>
@@ -109,13 +110,12 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hy4-5U-0Rm">
                                             <rect key="frame" x="10" y="0.0" width="344" height="113"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHp-Tc-47B">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hayvan numaranızı veteriner hekimnize vererek hayvanınıza ait sağlık bilgilerinin sisteme kayır edilmesini sağlayabilirsiniz." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHp-Tc-47B">
                                                     <rect key="frame" x="12" y="15" width="320" height="62.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62.5" id="Wcw-j7-Eah"/>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="niY-7x-bME"/>
                                                     </constraints>
-                                                    <string key="text">Pablo is allergic to peanuts and diary products.He requires frequent vaccination and medicines Pablo is allergic to peanuts and diary products.He requires frequent vaccination and medicines </string>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                                     <color key="textColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>

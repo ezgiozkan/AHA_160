@@ -43,8 +43,6 @@
 		D872A389264598F0006D439A /* Pets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D872A388264598F0006D439A /* Pets.swift */; };
 		D872A38F26459A77006D439A /* HealthInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D872A38D26459A77006D439A /* HealthInformationViewController.swift */; };
 		D872A39026459A77006D439A /* HealthInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D872A38E26459A77006D439A /* HealthInformationViewController.xib */; };
-		D872A39626459B7C006D439A /* HealthInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D872A39426459B7C006D439A /* HealthInformationCollectionViewCell.swift */; };
-		D872A39726459B7C006D439A /* HealthInformationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D872A39526459B7C006D439A /* HealthInformationCollectionViewCell.xib */; };
 		D872A39B2645C0AD006D439A /* PetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D872A39A2645C0AD006D439A /* PetResponse.swift */; };
 		D872A39F2645E385006D439A /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = D872A39E2645E385006D439A /* JWTDecode */; };
 		D87A400426358F6500363F3C /* UpdatePetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87A400226358F6500363F3C /* UpdatePetViewController.swift */; };
@@ -71,6 +69,9 @@
 		D8DFF1C2260E482700777F4C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CEAF13260E2F5A00A0D762 /* HomeViewController.xib */; };
 		D8DFF1C4260E482900777F4C /* AddPetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CEAF12260E2F5A00A0D762 /* AddPetViewController.xib */; };
 		D8E01B7B260D15AA0042C649 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E01B7A260D15AA0042C649 /* UIView+Additions.swift */; };
+		D8EB0C3D2667E205007A20B0 /* HealthInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EB0C3B2667E205007A20B0 /* HealthInformationTableViewCell.swift */; };
+		D8EB0C3E2667E205007A20B0 /* HealthInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EB0C3C2667E205007A20B0 /* HealthInformationTableViewCell.xib */; };
+		D8EB0C462667E5DB007A20B0 /* HealthInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EB0C452667E5DB007A20B0 /* HealthInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,8 +113,6 @@
 		D872A388264598F0006D439A /* Pets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pets.swift; sourceTree = "<group>"; };
 		D872A38D26459A77006D439A /* HealthInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthInformationViewController.swift; sourceTree = "<group>"; };
 		D872A38E26459A77006D439A /* HealthInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthInformationViewController.xib; sourceTree = "<group>"; };
-		D872A39426459B7C006D439A /* HealthInformationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthInformationCollectionViewCell.swift; sourceTree = "<group>"; };
-		D872A39526459B7C006D439A /* HealthInformationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthInformationCollectionViewCell.xib; sourceTree = "<group>"; };
 		D872A39A2645C0AD006D439A /* PetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetResponse.swift; sourceTree = "<group>"; };
 		D87A400226358F6500363F3C /* UpdatePetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePetViewController.swift; sourceTree = "<group>"; };
 		D87A400326358F6500363F3C /* UpdatePetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdatePetViewController.xib; sourceTree = "<group>"; };
@@ -139,6 +138,9 @@
 		D8DC74642618DEBC005EC30A /* PetDetailCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		D8DC74672618DED1005EC30A /* PetDetailCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		D8E01B7A260D15AA0042C649 /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
+		D8EB0C3B2667E205007A20B0 /* HealthInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthInformationTableViewCell.swift; sourceTree = "<group>"; };
+		D8EB0C3C2667E205007A20B0 /* HealthInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthInformationTableViewCell.xib; sourceTree = "<group>"; };
+		D8EB0C452667E5DB007A20B0 /* HealthInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +387,7 @@
 		D872A38C26459A47006D439A /* HealthInformationViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D8EB0C442667E5BD007A20B0 /* CommonModels */,
 				D872A39326459B64006D439A /* Cell */,
 				D872A38D26459A77006D439A /* HealthInformationViewController.swift */,
 				D872A38E26459A77006D439A /* HealthInformationViewController.xib */,
@@ -395,8 +398,8 @@
 		D872A39326459B64006D439A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				D872A39426459B7C006D439A /* HealthInformationCollectionViewCell.swift */,
-				D872A39526459B7C006D439A /* HealthInformationCollectionViewCell.xib */,
+				D8EB0C3B2667E205007A20B0 /* HealthInformationTableViewCell.swift */,
+				D8EB0C3C2667E205007A20B0 /* HealthInformationTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -544,6 +547,14 @@
 			path = UIAdditions;
 			sourceTree = "<group>";
 		};
+		D8EB0C442667E5BD007A20B0 /* CommonModels */ = {
+			isa = PBXGroup;
+			children = (
+				D8EB0C452667E5DB007A20B0 /* HealthInformation.swift */,
+			);
+			path = CommonModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -609,6 +620,7 @@
 			files = (
 				3B53A585260FC90700FD4F5D /* SignUpViewController.xib in Resources */,
 				3B6C604025FDFC7700839DA8 /* LoginViewController.xib in Resources */,
+				D8EB0C3E2667E205007A20B0 /* HealthInformationTableViewCell.xib in Resources */,
 				D86A22C8262F70C5006A91DB /* ReminderViewController.xib in Resources */,
 				D83A8C0B2639ACC20068574A /* ChosenReminderViewController.xib in Resources */,
 				3B7A796426513F5F005E92BC /* MapViewController.xib in Resources */,
@@ -630,7 +642,6 @@
 				D8A8493B265EB32200AC8251 /* AccountViewController.xib in Resources */,
 				D836215A2635C5A20075A690 /* SettingsTableViewCell.xib in Resources */,
 				D8DC74612618D96F005EC30A /* PetDetailCollectionViewCell.xib in Resources */,
-				D872A39726459B7C006D439A /* HealthInformationCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,19 +661,20 @@
 				D8DFF1B0260E47F500777F4C /* AddPetViewController.swift in Sources */,
 				D88967102610EA130092B228 /* PetDetailViewController.swift in Sources */,
 				D8051542260CF86200B54EF0 /* TabBarController.swift in Sources */,
-				D872A39626459B7C006D439A /* HealthInformationCollectionViewCell.swift in Sources */,
 				D864A3DE264985360004CC29 /* StringExtension.swift in Sources */,
 				D8DC74602618D96F005EC30A /* PetDetailCollectionViewCell.swift in Sources */,
 				D8DFF1B6260E480F00777F4C /* PetsCollectionViewDataSource.swift in Sources */,
 				D8DFF1BE260E481F00777F4C /* PetsCollectionViewCell.swift in Sources */,
 				D8D0237C2639B67D0023068B /* Network.swift in Sources */,
 				3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */,
+				D8EB0C3D2667E205007A20B0 /* HealthInformationTableViewCell.swift in Sources */,
 				D872A39B2645C0AD006D439A /* PetResponse.swift in Sources */,
 				3B7DB70E26595A2D000A1BB3 /* RemindersViewController.swift in Sources */,
 				D872A385264594BB006D439A /* Auth.swift in Sources */,
 				3B29BBAD263C2C7900399D71 /* ReminderCollectionViewCell.swift in Sources */,
 				D85D1CC22635C09200A8FF7D /* SettingsViewController.swift in Sources */,
 				D8DFF1AE260E47E900777F4C /* HomeViewController.swift in Sources */,
+				D8EB0C462667E5DB007A20B0 /* HealthInformation.swift in Sources */,
 				D87A400426358F6500363F3C /* UpdatePetViewController.swift in Sources */,
 				3B7DB70A26595644000A1BB3 /* ReminderTableViewCell.swift in Sources */,
 				3B7466CC25FCC32F0000FB00 /* HSU.xcdatamodeld in Sources */,

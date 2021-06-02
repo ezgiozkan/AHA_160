@@ -10,57 +10,78 @@ import UIKit
 class HealthInformationViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var tableView: UITableView!
+    var currentPetIds: [Int] = []
 
+    var healthInfoResponse = [HealthInformation]()
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureCollectionView()
+
+        configureTableView()
         configureNavBar()
+        
+        self.currentPetIds = UserDefaults.standard.array(forKey: "currentUserPetIds") as! [Int]
+        getHealthInformation { (healthInformation) in
+            self.healthInfoResponse = healthInformation
+        }
     }
     
-    func configureCollectionView() {
+    func configureTableView() {
         
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         
-        self.collectionView.register(UINib(nibName: "HealthInformationCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: HealthInformationCollectionViewCell.cellIdentifier)
+        self.tableView.register(UINib(nibName: "HealthInformationTableViewCell", bundle: nil), forCellReuseIdentifier: HealthInformationTableViewCell.cellIdentifier)
         
     }
     
     func configureNavBar() {
-        
         self.navigationController?.navigationBar.topItem?.title = "Sağlık Bilgileri"
     }
-
-}
-
-extension HealthInformationViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func getHealthInformation(completion: @escaping ([HealthInformation]) ->()) {
         
-        return 10
+        for currentPetId in self.currentPetIds {
+            Network.shared.getHealthInformation(currentPetId: currentPetId) { (result) in
+                switch result {
+                case .success(let healthInfoResponse):
+                    
+                    for response in healthInfoResponse {
+                        self.healthInfoResponse.append(response)
+                    }
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
+        
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HealthInformationCollectionViewCell.cellIdentifier, for: indexPath) as? HealthInformationCollectionViewCell else { return UICollectionViewCell() }
+}
+
+extension HealthInformationViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.healthInfoResponse.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HealthInformationTableViewCell.cellIdentifier, for: indexPath) as? HealthInformationTableViewCell else { return UITableViewCell() }
+    
+        cell.titleLabel.text = self.healthInfoResponse[indexPath.row].title
+        cell.subTitleLabel.text = self.healthInfoResponse[indexPath.row].subtitle
+        cell.healthInfoDescription.text = self.healthInfoResponse[indexPath.row].description
+        cell.dateAdded.text = self.healthInfoResponse[indexPath.row].dateAdded
         
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-     
-        return CGSize.init(width: UIScreen.main.bounds.width - 22, height: 313.5)
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 330
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-           
-        return UIEdgeInsets(top: 11, left: 11, bottom: 0, right: 11)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        
-        return 25
-    }
 }

@@ -227,5 +227,27 @@ class Network {
         
     }
 
-
+    func getHealthInformation(currentPetId: Int, completion: @escaping (Result<[HealthInformation],Error>) -> ()) {
+        
+        self.endPoint = "/animals/healthInformations/?animalId=\(currentPetId)"
+        
+        guard let url = URL(string: self.baseUrl + self.endPoint) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            let decoder = JSONDecoder()
+            
+            do {
+                
+                let jsonData = try decoder.decode([HealthInformation].self, from: data!)
+                
+                completion(.success(jsonData))
+            
+            }catch{
+                
+                completion(.failure(error))
+                
+            }
+        }.resume()
+    }
 }

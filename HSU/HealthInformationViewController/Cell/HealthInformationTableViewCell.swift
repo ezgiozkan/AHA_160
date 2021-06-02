@@ -1,18 +1,22 @@
 //
-//  HealthInformationCollectionViewCell.swift
+//  HealthInformationTableViewCell.swift
 //  HSU
 //
-//  Created by Batuhan Baran on 7.05.2021.
+//  Created by Batuhan Baran on 2.06.2021.
 //
 
 import UIKit
 
-class HealthInformationCollectionViewCell: UICollectionViewCell {
+class HealthInformationTableViewCell: UITableViewCell {
 
     static let cellIdentifier = "HealthInformationCollectionViewCell"
     
     // MARK: - IBOutlets
     @IBOutlet private weak var backView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet weak var healthInfoDescription: UILabel!
+    @IBOutlet weak var dateAdded: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -14,6 +14,7 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet private weak var firstBackView: UIView!
     @IBOutlet private weak var secondBackView: UIView!
     
+    @IBOutlet weak var petId: UILabel!
     // MARK: - Constants
     private enum Constants{
         
@@ -37,13 +38,16 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         return UIScreen.main.bounds.width - 80
     }
     
-
+    var selectedPetId = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
 
         configureNavBar()
         configureCollectionView()
+        
+
     }
 
     func configureNavBar() {
@@ -82,6 +86,8 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         
         self.collectionView.register(UINib(nibName: "PetDetailCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: PetDetailCollectionViewCell.cellIdentifier)
 
+        self.selectedPetId = self.viewModel?.cellForItemAt(indexPath: self.selectedIndexPathRow)?.id ?? 0
+        self.petId.text = "Hayvan numarası:" + " \(String(self.selectedPetId))"
     }
     
     @objc func back() {
