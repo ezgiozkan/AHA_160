@@ -17,6 +17,7 @@
                 <outlet property="clinicName" destination="riv-nE-Tc3" id="wuf-cy-Fjb"/>
                 <outlet property="clinicTitle" destination="riv-nE-Tc3" id="TsA-fR-ASz"/>
                 <outlet property="myMap" destination="TUg-2M-m3D" id="FP5-JL-RhA"/>
+                <outlet property="txtInfo" destination="EL4-Fz-Po0" id="Rdm-tQ-3pJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -59,6 +60,16 @@
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yakın çevrenizde HSU uygulamasını kullanan veterinerlere harita üzerinden ulaşabilirsiniz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EL4-Fz-Po0">
+                                    <rect key="frame" x="54.5" y="37" width="265.5" height="54"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="Hcb-4n-8WM"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ivu-xn-c4R"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,6 +77,8 @@
                                 <constraint firstItem="riv-nE-Tc3" firstAttribute="top" secondItem="CbQ-uh-hOS" secondAttribute="top" constant="28" id="0lk-Qr-5lr"/>
                                 <constraint firstItem="riv-nE-Tc3" firstAttribute="leading" secondItem="bcm-RA-EMa" secondAttribute="trailing" constant="18" id="3GS-MB-Emm"/>
                                 <constraint firstItem="NWf-hL-8nL" firstAttribute="top" secondItem="riv-nE-Tc3" secondAttribute="bottom" id="5NG-6g-UFC"/>
+                                <constraint firstItem="EL4-Fz-Po0" firstAttribute="centerX" secondItem="CbQ-uh-hOS" secondAttribute="centerX" id="Nbv-3a-tMT"/>
+                                <constraint firstItem="EL4-Fz-Po0" firstAttribute="centerY" secondItem="CbQ-uh-hOS" secondAttribute="centerY" id="TMO-HP-s9p"/>
                                 <constraint firstItem="NWf-hL-8nL" firstAttribute="leading" secondItem="bcm-RA-EMa" secondAttribute="trailing" constant="18" id="igf-RS-Gka"/>
                                 <constraint firstItem="bcm-RA-EMa" firstAttribute="leading" secondItem="CbQ-uh-hOS" secondAttribute="leading" constant="21" id="jfw-SR-Uyh"/>
                                 <constraint firstAttribute="height" constant="128" id="rMU-6x-Qei"/>

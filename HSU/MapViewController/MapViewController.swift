@@ -21,6 +21,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBOutlet weak var clinicAddress: UILabel!
     @IBOutlet weak var clinicName: UILabel!
     
+    @IBOutlet weak var txtInfo: UILabel!
     var locationManager : CLLocationManager!
     
     
@@ -108,16 +109,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             clinicTitle.text = "Dobido Veteriner KLiniği"
             clinicImage.image = UIImage(named: "bear")
             clinicAddress.text = "Harbiye Mahallesi, Dikili Sk. No:17, 06460 Çankaya/Ankara"
+            txtInfo.isHidden = true
         }
         else if ann.title == "Arda Veteriner Kliniği"{
             clinicTitle.text = "Arda Veteriner KLiniği"
             clinicImage.image = UIImage(named: "bear")
             clinicAddress.text = "Dikmen Cd. 120/1, 06450 Çankaya/Ankara"
+            txtInfo.isHidden = true
         }
         else if ann.title == "Korusev Veteriner Kliniği"{
             clinicTitle.text = "Korusev Veteriner Kliniği"
             clinicImage.image = UIImage(named: "bear")
             clinicAddress.text = "Mahir Turan Sk. No:3, 06690 Çankaya/Ankara"
+            txtInfo.isHidden = true
         }
     }
    
