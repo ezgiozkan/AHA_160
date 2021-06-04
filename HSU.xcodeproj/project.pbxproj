@@ -29,6 +29,7 @@
 		3B7DB70F26595A2D000A1BB3 /* RemindersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B7DB70D26595A2D000A1BB3 /* RemindersViewController.xib */; };
 		D8051542260CF86200B54EF0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8051540260CF86200B54EF0 /* TabBarController.swift */; };
 		D8051543260CF86200B54EF0 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8051541260CF86200B54EF0 /* TabBarController.xib */; };
+		D8055913266A6D7A002EA988 /* PetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8055912266A6D7A002EA988 /* PetResponse.swift */; };
 		D83621592635C5A20075A690 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83621572635C5A20075A690 /* SettingsTableViewCell.swift */; };
 		D836215A2635C5A20075A690 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D83621582635C5A20075A690 /* SettingsTableViewCell.xib */; };
 		D83A8C0A2639ACC20068574A /* ChosenReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A8C082639ACC20068574A /* ChosenReminderViewController.swift */; };
@@ -43,7 +44,6 @@
 		D872A389264598F0006D439A /* Pets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D872A388264598F0006D439A /* Pets.swift */; };
 		D872A38F26459A77006D439A /* HealthInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D872A38D26459A77006D439A /* HealthInformationViewController.swift */; };
 		D872A39026459A77006D439A /* HealthInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D872A38E26459A77006D439A /* HealthInformationViewController.xib */; };
-		D872A39B2645C0AD006D439A /* PetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D872A39A2645C0AD006D439A /* PetResponse.swift */; };
 		D872A39F2645E385006D439A /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = D872A39E2645E385006D439A /* JWTDecode */; };
 		D87A400426358F6500363F3C /* UpdatePetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87A400226358F6500363F3C /* UpdatePetViewController.swift */; };
 		D87A400526358F6500363F3C /* UpdatePetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87A400326358F6500363F3C /* UpdatePetViewController.xib */; };
@@ -99,6 +99,7 @@
 		3B7DB70D26595A2D000A1BB3 /* RemindersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemindersViewController.xib; sourceTree = "<group>"; };
 		D8051540260CF86200B54EF0 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D8051541260CF86200B54EF0 /* TabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
+		D8055912266A6D7A002EA988 /* PetResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetResponse.swift; sourceTree = "<group>"; };
 		D83621572635C5A20075A690 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		D83621582635C5A20075A690 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		D83A8C082639ACC20068574A /* ChosenReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenReminderViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +114,6 @@
 		D872A388264598F0006D439A /* Pets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pets.swift; sourceTree = "<group>"; };
 		D872A38D26459A77006D439A /* HealthInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthInformationViewController.swift; sourceTree = "<group>"; };
 		D872A38E26459A77006D439A /* HealthInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthInformationViewController.xib; sourceTree = "<group>"; };
-		D872A39A2645C0AD006D439A /* PetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetResponse.swift; sourceTree = "<group>"; };
 		D87A400226358F6500363F3C /* UpdatePetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePetViewController.swift; sourceTree = "<group>"; };
 		D87A400326358F6500363F3C /* UpdatePetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdatePetViewController.xib; sourceTree = "<group>"; };
 		D889670E2610EA130092B228 /* PetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailViewController.swift; sourceTree = "<group>"; };
@@ -378,8 +378,8 @@
 		D872A387264598D6006D439A /* CommonModels */ = {
 			isa = PBXGroup;
 			children = (
+				D8055912266A6D7A002EA988 /* PetResponse.swift */,
 				D872A388264598F0006D439A /* Pets.swift */,
-				D872A39A2645C0AD006D439A /* PetResponse.swift */,
 			);
 			path = CommonModels;
 			sourceTree = "<group>";
@@ -668,7 +668,6 @@
 				D8D0237C2639B67D0023068B /* Network.swift in Sources */,
 				3B7466DF25FCC4DA0000FB00 /* RootViewController.swift in Sources */,
 				D8EB0C3D2667E205007A20B0 /* HealthInformationTableViewCell.swift in Sources */,
-				D872A39B2645C0AD006D439A /* PetResponse.swift in Sources */,
 				3B7DB70E26595A2D000A1BB3 /* RemindersViewController.swift in Sources */,
 				D872A385264594BB006D439A /* Auth.swift in Sources */,
 				3B29BBAD263C2C7900399D71 /* ReminderCollectionViewCell.swift in Sources */,
@@ -689,6 +688,7 @@
 				D8DFF1B4260E480B00777F4C /* ServicesCollectionViewDelegate.swift in Sources */,
 				3B7A796326513F5F005E92BC /* MapViewController.swift in Sources */,
 				D8DFF1B2260E480800777F4C /* ServicesCollectionViewDataSource.swift in Sources */,
+				D8055913266A6D7A002EA988 /* PetResponse.swift in Sources */,
 				D83621592635C5A20075A690 /* SettingsTableViewCell.swift in Sources */,
 				3B7466C225FCC32E0000FB00 /* AppDelegate.swift in Sources */,
 				D8DC74682618DED1005EC30A /* PetDetailCollectionViewDataSource.swift in Sources */,

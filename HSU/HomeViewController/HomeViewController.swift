@@ -43,18 +43,16 @@ class HomeViewController: UIViewController {
     }
     
     var windowWidth: CGFloat?{
-        
         return UIScreen.main.bounds.width - 25
     }
     
-    var currentUserPetIds = [Int]()
+    var currentPets = [(Int,String)]()
     var petIds: [String] = []
     var reminderList : [Reminder]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
         configureTableView()
         configureImageView()
         getPets { (viewModel) in
@@ -62,18 +60,19 @@ class HomeViewController: UIViewController {
             self.viewModel = viewModel
             
             for res in viewModel.responseModel! {
-                self.currentUserPetIds.append(res.id)
+                self.currentPets.append((res.id,res.name))
             }
             
-            UserDefaults.standard.setValue(self.currentUserPetIds, forKey: "currentUserPetIds")
-            
             DispatchQueue.main.async {
+                if let tabBarVC = self.navigationController?.tabBarController as? TabBarController {
+                    let healhInfoVC = tabBarVC.item2.viewControllers[0] as? HealthInformationViewController
+                    healhInfoVC?.currentPets = self.currentPets
+                }
                 self.configureCollectionViews()
             }
         }
         
         print(UserDefaults.standard.string(forKey: "currentUserEmail") ?? "boşMail")
-        
     }
     
     
@@ -138,7 +137,6 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        
         getAllReminder()
         // Hide the navigation bar on the this view controller
         
@@ -154,8 +152,6 @@ class HomeViewController: UIViewController {
             }
         }
         
-       
-        
     }
     
     func configureTableView() {
@@ -169,7 +165,6 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func seeAll(_ sender: Any) {
-        
         self.navigationController?.pushViewController(RemindersViewController(nibName: "RemindersViewController", bundle: nil), animated: true)
     }
     
@@ -181,9 +176,6 @@ class HomeViewController: UIViewController {
         
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-    
-   
-    
 
 }
 

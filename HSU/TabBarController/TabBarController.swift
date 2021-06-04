@@ -20,26 +20,26 @@ class TabBarController: UITabBarController {
     var freshLaunch = true
     
     
+    let item1 = UINavigationController(rootViewController: MapViewController(nibName: "MapViewController", bundle: .main))
+    
+    let item2 = UINavigationController(rootViewController: HealthInformationViewController(nibName: "HealthInformationViewController", bundle: .main))
+    
+    let item3 = UINavigationController(rootViewController: HomeViewController(nibName: "HomeViewController", bundle: .main))
+    
+    let item4 = UINavigationController(rootViewController: RemindersViewController(nibName: "RemindersViewController", bundle: .main))
+    
+    let item5 = UINavigationController(rootViewController: SettingsViewController(nibName: "SettingsViewController", bundle: .main))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let item1 = UINavigationController(rootViewController: MapViewController(nibName: "MapViewController", bundle: .main))
-        
-        let item2 = UINavigationController(rootViewController: HealthInformationViewController(nibName: "HealthInformationViewController", bundle: .main))
-        
-        let item3 = UINavigationController(rootViewController: HomeViewController(nibName: "HomeViewController", bundle: .main))
-        
-        let item4 = UINavigationController(rootViewController: RemindersViewController(nibName: "RemindersViewController", bundle: .main))
-        
-        let item5 = UINavigationController(rootViewController: SettingsViewController(nibName: "SettingsViewController", bundle: .main))
-        
+
         item1.tabBarItem = icon1
         item2.tabBarItem = icon2
         item3.tabBarItem = icon3
         item4.tabBarItem = icon4
         item5.tabBarItem = icon5
         
-        let controllers = [item1, item2, item3, item4, item5]
+        let controllers = [item1, item2, item3, item4, item5] 
         self.viewControllers = controllers
         
         self.selectedIndex = 2

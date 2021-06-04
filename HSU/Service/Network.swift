@@ -22,7 +22,6 @@ class Network {
     weak var delegate: PetsCollectionViewModelDelegateOutput?
     
     init() {
-        
         self.baseUrl = "http://api.hayvansaglikuygulamasi.com/api"
         self.endPoint = ""
     }

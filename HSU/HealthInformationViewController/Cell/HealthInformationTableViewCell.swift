@@ -17,6 +17,7 @@ class HealthInformationTableViewCell: UITableViewCell {
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var healthInfoDescription: UILabel!
     @IBOutlet weak var dateAdded: UILabel!
+    @IBOutlet weak var animalName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,14 +27,14 @@ class HealthInformationTableViewCell: UITableViewCell {
     
     func configureBackView() {
 
-        contentView.layer.cornerRadius = 8
-        contentView.layer.masksToBounds = true
-        layer.cornerRadius = 8
-        layer.masksToBounds = false
-        layer.shadowRadius = 8.0
-        layer.shadowOpacity = 0.20
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 5)
+        backView.layer.cornerRadius = 8
+        backView.layer.masksToBounds = true
+        backView.layer.cornerRadius = 8
+        backView.layer.masksToBounds = false
+        backView.layer.shadowRadius = 8.0
+        backView.layer.shadowOpacity = 0.20
+        backView.layer.shadowColor = UIColor.black.cgColor
+        backView.layer.shadowOffset = CGSize(width: 0, height: 5)
 
     }
 
