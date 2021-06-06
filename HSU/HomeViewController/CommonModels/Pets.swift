@@ -15,6 +15,7 @@ struct Pets: Decodable {
     let breed: String
     let dateOfBirth: String
     let isNeutered: Bool
+    let type: String
     
     //TODO: healthInfo or media...
 }

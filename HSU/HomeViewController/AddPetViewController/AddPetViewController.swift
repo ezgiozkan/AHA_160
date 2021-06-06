@@ -12,8 +12,12 @@ protocol AddPetOutputDelegate: class {
     func petIds(id: Int)
 }
 
+enum PetType : String {
+    case cat = "catImg"
+    case dog = "dogImg"
+}
 
-class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
+class AddPetViewController: UIViewController, UIGestureRecognizerDelegate,UIPickerViewDelegate, UIPickerViewDataSource {
     
     // MARK: - IBOutlets
     @IBOutlet weak var addView: UIView!
@@ -29,6 +33,11 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var maleButton: UIButton!
     @IBOutlet weak var neauteredSwitch: UISwitch!
     @IBOutlet weak var birthTextField: UITextField!
+    
+    @IBOutlet weak var petTypeTextField: UITextField!
+    
+    var petTypePickerView = UIPickerView()
+    let typeReminder = ["Kedi", "Köpek", "Kuş", "Diğer"]
     
     // MARK: - Constants
     private enum Constants{
@@ -82,6 +91,7 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
         configureNavBar()
         configureBackViews()
         configureAddButton()
+        pickUp(petTypeTextField)
         
     }
     
@@ -169,14 +179,16 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
         
         if let name = self.nameTextField.text, let gender = self.selectedGender,
            let breed = self.breedTextField.text,
+           let petType = self.petTypeTextField.text,
            let userId = UserDefaults.standard.string(forKey: "currentUserId") {
             
-            if !name.isEmpty && !gender.isEmpty && !breed.isEmpty && !dateOfBirth.isEmpty && !userId.isEmpty{
+            if !name.isEmpty && !gender.isEmpty && !breed.isEmpty && !dateOfBirth.isEmpty && !userId.isEmpty && !petType.isEmpty {
                 
                 let params = [
                     "userId": userId,
                     "name": name,
                     "gender": gender,
+                    "type": petType,
                     "breed": breed,
                     "dateOfBirth": self.dateOfBirth,
                     "isneutered": neauteredSwitch.isOn ? true : false
@@ -256,6 +268,79 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewWillDisappear(animated)
         self.tabBarController?.tabBar.isHidden = false
     }
+    
+    //MARK: Type Reminder
+    
+    func pickUp(_ textField : UITextField){
+        
+        // UIPickerView
+        self.petTypePickerView = UIPickerView(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        self.petTypePickerView.delegate = self
+        self.petTypePickerView.dataSource = self
+        self.petTypePickerView.backgroundColor = UIColor.white
+        textField.inputView = self.petTypePickerView
+        
+        // ToolBar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 92/255, green: 216/255, blue: 255/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        // Adding Button ToolBar
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: nil, action: #selector(doneClick))
+       
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        textField.inputAccessoryView = toolBar
+        
+        
+    }
+    //MARK:- PickerView Delegate & DataSource
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return typeReminder.count
+    }
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return typeReminder[row]
+    }
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.petTypeTextField.text = typeReminder[row]
+    }
+    //MARK:- TextFiled Delegate
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.pickUp(petTypeTextField)
+    }
+    
+    //MARK:- Button
+    @objc func doneClick() {
+        petTypeTextField.resignFirstResponder()
+        
+       
+        
+        if self.petTypeTextField.text == "Kedi"
+        {
+            imageView.image = UIImage(named: "catImg")
+        }
+        else if self.petTypeTextField.text == "Köpek"
+        {
+            imageView.image = UIImage(named: "dogImg")
+        }
+    }
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 

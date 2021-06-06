@@ -13,6 +13,7 @@
 		3B29BBAE263C2C7900399D71 /* ReminderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B29BBAC263C2C7900399D71 /* ReminderCollectionViewCell.xib */; };
 		3B53A584260FC90700FD4F5D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53A582260FC90700FD4F5D /* SignUpViewController.swift */; };
 		3B53A585260FC90700FD4F5D /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B53A583260FC90700FD4F5D /* SignUpViewController.xib */; };
+		3B5606D1266D650C008369DE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5606D0266D650C008369DE /* Kingfisher */; };
 		3B6C603F25FDFC7700839DA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C603D25FDFC7700839DA8 /* LoginViewController.swift */; };
 		3B6C604025FDFC7700839DA8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6C603E25FDFC7700839DA8 /* LoginViewController.xib */; };
 		3B7466C225FCC32E0000FB00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7466C125FCC32E0000FB00 /* AppDelegate.swift */; };
@@ -148,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5606D1266D650C008369DE /* Kingfisher in Frameworks */,
 				D872A39F2645E385006D439A /* JWTDecode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,6 +575,7 @@
 			name = HSU;
 			packageProductDependencies = (
 				D872A39E2645E385006D439A /* JWTDecode */,
+				3B5606D0266D650C008369DE /* Kingfisher */,
 			);
 			productName = HSU;
 			productReference = 3B7466BE25FCC32E0000FB00 /* HSU.app */;
@@ -603,6 +606,7 @@
 			mainGroup = 3B7466B525FCC32E0000FB00;
 			packageReferences = (
 				D872A39D2645E385006D439A /* XCRemoteSwiftPackageReference "JWTDecode.swift" */,
+				3B5606CF266D650C008369DE /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 3B7466BF25FCC32E0000FB00 /* Products */;
 			projectDirPath = "";
@@ -889,6 +893,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3B5606CF266D650C008369DE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
 		D872A39D2645E385006D439A /* XCRemoteSwiftPackageReference "JWTDecode.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/auth0/JWTDecode.swift.git";
@@ -900,6 +912,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3B5606D0266D650C008369DE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B5606CF266D650C008369DE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		D872A39E2645E385006D439A /* JWTDecode */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D872A39D2645E385006D439A /* XCRemoteSwiftPackageReference "JWTDecode.swift" */;

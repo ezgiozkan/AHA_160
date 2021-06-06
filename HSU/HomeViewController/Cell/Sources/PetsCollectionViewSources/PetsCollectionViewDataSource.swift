@@ -30,8 +30,17 @@ extension PetsCollectionViewDataSource: UICollectionViewDataSource {
             cell.imageView.image = #imageLiteral(resourceName: "plus")
             
         }else{
+            if viewModel?.cellForItemAt(indexPath: indexPath.row)?.type == "Kedi"
+            {
+                cell.imageView.image = UIImage(named: "catImg")
+            }
+            else if viewModel?.cellForItemAt(indexPath: indexPath.row)?.type == "Köpek"
+            {
+                cell.imageView.image = UIImage(named: "dogImg")
+            }
             
-            cell.imageView.image = #imageLiteral(resourceName: "cat3")
+            
+           
         }
             
         return cell
@@ -42,5 +51,6 @@ extension PetsCollectionViewDataSource: UICollectionViewDataSource {
         return viewModel?.numberOfItemsInSection() ?? 0 + 1
  
     }
+    
     
 }

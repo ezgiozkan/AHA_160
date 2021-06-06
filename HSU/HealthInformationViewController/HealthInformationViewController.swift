@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HealthInformationViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class HealthInformationViewController: UIViewController {
     var currentPets = [(Int,String)]()
     var healthInfoResponse = [HealthInformation]()
     var haveHealthInfoAnimals: [String] = []
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -82,7 +84,10 @@ extension HealthInformationViewController: UITableViewDataSource, UITableViewDel
         cell.healthInfoDescription.text = self.healthInfoResponse[indexPath.row].description
         cell.dateAdded.text = String(self.healthInfoResponse[indexPath.row].dateAdded.split(separator: "T").first ?? "").replacingOccurrences(of: "-", with: "/")
         cell.animalName.text = self.haveHealthInfoAnimals[indexPath.row]
- 
+        
+       let url = URL(string: "\(self.healthInfoResponse[indexPath.row].url)")
+        cell.healthInfoImage.kf.setImage(with: url)
+        
         tableView.separatorStyle = .none
         return cell
     }

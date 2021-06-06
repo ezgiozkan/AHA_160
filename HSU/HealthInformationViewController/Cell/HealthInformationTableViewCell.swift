@@ -19,6 +19,7 @@ class HealthInformationTableViewCell: UITableViewCell {
     @IBOutlet weak var dateAdded: UILabel!
     @IBOutlet weak var animalName: UILabel!
     
+    @IBOutlet weak var healthInfoImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         

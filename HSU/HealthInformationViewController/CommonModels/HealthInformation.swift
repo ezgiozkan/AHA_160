@@ -13,4 +13,5 @@ struct HealthInformation: Decodable {
     let subtitle: String
     let description: String
     let dateAdded: String
+    let url: String
 }

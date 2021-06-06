@@ -13,7 +13,7 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var firstBackView: UIView!
     @IBOutlet private weak var secondBackView: UIView!
-    
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var petId: UILabel!
     // MARK: - Constants
     private enum Constants{
@@ -46,7 +46,15 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
 
         configureNavBar()
         configureCollectionView()
+        print(selectedIndexPathRow)
         
+        
+        if self.viewModel?.cellForItemAt(indexPath: selectedIndexPathRow)?.type == "Kedi"{
+            self.imageView.image = UIImage(named: "catImg")
+        }
+        else if self.viewModel?.cellForItemAt(indexPath: selectedIndexPathRow)?.type == "Köpek"{
+            self.imageView.image = UIImage(named: "dogImg")
+        }
 
     }
 
@@ -97,14 +105,36 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @objc func deletePet() {
         
-        print("delete")
+        
+        
+        let alert = UIAlertController(title: "Uyarı!", message: "Silmek istediğinize emin misiniz?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "İptal", style: .destructive, handler: nil))
+        
+        alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { (action) in
+            
+            Network.shared.deletePet(animalId: self.selectedPetId) { statusCode, error in
+                if error == nil {
+                    DispatchQueue.main.async {
+                        
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }
+            }
+    
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        
     }
     
     @IBAction func updateButton(_ sender: Any) {
         
-        let pet = self.viewModel?.cellForItemAt(indexPath: self.selectedIndexPathRow - 1)
+        let pet = self.viewModel?.cellForItemAt(indexPath: self.selectedIndexPathRow)
         let updatePetVC = UpdatePetViewController(nibName: "UpdatePetViewController", bundle: nil, willUpdatePet: pet!)
         self.navigationController?.pushViewController(updatePetVC, animated: true)
+        
     }
     
     

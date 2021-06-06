@@ -249,4 +249,37 @@ class Network {
             }
         }.resume()
     }
+    
+    func deletePet(animalId: Int,completion: @escaping (Int?,Error?) -> ()) {
+        
+        self.endPoint = "/animals/delete/?animalId=\(animalId)"
+        
+        guard let url = URL(string: self.baseUrl + self.endPoint) else { return }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "DELETE"
+        
+        do {
+             
+            URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+                
+                
+                if let httpResponse = response as? HTTPURLResponse {
+                    
+                    if httpResponse.statusCode == 200 {
+                        
+                     completion(httpResponse.statusCode,nil)
+                                          
+                    }
+                    else {
+                                 
+                        completion(nil,error)
+                    }
+                }
+                
+            }.resume()
+            
+        }
+    }
+    
 }
