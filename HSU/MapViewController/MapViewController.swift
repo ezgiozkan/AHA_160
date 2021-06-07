@@ -20,6 +20,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBOutlet weak var clinicTitle: UILabel!
     @IBOutlet weak var clinicAddress: UILabel!
     @IBOutlet weak var clinicName: UILabel!
+  
+    @IBOutlet weak var backViewFront: UIView!
     
     @IBOutlet weak var txtInfo: UILabel!
     var locationManager : CLLocationManager!
@@ -41,7 +43,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 
         getLocation()
         configureNavBar()
- 
+        backViewFrontConfiguration()
         backView.layer.cornerRadius = 38
         //configureBackView()
         createAnnotations(locations: annotationLocations)
@@ -135,9 +137,20 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func configureNavBar() {
         
         self.navigationController?.navigationBar.topItem?.title = "Harita"
+        
     }
+    func backViewFrontConfiguration(){
     
-    
+   
+    backView.layer.masksToBounds = true
+    backView.layer.cornerRadius = 8
+    backView.layer.masksToBounds = false
+    backView.layer.shadowRadius = 8.0
+    backView.layer.shadowOpacity = 0.20
+    backView.layer.shadowColor = UIColor.black.cgColor
+    backView.layer.shadowOffset = CGSize(width: 0, height: 5)
+}
+
 }
 
 class Location : NSObject, MKAnnotation{

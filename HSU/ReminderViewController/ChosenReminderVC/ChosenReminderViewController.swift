@@ -43,7 +43,7 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
     }
 
     let datePicker = UIDatePicker()
-    let typeReminder = ["Vaccine", "Vet Visit", "Food"]
+    let typeReminder = ["Aşı", "Veteriner", "Besleme"]
     
     // MARK: - Configures
    
@@ -103,6 +103,7 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
             
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
        
         

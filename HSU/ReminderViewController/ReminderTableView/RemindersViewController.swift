@@ -80,12 +80,12 @@ extension RemindersViewController: UITableViewDelegate, UITableViewDataSource {
       cell.rTitleLabel.text = reminderList![indexPath.row].reminderType
         
         if cell.rTitleLabel.text == "Vaccine" {
-            cell.imgReminder.image = UIImage(named:"vaccineImg")
+            cell.imgReminder.image = UIImage(named:"pvacci")
         }else if cell.rTitleLabel.text == "Vet Visit"
         {
-            cell.imgReminder.image = UIImage(named:"stethoscope")
+            cell.imgReminder.image = UIImage(named:"vvisit")
         }else{
-            cell.imgReminder.image = UIImage(named:"dog-food")
+            cell.imgReminder.image = UIImage(named:"pfood")
         }
         
         cell.dtitleLabel.text = reminderList![indexPath.row].reminderDate
@@ -115,7 +115,9 @@ extension RemindersViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
+    }
     
     func getAllReminder(){
         

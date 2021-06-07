@@ -11,7 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="HSU" customModuleProvider="target">
             <connections>
-                <outlet property="backView" destination="nvk-KI-0Js" id="xVg-eo-Efh"/>
+                <outlet property="backView" destination="CbQ-uh-hOS" id="3RL-x8-vPW"/>
+                <outlet property="backViewFront" destination="nvk-KI-0Js" id="Prd-4n-Mz8"/>
                 <outlet property="clinicAddress" destination="NWf-hL-8nL" id="eZF-tG-hA5"/>
                 <outlet property="clinicImage" destination="bcm-RA-EMa" id="uHa-Xc-RNG"/>
                 <outlet property="clinicName" destination="riv-nE-Tc3" id="wuf-cy-Fjb"/>
@@ -30,7 +31,7 @@
                     <rect key="frame" x="0.0" y="637" width="419" height="253"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CbQ-uh-hOS">
-                            <rect key="frame" x="17" y="35" width="374" height="128"/>
+                            <rect key="frame" x="22" y="55" width="374" height="128"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bcm-RA-EMa">
                                     <rect key="frame" x="21" y="28" width="90" height="90"/>
@@ -88,10 +89,10 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="CbQ-uh-hOS" firstAttribute="leading" secondItem="nvk-KI-0Js" secondAttribute="leading" constant="17" id="1aa-4U-egy"/>
-                        <constraint firstAttribute="bottom" secondItem="CbQ-uh-hOS" secondAttribute="bottom" constant="90" id="7cG-eI-sqV"/>
-                        <constraint firstItem="CbQ-uh-hOS" firstAttribute="top" secondItem="nvk-KI-0Js" secondAttribute="top" constant="35" id="bWZ-Bq-Mgg"/>
-                        <constraint firstAttribute="trailing" secondItem="CbQ-uh-hOS" secondAttribute="trailing" constant="28" id="ccs-hs-zng"/>
+                        <constraint firstItem="CbQ-uh-hOS" firstAttribute="leading" secondItem="nvk-KI-0Js" secondAttribute="leading" constant="22" id="1aa-4U-egy"/>
+                        <constraint firstAttribute="bottom" secondItem="CbQ-uh-hOS" secondAttribute="bottom" constant="70" id="7cG-eI-sqV"/>
+                        <constraint firstItem="CbQ-uh-hOS" firstAttribute="top" secondItem="nvk-KI-0Js" secondAttribute="top" constant="55" id="bWZ-Bq-Mgg"/>
+                        <constraint firstAttribute="trailing" secondItem="CbQ-uh-hOS" secondAttribute="trailing" constant="23" id="ccs-hs-zng"/>
                     </constraints>
                 </view>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TUg-2M-m3D">

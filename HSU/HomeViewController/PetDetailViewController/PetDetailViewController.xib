@@ -111,7 +111,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hy4-5U-0Rm">
                                             <rect key="frame" x="10" y="0.0" width="344" height="113"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hayvan numaranızı veteriner hekimnize vererek hayvanınıza ait sağlık bilgilerinin sisteme kayır edilmesini sağlayabilirsiniz." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHp-Tc-47B">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hayvan numaranızı veteriner hekimnize vererek hayvanınıza ait sağlık bilgilerinin sisteme kayıt edilmesini sağlayabilirsiniz." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHp-Tc-47B">
                                                     <rect key="frame" x="12" y="15" width="320" height="62.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62.5" id="Wcw-j7-Eah"/>

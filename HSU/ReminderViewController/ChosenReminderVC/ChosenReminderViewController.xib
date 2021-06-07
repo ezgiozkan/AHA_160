@@ -56,8 +56,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0P7-yU-vJm">
                             <rect key="frame" x="13" y="28" width="306" height="66"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Reminder Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBT-0Y-dYu">
-                                    <rect key="frame" x="8" y="8" width="144" height="16"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ne için hatırlatma istiyorsunuz?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBT-0Y-dYu">
+                                    <rect key="frame" x="8" y="8" width="189" height="16"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="16" id="xto-h0-Bxh"/>
                                     </constraints>
@@ -65,7 +65,7 @@
                                     <color key="textColor" name="Color3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fjH-0l-gP1">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Besleme" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fjH-0l-gP1">
                                     <rect key="frame" x="8" y="32" width="112" height="29"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="112" id="BQk-Xw-xQc"/>
@@ -96,7 +96,7 @@
                                     <color key="textColor" name="Color3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tH9-1C-acg">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="7/05/2020" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tH9-1C-acg">
                                     <rect key="frame" x="8" y="32" width="112" height="29"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="29" id="0QX-ag-XMD"/>
@@ -127,8 +127,8 @@
                                     <color key="textColor" name="Color3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ntw-kt-Phf">
-                                    <rect key="frame" x="8" y="38" width="35.333333333333336" height="28"/>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Boncuk" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ntw-kt-Phf">
+                                    <rect key="frame" x="8" y="38" width="45.333333333333336" height="28"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="28" id="djP-5V-H0O"/>
                                     </constraints>

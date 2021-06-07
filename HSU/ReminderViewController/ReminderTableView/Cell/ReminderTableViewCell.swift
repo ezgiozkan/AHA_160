@@ -14,6 +14,7 @@ class ReminderTableViewCell: UITableViewCell {
     @IBOutlet weak var imgReminder: UIImageView!
     
     @IBOutlet weak var petName: UILabel!
+    @IBOutlet weak var backView: UIView!
     
     
     // MARK: - Constants
@@ -29,7 +30,7 @@ class ReminderTableViewCell: UITableViewCell {
   override func awakeFromNib() {
         super.awakeFromNib()
      imageConfiguration()
-    configureReminderView()
+    configureBackView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -47,15 +48,16 @@ class ReminderTableViewCell: UITableViewCell {
         
     }
     
-    func configureReminderView() {
+    func configureBackView() {
 
-        contentView.layer.cornerRadius = 10
-        
-        layer.masksToBounds = false
-        layer.shadowRadius = 8.0
-        layer.shadowOpacity = 0.20
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 5)
+        backView.layer.cornerRadius = 8
+        backView.layer.masksToBounds = true
+        backView.layer.cornerRadius = 8
+        backView.layer.masksToBounds = false
+        backView.layer.shadowRadius = 8.0
+        backView.layer.shadowOpacity = 0.20
+        backView.layer.shadowColor = UIColor.black.cgColor
+        backView.layer.shadowOffset = CGSize(width: 0, height: 5)
 
     }
     
