@@ -113,7 +113,6 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
         
     }
  
-    
     @IBAction func btnCreateAccount(_ sender: Any) {
         
         if let fullName = fullNameTxtField.text, let phoneNumber = phoneNumberTxtField.text,

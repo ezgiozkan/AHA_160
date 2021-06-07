@@ -52,6 +52,7 @@
 		D88967112610EA130092B228 /* PetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D889670F2610EA130092B228 /* PetDetailViewController.xib */; };
 		D8A8493A265EB32200AC8251 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A84938265EB32200AC8251 /* AccountViewController.swift */; };
 		D8A8493B265EB32200AC8251 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A84939265EB32200AC8251 /* AccountViewController.xib */; };
+		D8A87846266E81E4005FFBDD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A87845266E81E4005FFBDD /* User.swift */; };
 		D8D0237C2639B67D0023068B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0237B2639B67D0023068B /* Network.swift */; };
 		D8DC74602618D96F005EC30A /* PetDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DC745E2618D96F005EC30A /* PetDetailCollectionViewCell.swift */; };
 		D8DC74612618D96F005EC30A /* PetDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8DC745F2618D96F005EC30A /* PetDetailCollectionViewCell.xib */; };
@@ -121,6 +122,7 @@
 		D889670F2610EA130092B228 /* PetDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetDetailViewController.xib; sourceTree = "<group>"; };
 		D8A84938265EB32200AC8251 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		D8A84939265EB32200AC8251 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		D8A87845266E81E4005FFBDD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D8CEAF08260E2F5A00A0D762 /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		D8CEAF09260E2F5A00A0D762 /* PetsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionViewCell.swift; sourceTree = "<group>"; };
 		D8CEAF0B260E2F5A00A0D762 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		3B6C603A25FDFC3F00839DA8 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				D8A87844266E81D5005FFBDD /* Models */,
 				3B6C603B25FDFC4800839DA8 /* Controllers */,
 				3B6C603C25FDFC5C00839DA8 /* Xib */,
 				D872A384264594BB006D439A /* Auth.swift */,
@@ -433,6 +436,14 @@
 				D8A84939265EB32200AC8251 /* AccountViewController.xib */,
 			);
 			path = AccountViewController;
+			sourceTree = "<group>";
+		};
+		D8A87844266E81D5005FFBDD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D8A87845266E81E4005FFBDD /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D8CEAF06260E2F4800A0D762 /* HomeViewController */ = {
@@ -674,6 +685,7 @@
 				D8EB0C3D2667E205007A20B0 /* HealthInformationTableViewCell.swift in Sources */,
 				3B7DB70E26595A2D000A1BB3 /* RemindersViewController.swift in Sources */,
 				D872A385264594BB006D439A /* Auth.swift in Sources */,
+				D8A87846266E81E4005FFBDD /* User.swift in Sources */,
 				3B29BBAD263C2C7900399D71 /* ReminderCollectionViewCell.swift in Sources */,
 				D85D1CC22635C09200A8FF7D /* SettingsViewController.swift in Sources */,
 				D8DFF1AE260E47E900777F4C /* HomeViewController.swift in Sources */,

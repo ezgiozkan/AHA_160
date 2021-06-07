@@ -11,15 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountViewController" customModule="HSU" customModuleProvider="target">
             <connections>
-                <outlet property="addButton" destination="pv7-oN-F9d" id="Rnu-rH-XYT"/>
                 <outlet property="addView" destination="j14-Zl-Gme" id="rCV-rb-KWG"/>
                 <outlet property="editButton" destination="DSQ-0l-0Am" id="SHn-SD-jaA"/>
                 <outlet property="emailTxtField" destination="3P6-FF-FRs" id="24K-Az-rkc"/>
-                <outlet property="passwordTxtField" destination="l1w-kw-1fd" id="PLr-oa-xEh"/>
                 <outlet property="phoneNumberTxtField" destination="otf-Za-dlP" id="Yj0-Rc-54l"/>
                 <outlet property="profilePicture" destination="zbY-uL-ZBq" id="tgA-8w-tKR"/>
                 <outlet property="scrollView" destination="Eo5-9i-7vk" id="EKI-og-B3Q"/>
                 <outlet property="scrollViewContentView" destination="HSz-he-hQq" id="TT5-xk-PGM"/>
+                <outlet property="updateButton" destination="pv7-oN-F9d" id="uDS-g4-YBG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,6 +40,9 @@
                             <state key="normal" title="Güncelle">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="updateButton:" destination="-1" eventType="touchUpInside" id="j9Y-2P-Bon"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,35 +60,21 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="650"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="alW-ct-da8">
-                                    <rect key="frame" x="50" y="210" width="314" height="250"/>
+                                    <rect key="frame" x="50" y="235" width="314" height="150"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Telefon numarası" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otf-Za-dlP">
                                             <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="7m8-Ri-K2U"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3P6-FF-FRs">
                                             <rect key="frame" x="0.0" y="100" width="314" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="n33-I1-F2G"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Şifre" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l1w-kw-1fd">
-                                            <rect key="frame" x="0.0" y="200" width="314" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="7Ad-8N-UJ5"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                        </textField>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="250" id="Bov-pj-Yy0"/>
+                                        <constraint firstAttribute="height" constant="150" id="Bov-pj-Yy0"/>
                                     </constraints>
                                 </stackView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempFace" translatesAutoresizingMaskIntoConstraints="NO" id="zbY-uL-ZBq">
@@ -113,7 +101,7 @@
                                 <constraint firstItem="alW-ct-da8" firstAttribute="leading" secondItem="HSz-he-hQq" secondAttribute="leading" constant="50" id="kjo-xP-f4f"/>
                                 <constraint firstItem="zbY-uL-ZBq" firstAttribute="top" secondItem="HSz-he-hQq" secondAttribute="top" constant="40" id="lfD-5b-BeQ"/>
                                 <constraint firstAttribute="trailing" secondItem="alW-ct-da8" secondAttribute="trailing" constant="50" id="naw-6P-fnY"/>
-                                <constraint firstItem="alW-ct-da8" firstAttribute="top" secondItem="zbY-uL-ZBq" secondAttribute="bottom" constant="50" id="nl9-Zo-9Yj"/>
+                                <constraint firstItem="alW-ct-da8" firstAttribute="top" secondItem="zbY-uL-ZBq" secondAttribute="bottom" constant="75" id="nl9-Zo-9Yj"/>
                                 <constraint firstItem="DSQ-0l-0Am" firstAttribute="top" secondItem="zbY-uL-ZBq" secondAttribute="bottom" constant="-35" id="yLA-b2-z4f"/>
                             </constraints>
                         </view>

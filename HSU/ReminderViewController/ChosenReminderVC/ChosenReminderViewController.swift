@@ -102,7 +102,6 @@ public class ChosenReminderViewController: UIViewController, UIGestureRecognizer
         }else{
             
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            dismiss(animated: true, completion: nil)
             self.navigationController?.popViewController(animated: true)
         }
        

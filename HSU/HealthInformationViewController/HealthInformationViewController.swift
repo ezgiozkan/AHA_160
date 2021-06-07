@@ -15,6 +15,7 @@ class HealthInformationViewController: UIViewController {
     var currentPets = [(Int,String)]()
     var healthInfoResponse = [HealthInformation]()
     var haveHealthInfoAnimals: [String] = []
+    var refreshControl: UIRefreshControl!
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,9 @@ class HealthInformationViewController: UIViewController {
         
         self.tableView.register(UINib(nibName: "HealthInformationTableViewCell", bundle: nil), forCellReuseIdentifier: HealthInformationTableViewCell.cellIdentifier)
         
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.addSubview(refreshControl)
     }
     
     func configureNavBar() {
@@ -43,6 +47,8 @@ class HealthInformationViewController: UIViewController {
     }
     
     func getHealthInformation(completion: @escaping ([HealthInformation]) ->()) {
+        
+        self.healthInfoResponse.removeAll(keepingCapacity: false)
         
         for currentPetId in self.currentPets {
             Network.shared.getHealthInformation(currentPetId: currentPetId.0) { (result) in
@@ -58,7 +64,6 @@ class HealthInformationViewController: UIViewController {
                             }
                         }
                     }
-                    
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
@@ -67,6 +72,17 @@ class HealthInformationViewController: UIViewController {
                     print(error.localizedDescription)
                 }
             }
+        }
+    }
+    
+    @objc func refresh(_ sender: Any) {
+        
+        getHealthInformation { (healthInformation) in
+            self.healthInfoResponse = healthInformation
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            self.refreshControl.endRefreshing()
         }
     }
 }

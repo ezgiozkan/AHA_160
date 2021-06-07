@@ -149,7 +149,7 @@ class Network {
         urlRequest.httpMethod = "POST"
         
         let params = params
-        print(params)
+        
         do {
             
             let data = try JSONSerialization.data(withJSONObject: params, options: .init())
@@ -280,6 +280,73 @@ class Network {
             }.resume()
             
         }
+    }
+    
+    func getUserInfo(completion: @escaping (Result<User,Error>) -> ()) {
+        
+        let userId = UserDefaults.standard.integer(forKey: "currentUserId")
+        
+        self.endPoint = "/users/detail/?userId=\(userId)"
+        
+        guard let url = URL(string: self.baseUrl + self.endPoint) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            let decoder = JSONDecoder()
+            
+            do {
+                
+                let jsonData = try decoder.decode(User.self, from: data!)
+                
+                completion(.success(jsonData))
+            
+            }catch{
+                
+                completion(.failure(error))
+                
+            }
+        }.resume()
+        
+    }
+    
+    func updateUserInfo(params: [String:Any], completion: @escaping (Int?,Error?) -> ()) {
+        
+        let userId = UserDefaults.standard.integer(forKey: "currentUserId")
+        
+        self.endPoint = "/users/update/?userId=\(userId)"
+        
+        guard let url = URL(string: self.baseUrl + self.endPoint) else { return }
+        
+        print(url)
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.allHTTPHeaderFields = [
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        ]
+        
+        let params = params
+
+        let data = try! JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+        
+        URLSession.shared.uploadTask(with: request, from: data) { (responseData, response, error) in
+            if let error = error {
+                print("Error making PUT request: \(error.localizedDescription)")
+                return
+            }
+            
+            if let responseCode = (response as? HTTPURLResponse)?.statusCode, let responseData = responseData {
+                guard responseCode == 200 else {
+                    print("Invalid response code: \(responseCode)")
+                    return
+                }
+                
+                if let responseJSONData = try? JSONSerialization.jsonObject(with: responseData, options: .allowFragments) {
+                    completion(200,error)
+                }
+            }
+        }.resume()
     }
     
 }
