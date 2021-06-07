@@ -233,9 +233,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
       cell.rTitleLabel.text = reminderList![indexPath.row].reminderType
         
-        if cell.rTitleLabel.text == "Vaccine" {
+        if cell.rTitleLabel.text == "Veteriner" {
             cell.imgReminder.image = UIImage(named:"pvacci")
-        }else if cell.rTitleLabel.text == "Vet Visit"
+        }else if cell.rTitleLabel.text == "Aşı"
         {
             cell.imgReminder.image = UIImage(named:"vvisit")
         }else{
