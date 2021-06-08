@@ -236,12 +236,10 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate,UIPick
     
     
     @IBAction func femaleButton(_ sender: UIButton) {
-
         self.selectedGender = sender.currentTitle!
     }
     
     @IBAction func maleButton(_ sender: UIButton) {
-        
         self.selectedGender = sender.currentTitle!
     }
     
@@ -250,7 +248,6 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate,UIPick
     }
     
     @objc func doneButtonClicked() {
-           
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         self.dateOfBirth = dateFormatter.string(from: datePicker.date)
@@ -318,14 +315,10 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate,UIPick
     @objc func doneClick() {
         petTypeTextField.resignFirstResponder()
         
-       
-        
-        if self.petTypeTextField.text == "Kedi"
-        {
+        if self.petTypeTextField.text == "Kedi" {
             imageView.image = UIImage(named: "catImg")
         }
-        else if self.petTypeTextField.text == "Köpek"
-        {
+        else if self.petTypeTextField.text == "Köpek" {
             imageView.image = UIImage(named: "dogImg")
         }
     }

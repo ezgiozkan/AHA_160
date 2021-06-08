@@ -104,9 +104,6 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @objc func deletePet() {
-        
-        
-        
         let alert = UIAlertController(title: "Uyarı!", message: "Silmek istediğinize emin misiniz?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "İptal", style: .destructive, handler: nil))
@@ -126,11 +123,9 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         
         self.present(alert, animated: true, completion: nil)
         
-        
     }
     
     @IBAction func updateButton(_ sender: Any) {
-        
         let pet = self.viewModel?.cellForItemAt(indexPath: self.selectedIndexPathRow)
         let updatePetVC = UpdatePetViewController(nibName: "UpdatePetViewController", bundle: nil, willUpdatePet: pet!)
         self.navigationController?.pushViewController(updatePetVC, animated: true)

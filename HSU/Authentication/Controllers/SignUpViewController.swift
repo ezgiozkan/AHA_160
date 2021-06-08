@@ -29,7 +29,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
         }
     }
 
-   
+    let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +41,6 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
 
     
     func configureCreateButton(){
-        
         self.signUpButton.backViewShadow(cornerRadius: 8)
     }
     
@@ -104,6 +103,9 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
         self.view.backgroundColor = .white
         self.title = "Üye ol"
         
+        let barButton = UIBarButtonItem(customView: activityIndicator)
+        self.navigationItem.setRightBarButton(barButton, animated: true)
+        
         let backBarButton = UIBarButtonItem(image: UIImage(named: "backBarButton"),
                                       style: .plain,
                                       target: self,
@@ -123,11 +125,16 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
                 
                 if password == confirmPassword {
                     
+                    activityIndicator.startAnimating()
+                    
                     Network.shared.signUp(fullName: fullName, phoneNumber: phoneNumber, email: email, password: password) { (statusCode, error) in
                         
                         if statusCode == 201 && error == nil {
                             
                             DispatchQueue.main.async {
+                                
+                                self.activityIndicator.stopAnimating()
+                                self.activityIndicator.hidesWhenStopped = true
                                 
                                 let alert = UIAlertController(title: "", message: "Üye kayıtı başarılı.", preferredStyle: .alert)
                                 alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { (action) in
@@ -142,15 +149,17 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
                             }
                             
                         }else{
-                            
-                            print("register failure")
+                            let alert = UIAlertController(title: "Hata", message: "Bir sorun oluştu lütfen daha sonra tekrar deneyiniz!", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { (action) in
+                                self.navigationController?.popViewController(animated: true)
+                            }))
+                            self.present(alert, animated: true, completion: nil)
                         }
                     }
                     
                 }else{
                     
                     DispatchQueue.main.async {
-                        
                         let alert = UIAlertController(title: "Hata", message: "Şifreler aynı değil lütfen kontrol ediniz!", preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
@@ -170,7 +179,6 @@ class SignUpViewController: UIViewController,UITextFieldDelegate, UIGestureRecog
 
     
     @objc func back() {
-        
         self.navigationController?.popViewController(animated: true)
     }
     

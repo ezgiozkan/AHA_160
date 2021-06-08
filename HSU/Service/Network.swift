@@ -349,4 +349,42 @@ class Network {
         }.resume()
     }
     
+    func updatePet(animalId: Int,params: [String:Any], completion: @escaping (Int?,Error?) -> ()) {
+        
+        self.endPoint = "/animals/updateAnimal/?animalId=\(animalId)"
+        
+        guard let url = URL(string: self.baseUrl + self.endPoint) else { return }
+        
+        print(url)
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.allHTTPHeaderFields = [
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        ]
+        
+        let params = params
+
+        let data = try! JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+        
+        URLSession.shared.uploadTask(with: request, from: data) { (responseData, response, error) in
+            if let error = error {
+                print("Error making PUT request: \(error.localizedDescription)")
+                return
+            }
+            
+            if let responseCode = (response as? HTTPURLResponse)?.statusCode, let responseData = responseData {
+                guard responseCode == 200 else {
+                    print("Invalid response code: \(responseCode)")
+                    return
+                }
+                
+                if let responseJSONData = try? JSONSerialization.jsonObject(with: responseData, options: .allowFragments) {
+                    completion(200,error)
+                }
+            }
+        }.resume()
+    }
+    
 }

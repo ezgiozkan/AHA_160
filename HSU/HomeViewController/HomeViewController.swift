@@ -31,6 +31,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var seeAll: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var indicatorContainerView: UIView!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    
     weak var delegate: HomeViewControllerDelegateOutput?
     
     // MARK: - Constants
@@ -53,8 +56,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.indicator.startAnimating()
+        
         configureTableView()
-        configureImageView()
         getPets { (viewModel) in
             
             self.viewModel = viewModel
@@ -70,6 +74,8 @@ class HomeViewController: UIViewController {
                     healhInfoVC?.currentPets = self.currentPets
                 }
                 self.configureCollectionViews()
+                self.indicatorContainerView.isHidden = true
+                self.indicator.stopAnimating()
             }
         }
         
@@ -99,16 +105,6 @@ class HomeViewController: UIViewController {
 
     }
     
-    func configureImageView() {
-        
-        imageView.image = #imageLiteral(resourceName: "face")
-        imageView.layer.borderWidth = 2.0
-        imageView.layer.masksToBounds = false
-        imageView.layer.borderColor = Constants.Color.borderColor.cgColor
-        imageView.layer.cornerRadius = 20
-        imageView.clipsToBounds = true
-    }
-    
     func configureCollectionViews() {
         
         self.petsCollectionViewDelegate = PetsCollectionViewDelegate(outputDelegate: self)
@@ -122,21 +118,17 @@ class HomeViewController: UIViewController {
         self.petsCollectionView.delegate = self.petsCollectionViewDelegate
         
         self.petsCollectionView.register(UINib(nibName: "PetsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: PetsCollectionViewCell.cellIdentifier)
-        
        
-       self.servicesCollectionViewDataSource = ServicesCollectionViewDataSource()
+        self.servicesCollectionViewDataSource = ServicesCollectionViewDataSource()
         self.servicesCollectionViewDelegate = ServicesCollectionViewDelegate(width: self.windowWidth ?? 0.0)
-        
-        /*  self.servicesCollectionView.dataSource = self.servicesCollectionViewDataSource
-        self.servicesCollectionView.delegate = self.servicesCollectionViewDelegate
-        
-        self.servicesCollectionView.register(UINib(nibName: "ServicesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ServicesCollectionViewCell.cellIdentifier)*/
-        
+
     }
     
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.indicator.startAnimating()
 
         getAllReminder()
         // Hide the navigation bar on the this view controller
@@ -147,10 +139,13 @@ class HomeViewController: UIViewController {
             
             self.viewModel = viewModel
             
-            DispatchQueue.main.async {
-                
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                 self.configureCollectionViews()
+                self.indicator.stopAnimating()
+                self.indicatorContainerView.isHidden = true
+                self.indicator.stopAnimating()
             }
+            
         }
         
     }
@@ -169,12 +164,17 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(RemindersViewController(nibName: "RemindersViewController", bundle: nil), animated: true)
     }
     
-   
+    @IBAction func accountButton(_ sender: Any) {
+        let accountVC = AccountViewController(nibName: "AccountViewController", bundle: nil)
+        accountVC.title = "Hesap"
+        accountVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(accountVC, animated: true)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
         // Show the navigation bar on other view controllers
-        
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
@@ -205,12 +205,9 @@ extension HomeViewController: PetsCollectionViewDelegateOutput {
 extension HomeViewController: AddPetOutputDelegate {
     
     func petIds(id: Int) {
-        
         var nums = UserDefaults.standard.array(forKey: "nums") ?? []
         nums.append(id)
         UserDefaults.standard.set(nums, forKey: "nums")
-        
-        print(UserDefaults.standard.array(forKey: "nums")!)
     }
     
 }

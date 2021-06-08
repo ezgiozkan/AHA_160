@@ -18,6 +18,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var rememberMeButton: UIButton!
     
+    let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+    
     //MARK:CONSTANTS
     private enum Constants{
         
@@ -43,11 +45,9 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
         configureTextFields()
         configureNavBar()
         
-     
     }
     
     func configureLoginButton(){
-        
         self.loginButton.backViewShadow(cornerRadius: 8)
         
     }
@@ -87,6 +87,9 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
         self.view.backgroundColor = .white
         self.title = "Giriş yap"
         
+        let barButton = UIBarButtonItem(customView: activityIndicator)
+        self.navigationItem.setRightBarButton(barButton, animated: true)
+        
         let backBarButton = UIBarButtonItem(image: UIImage(named: "backBarButton"),
                                       style: .plain,
                                       target: self,
@@ -97,7 +100,6 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
     }
     
     @IBAction func forgotPasswordBtn(_ sender: Any) {
-        
         print("forgot password")
     }
     
@@ -108,12 +110,13 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
             
             if !email.isEmpty && !password.isEmpty {
                 
+                activityIndicator.startAnimating()
+                
                 Network.shared.signIn(email: self.emailTxtField.text ?? "", password: self.passwordTxtField.text ?? "") { (response,token)  in
                     
                     if response == 200 && token != nil {
                         
                         if self.isRemember {
-                            
                             UserDefaults.standard.setValue(token, forKey: "token")
 
                         }else{
@@ -125,18 +128,20 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
                         }
                         
                         DispatchQueue.main.async {
-                            
+                            self.activityIndicator.stopAnimating()
+                            self.activityIndicator.hidesWhenStopped = true
                             let tabVC = TabBarController(nibName: "TabBarController", bundle: nil)
                             tabVC.modalPresentationStyle = .fullScreen
                             self.navigationController?.present(tabVC, animated: true, completion: nil)
                             
-
                         }
                         
                     }
                     else if response == 401 && token == nil{
                         
                         DispatchQueue.main.async {
+                            self.activityIndicator.stopAnimating()
+                            self.activityIndicator.hidesWhenStopped = true
                             
                             let alert = UIAlertController(title: "Hata", message: "Email veya şifre yanlış", preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title: "Tamam", style: .default, handler: nil))
