@@ -321,6 +321,14 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate,UIPick
         else if self.petTypeTextField.text == "Köpek" {
             imageView.image = UIImage(named: "dogImg")
         }
+        else if self.petTypeTextField.text == "Kuş"
+        {
+            imageView.image = UIImage(named: "bird")
+        }
+        else
+        {
+            imageView.image = UIImage(named: "other")
+        }
     }
    
     

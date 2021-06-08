@@ -38,6 +38,14 @@ extension PetsCollectionViewDataSource: UICollectionViewDataSource {
             {
                 cell.imageView.image = UIImage(named: "dogImg")
             }
+            else if viewModel?.cellForItemAt(indexPath: indexPath.row)?.type == "Kuş"
+            {
+                cell.imageView.image = UIImage(named: "bird")
+            }
+            else
+            {
+                cell.imageView.image = UIImage(named: "other")
+            }
             
             
            

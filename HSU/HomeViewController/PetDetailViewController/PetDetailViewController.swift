@@ -55,6 +55,14 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         else if self.viewModel?.cellForItemAt(indexPath: selectedIndexPathRow)?.type == "Köpek"{
             self.imageView.image = UIImage(named: "dogImg")
         }
+        else if viewModel?.cellForItemAt(indexPath: selectedIndexPathRow)?.type == "Kuş"
+        {
+            self.imageView.image = UIImage(named: "bird")
+        }
+        else
+        {
+            self.imageView.image = UIImage(named: "other")
+        }
 
     }
 
