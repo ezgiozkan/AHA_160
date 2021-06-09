@@ -231,7 +231,6 @@ class AddPetViewController: UIViewController, UIGestureRecognizerDelegate,UIPick
     
 
     @IBAction func imageButton(_ sender: Any) {
-        print("Open gallery...")
     }
     
     

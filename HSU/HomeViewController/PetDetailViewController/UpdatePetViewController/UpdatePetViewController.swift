@@ -96,7 +96,6 @@ class UpdatePetViewController: UIViewController, UIGestureRecognizerDelegate {
 
 
     @IBAction func imageButton(_ sender: Any) {
-        print("Open gallery...")
     }
 
     @IBAction func updateButton(_ sender: Any) {

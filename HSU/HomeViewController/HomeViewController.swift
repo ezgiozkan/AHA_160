@@ -65,7 +65,6 @@ class HomeViewController: UIViewController {
             
             for res in viewModel.responseModel! {
                 self.currentPets.append((res.id,res.name))
-                print(res)
             }
             
             DispatchQueue.main.async {

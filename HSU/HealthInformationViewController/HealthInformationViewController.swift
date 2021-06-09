@@ -26,8 +26,6 @@ class HealthInformationViewController: UIViewController {
         configureTableView()
         configureNavBar()
         
-        print(currentPets)
-        
     }
     
     func configureTableView() {
@@ -116,8 +114,6 @@ extension HealthInformationViewController: UITableViewDataSource, UITableViewDel
 
 extension HealthInformationViewController: HomeViewControllerDelegateOutput {
     func currentPetIds(petIds: [Int]) {
-        print("Here")
-        print(petIds)
     }
     
 }

@@ -78,7 +78,7 @@
                         <constraint firstAttribute="width" constant="40" id="Qsi-7Q-QSX"/>
                         <constraint firstAttribute="height" constant="40" id="t7f-C4-yU8"/>
                     </constraints>
-                    <state key="normal" image="tempFace"/>
+                    <state key="normal" image="user"/>
                     <connections>
                         <action selector="accountButton:" destination="-1" eventType="touchUpInside" id="Z4J-fy-gQv"/>
                     </connections>
@@ -133,7 +133,7 @@
         </view>
     </objects>
     <resources>
-        <image name="tempFace" width="143" height="143"/>
+        <image name="user" width="512" height="512"/>
         <namedColor name="Color1">
             <color red="0.95200002193450928" green="0.7850000262260437" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

@@ -100,7 +100,6 @@ class LoginViewController: UIViewController,UITextFieldDelegate, UIGestureRecogn
     }
     
     @IBAction func forgotPasswordBtn(_ sender: Any) {
-        print("forgot password")
     }
     
     

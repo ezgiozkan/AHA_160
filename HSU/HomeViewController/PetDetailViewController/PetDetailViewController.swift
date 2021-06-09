@@ -46,7 +46,6 @@ class PetDetailViewController: UIViewController, UIGestureRecognizerDelegate {
 
         configureNavBar()
         configureCollectionView()
-        print(selectedIndexPathRow)
         
         
         if self.viewModel?.cellForItemAt(indexPath: selectedIndexPathRow)?.type == "Kedi"{
